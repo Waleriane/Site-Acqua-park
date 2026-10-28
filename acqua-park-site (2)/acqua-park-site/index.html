@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Acqua Park Resort Jaru</title>
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <meta name="description" content="Seja Sócio Fundador Remido do Acqua Park Resort Jaru. Um projeto de lazer, natureza e diversão para toda a família em Jaru/RO.">
+  <meta name="theme-color" content="#0069d6">
+
+  <!-- FONTES: Montserrat (textos, menu, botões e a linha "DESDE O COMEÇO")
+       A Qimberly (títulos) é carregada no css/style.css a partir de assets/fonts/ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
+
+  <!-- IMAGEM DO FUNDO: pré-carregada para a Hero aparecer rápido -->
+  <link rel="preload" as="image" href="assets/img/hero-bg.jpg">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/Qimberly.woff2" crossorigin>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-home">
+
+  <!-- Ícones reutilizados no site (WhatsApp, onda, pessoas, setas) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-whatsapp" viewBox="0 0 32 32"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.11.56 4.17 1.62 5.99L4 29l8.25-2.15a12.1 12.1 0 0 0 3.79.6C22.66 27.45 28 22.1 28 15.5 28 8.9 22.66 3 16.04 3Zm0 21.98c-1.84 0-3.64-.5-5.21-1.43l-.37-.22-4.9 1.28 1.31-4.76-.24-.39a9.83 9.83 0 0 1-1.52-5.25c0-5.47 4.47-9.92 9.95-9.92 5.47 0 9.92 4.92 9.92 10.4 0 5.48-4.46 10.29-8.94 10.29Zm5.45-7.43c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.96 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.63-.93-2.23-.24-.58-.5-.5-.68-.51h-.58c-.2 0-.53.07-.8.37-.28.3-1.05 1.02-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.08-.13-.28-.2-.58-.35Z"/></symbol>
+    <symbol id="i-wave" viewBox="0 0 48 48"><path fill="currentColor" d="M33.6 7.2c-8.9-.6-17.3 4.6-20.7 12.8 3.6-3.7 9.2-5.2 14-3.5-6 1.2-10.7 6.2-11.4 12.4 3-3 7.4-4.3 11.5-3.2-4.2 1.7-7.1 5.6-7.5 10.1h.1c3.3-4 8.3-6.4 13.6-6.4 4.4 0 8.5 1.6 11.6 4.4-1.3-6.8-6.8-12-13.6-12.8 2.8-1.6 6.1-2.2 9.4-1.6C38.6 15.9 35 12 30.4 10.5c1.1-.3 2.2-.4 3.3-.4h.1c2.6 0 5.2.7 7.4 2-1.7-2.8-4.5-4.7-7.6-4.9ZM4 39.2c2.3 0 3.6-.9 4.9-1.8 1.3-.9 2.6-1.8 4.8-1.8s3.5.9 4.8 1.8c1.3.9 2.6 1.8 4.9 1.8s3.6-.9 4.9-1.8c1.3-.9 2.6-1.8 4.8-1.8s3.5.9 4.8 1.8c1.3.9 2.6 1.8 4.9 1.8v3.3c-2.3 0-3.6-.9-4.9-1.8-1.3-.9-2.6-1.8-4.8-1.8s-3.5.9-4.8 1.8c-1.3.9-2.6 1.8-4.9 1.8s-3.6-.9-4.9-1.8c-1.3-.9-2.6-1.8-4.8-1.8s-3.5.9-4.8 1.8C7.6 41.6 6.3 42.5 4 42.5v-3.3Z"/></symbol>
+    <symbol id="i-people" viewBox="0 0 48 48"><path fill="currentColor" d="M24 10.5a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13Zm-13 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm26 0a5 5 0 1 1 0 10 5 5 0 0 1 0-10ZM24 26c6.6 0 12 4.2 12 9.4V38H12v-2.6C12 30.2 17.4 26 24 26Zm-13 .5c1.1 0 2.2.2 3.2.5-2.3 2.2-3.7 5-3.7 8.1V38H2v-2.4c0-5 4-9.1 9-9.1Zm26 0c5 0 9 4.1 9 9.1V38h-8.5v-2.9c0-3.1-1.4-5.9-3.7-8.1 1-.3 2.1-.5 3.2-.5Z"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="m5 9 7 7 7-7"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5h16v10H10l-4.5 3.5v-3.5H4z"/><circle cx="9" cy="10.5" r="1" fill="currentColor"/><circle cx="12" cy="10.5" r="1" fill="currentColor"/><circle cx="15" cy="10.5" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8a1 1 0 0 0 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></symbol>
+    <!-- ilustrações da Hero: coqueiro e sol -->
+    <symbol id="i-palm" viewBox="100 80 840 920"><g fill="currentColor"><path d="M410.0 1000.0 L424.2 970.0 L437.4 939.8 L449.6 909.5 L460.8 879.2 L471.0 848.8 L480.2 818.2 L488.4 787.5 L495.6 756.8 L501.8 726.0 L507.0 695.0 L511.2 664.0 L514.4 632.8 L516.6 601.5 L517.8 570.2 L518.0 538.8 L517.2 507.2 L515.4 475.5 L512.6 443.8 L508.8 412.0 L504.0 380.0 L536.0 380.0 L542.2 412.0 L547.4 443.8 L551.6 475.5 L554.8 507.2 L557.0 538.8 L558.2 570.2 L558.4 601.5 L557.6 632.8 L555.8 664.0 L553.0 695.0 L549.2 726.0 L544.4 756.8 L538.6 787.5 L531.8 818.2 L524.0 848.8 L515.2 879.2 L505.4 909.5 L494.6 939.8 L482.8 970.0 L470.0 1000.0Z"/><path d="M520.0 380.0 L504.3 371.9 L487.9 367.0 L471.5 363.8 L454.9 362.2 L438.4 362.2 L421.9 363.8 L405.6 367.0 L389.4 371.8 L373.5 378.1 L357.8 386.0 L342.4 395.4 L327.4 406.2 L312.8 418.5 L298.5 432.3 L284.6 447.4 L271.1 463.9 L258.0 481.8 L245.3 501.0 L233.0 521.6 L221.0 543.5 L209.4 566.8 L198.3 591.4 L187.5 617.3 L177.2 644.6 L167.6 673.4 L160.0 704.0 L160.0 704.0 L174.1 675.9 L204.9 671.9 L199.7 622.8 L237.2 634.0 L225.1 574.9 L265.9 599.2 L250.8 532.4 L291.7 567.9 L276.7 495.2 L314.8 540.2 L303.0 463.4 L335.4 515.6 L329.5 436.8 L354.0 493.4 L356.4 415.3 L371.4 472.9 L383.7 398.8 L389.2 453.2 L411.6 387.0 L409.6 434.3 L440.6 379.7 L435.3 416.6 L470.8 377.1 L468.9 400.8 L502.8 378.8 L520.0 380.0Z"/><path d="M520.0 380.0 L509.6 365.9 L498.1 354.0 L486.4 343.3 L474.5 333.6 L462.6 325.0 L450.7 317.4 L438.7 310.9 L426.7 305.4 L414.7 300.9 L402.6 297.6 L390.6 295.4 L378.6 294.4 L366.7 294.5 L355.0 295.8 L343.5 298.2 L332.2 301.8 L321.3 306.5 L310.8 312.3 L300.6 319.2 L290.8 327.1 L281.5 336.0 L272.5 345.8 L264.0 356.7 L256.0 368.5 L248.6 381.4 L242.9 396.0 L242.9 396.0 L253.9 385.1 L274.2 399.9 L273.4 364.9 L294.3 395.3 L292.5 348.3 L309.5 391.3 L311.5 335.4 L320.7 387.9 L330.3 326.1 L328.9 384.0 L349.1 320.3 L336.3 378.9 L368.3 317.6 L345.2 372.8 L388.1 318.1 L358.2 366.8 L409.0 321.8 L376.4 362.6 L431.0 328.8 L400.4 361.6 L454.4 339.3 L430.3 364.7 L479.1 353.4 L466.6 372.2 L505.4 370.9 L520.0 380.0Z"/><path d="M520.0 380.0 L518.3 366.5 L515.3 353.9 L512.1 342.0 L508.7 330.6 L505.2 319.8 L501.7 309.6 L498.1 299.9 L494.4 290.7 L490.7 282.2 L487.0 274.1 L483.2 266.6 L479.3 259.7 L475.4 253.3 L471.4 247.4 L467.4 242.1 L463.3 237.4 L459.1 233.2 L454.8 229.7 L450.4 226.7 L446.0 224.5 L441.5 222.9 L437.0 222.2 L432.7 222.3 L428.6 223.3 L425.1 225.2 L422.8 229.0 L422.8 229.0 L426.4 230.5 L419.1 251.8 L431.5 232.5 L409.9 257.7 L436.0 235.5 L402.1 258.2 L440.8 239.7 L398.4 258.0 L446.3 245.7 L398.9 259.5 L452.5 253.7 L402.8 263.7 L459.3 263.7 L409.7 271.0 L466.7 275.9 L419.3 281.3 L474.8 290.2 L431.5 294.7 L483.4 306.6 L446.3 311.1 L492.6 325.1 L464.0 330.6 L502.5 345.7 L485.3 353.2 L513.3 368.3 L520.0 380.0Z"/><path d="M520.0 380.0 L519.9 365.1 L521.3 351.1 L523.0 337.7 L524.9 325.0 L526.8 313.0 L528.9 301.6 L531.0 290.8 L533.2 280.7 L535.5 271.2 L537.9 262.3 L540.3 254.0 L542.8 246.4 L545.3 239.4 L548.0 233.0 L550.7 227.2 L553.6 222.1 L556.5 217.5 L559.6 213.6 L562.9 210.2 L566.5 207.6 L570.3 205.6 L574.4 204.7 L578.5 205.1 L582.0 206.7 L584.3 209.4 L584.7 213.5 L584.7 213.5 L581.4 214.2 L584.8 237.9 L578.6 215.8 L603.5 241.2 L577.5 217.9 L617.7 234.2 L575.5 221.4 L623.3 229.5 L572.4 227.2 L624.0 229.8 L568.5 235.7 L621.5 234.8 L564.0 246.7 L616.2 243.9 L558.9 260.3 L608.6 257.0 L553.3 276.5 L598.5 273.7 L547.3 295.2 L586.1 294.1 L540.7 316.4 L571.0 318.0 L533.5 340.1 L552.2 345.9 L525.4 366.2 L520.0 380.0Z"/><path d="M520.0 380.0 L529.5 365.1 L540.2 352.2 L551.2 340.6 L562.3 330.1 L573.4 320.7 L584.7 312.3 L596.0 305.1 L607.4 298.9 L618.8 293.9 L630.3 290.0 L641.8 287.2 L653.3 285.7 L664.8 285.5 L676.0 286.5 L687.1 288.8 L697.9 292.3 L708.4 297.0 L718.5 302.8 L728.1 309.8 L737.4 317.8 L746.2 326.9 L754.6 337.0 L762.6 348.1 L770.1 360.2 L777.0 373.5 L782.1 388.5 L782.1 388.5 L771.5 377.0 L750.6 390.9 L752.9 355.9 L730.8 385.5 L734.7 338.7 L716.4 381.4 L716.7 325.6 L706.6 378.1 L699.1 316.4 L700.5 374.5 L681.5 310.9 L695.8 369.4 L663.7 308.7 L689.4 363.0 L645.2 309.8 L678.3 356.7 L625.7 314.3 L661.2 352.8 L604.9 322.4 L637.9 352.9 L582.7 334.4 L608.7 357.9 L559.2 350.2 L572.9 368.0 L534.1 369.7 L520.0 380.0Z"/><path d="M520.0 380.0 L536.2 371.8 L553.0 366.9 L570.0 363.8 L587.0 362.4 L604.0 362.7 L620.9 364.7 L637.8 368.4 L654.4 373.7 L670.8 380.8 L686.8 389.4 L702.6 399.6 L718.0 411.4 L733.0 424.8 L747.6 439.6 L761.8 455.9 L775.7 473.7 L789.1 493.0 L802.2 513.6 L814.9 535.8 L827.2 559.3 L839.0 584.3 L850.5 610.7 L861.6 638.6 L872.2 667.9 L882.1 698.7 L890.0 731.5 L890.0 731.5 L875.6 701.2 L844.1 694.7 L849.4 643.8 L810.8 652.7 L823.2 592.1 L781.1 614.1 L796.8 546.2 L754.3 579.5 L770.1 506.0 L730.2 548.9 L743.1 471.5 L708.5 521.9 L715.8 442.6 L689.0 497.8 L688.1 419.2 L670.9 475.9 L660.0 401.1 L652.6 455.2 L631.2 388.2 L631.8 435.4 L601.5 380.2 L605.8 417.0 L570.5 377.1 L571.8 400.8 L537.6 378.7 L520.0 380.0Z"/><path d="M520.0 380.0 L509.2 380.1 L498.5 382.6 L488.0 386.3 L477.6 391.3 L467.3 397.4 L457.2 404.7 L447.2 412.9 L437.5 422.2 L428.0 432.6 L418.7 443.9 L409.6 456.2 L400.7 469.5 L392.1 483.7 L383.8 498.9 L375.6 515.1 L367.7 532.2 L360.0 550.2 L352.5 569.2 L345.3 589.1 L338.3 609.9 L331.6 631.7 L325.1 654.4 L318.8 678.0 L312.9 702.6 L307.5 728.2 L303.5 755.0 L303.5 755.0 L312.5 729.5 L335.8 720.1 L328.3 680.8 L358.3 681.5 L344.0 635.8 L378.2 644.9 L359.8 594.5 L396.2 610.9 L375.7 556.9 L412.6 579.4 L391.8 523.0 L427.4 550.5 L408.1 492.9 L440.8 524.0 L424.6 466.3 L452.9 499.4 L441.2 443.4 L463.9 476.6 L458.1 423.9 L474.6 454.8 L475.2 407.9 L485.9 433.4 L492.7 395.0 L499.5 411.3 L510.8 385.0 L520.0 380.0Z"/><path d="M520.0 380.0 L530.9 380.1 L541.5 382.7 L552.1 386.7 L562.5 392.0 L572.9 398.5 L583.0 406.1 L593.0 414.9 L602.7 424.8 L612.2 435.8 L621.5 447.8 L630.6 460.9 L639.4 475.1 L648.0 490.2 L656.4 506.4 L664.5 523.6 L672.4 541.9 L680.1 561.1 L687.5 581.3 L694.8 602.6 L701.7 624.9 L708.5 648.1 L715.0 672.4 L721.2 697.7 L727.1 724.0 L732.5 751.4 L736.5 780.0 L736.5 780.0 L727.5 752.6 L703.9 741.1 L711.7 700.3 L681.2 698.9 L696.0 652.0 L661.1 659.0 L680.2 607.7 L642.9 622.0 L664.2 567.4 L626.3 588.0 L648.1 531.2 L611.3 556.8 L631.8 498.9 L597.8 528.4 L615.3 470.6 L585.7 502.3 L598.6 446.2 L574.7 478.3 L581.8 425.6 L564.2 455.8 L564.7 408.7 L553.3 433.9 L547.2 395.3 L540.1 411.5 L529.2 385.0 L520.0 380.0Z"/><circle cx="506" cy="404" r="16"/><circle cx="536" cy="408" r="16"/><circle cx="521" cy="428" r="16"/></g></symbol>
+    <symbol id="i-sun" viewBox="0 0 400 400"><path fill="currentColor" d="M318.0 200.0 L400.0 200.0 L398.3 226.1 L317.0 215.4Z M314.0 230.5 L393.2 251.8 L384.8 276.5 L309.0 245.2Z M302.2 259.0 L373.2 300.0 L358.7 321.8 L293.6 271.8Z M283.4 283.4 L341.4 341.4 L321.8 358.7 L271.8 293.6Z M259.0 302.2 L300.0 373.2 L276.5 384.8 L245.2 309.0Z M230.5 314.0 L251.8 393.2 L226.1 398.3 L215.4 317.0Z M200.0 318.0 L200.0 400.0 L173.9 398.3 L184.6 317.0Z M169.5 314.0 L148.2 393.2 L123.5 384.8 L154.8 309.0Z M141.0 302.2 L100.0 373.2 L78.2 358.7 L128.2 293.6Z M116.6 283.4 L58.6 341.4 L41.3 321.8 L106.4 271.8Z M97.8 259.0 L26.8 300.0 L15.2 276.5 L91.0 245.2Z M86.0 230.5 L6.8 251.8 L1.7 226.1 L83.0 215.4Z M82.0 200.0 L0.0 200.0 L1.7 173.9 L83.0 184.6Z M86.0 169.5 L6.8 148.2 L15.2 123.5 L91.0 154.8Z M97.8 141.0 L26.8 100.0 L41.3 78.2 L106.4 128.2Z M116.6 116.6 L58.6 58.6 L78.2 41.3 L128.2 106.4Z M141.0 97.8 L100.0 26.8 L123.5 15.2 L154.8 91.0Z M169.5 86.0 L148.2 6.8 L173.9 1.7 L184.6 83.0Z M200.0 82.0 L200.0 0.0 L226.1 1.7 L215.4 83.0Z M230.5 86.0 L251.8 6.8 L276.5 15.2 L245.2 91.0Z M259.0 97.8 L300.0 26.8 L321.8 41.3 L271.8 106.4Z M283.4 116.6 L341.4 58.6 L358.7 78.2 L293.6 128.2Z M302.2 141.0 L373.2 100.0 L384.8 123.5 L309.0 154.8Z M314.0 169.5 L393.2 148.2 L398.3 173.9 L317.0 184.6Z"/><circle cx="200" cy="200" r="98" fill="currentColor"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 32"><path fill="currentColor" d="M12 1.5C9 7.3 3 13.2 3 20a9 9 0 0 0 18 0c0-6.8-6-12.7-9-18.5Z"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- =====================================================================
+       CABEÇALHO (logo + menu + botão "Quero ser sócio")
+       O mesmo bloco está repetido em o-parque.html. Se mudar um item do
+       menu aqui, mude lá também.
+       ===================================================================== -->
+  <header class="site-header" id="topo" data-header>
+    <div class="site-header__inner container">
+
+      <!-- LOGO ✏️ Para trocar, substitua o arquivo assets/img/logo-acqua-park.png -->
+      <a class="brand" href="index.html#inicio" aria-label="Acqua Park Resort Jaru — página inicial">
+        <img class="brand__logo" src="assets/img/logo-acqua-park.png" alt="Acqua Park Resort Jaru" width="720" height="467">
+      </a>
+
+      <!-- MENU ✏️ Textos e links dos itens -->
+      <nav class="main-nav" id="menu-principal" aria-label="Menu principal" data-nav>
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link is-active" href="index.html#inicio" aria-current="page">Início</a></li>
+          <li><a class="main-nav__link" href="index.html#socio-remido">Sócio Remido</a></li>
+          <li><a class="main-nav__link" href="o-parque.html">O Parque</a></li>
+          <li><a class="main-nav__link" href="index.html#o-projeto">O Projeto</a></li>
+          <li><a class="main-nav__link" href="index.html#quem-ja-e-socio">Quem já é sócio</a></li>
+          <li><a class="main-nav__link" href="index.html#contato">Contato</a></li>
+        </ul>
+        <!-- Botão de WhatsApp que aparece só dentro do menu do celular -->
+        <a class="btn-pill btn-pill--whats main-nav__cta" href="#" data-whatsapp target="_blank" rel="noopener">
+          <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+          Quero ser sócio
+        </a>
+      </nav>
+
+      <!-- BOTÃO "QUERO SER SÓCIO" (desktop) — abre o WhatsApp configurado em js/config.js -->
+      <a class="btn-pill btn-pill--whats header-cta" href="#" data-whatsapp target="_blank" rel="noopener">
+        <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+        Quero ser sócio
+      </a>
+
+      <!-- Botão hamburger (só no celular/tablet) -->
+      <button class="nav-toggle" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ===================================================================
+         HERO
+         Esquerda: foto com o Joca apontando para o texto (assets/img/hero-bg.jpg)
+         Direita: painel azul com ilustrações (sol e coqueiros) e borda curva
+         Base: 3 abas coloridas (os 3 botões principais)
+         =================================================================== -->
+    <section class="hs" id="inicio" aria-labelledby="hero-titulo">
+      <div class="hs__frame">
+
+        <!-- FOTO ✏️ troque o arquivo assets/img/hero-bg.jpg -->
+        <div class="hs__photo" role="img" aria-label="Joca, mascote do Acqua Park, na praia do parque apontando para a piscina de ondas e os tobogãs"></div>
+
+        <!-- PAINEL -->
+        <div class="hs__panel">
+          <!-- forma do painel: curva grande + faixa azul-água (computador) -->
+          <svg class="hs__shape" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="hsPanelGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#0b6ade"/>
+                <stop offset="1" stop-color="#0747b0"/>
+              </linearGradient>
+            </defs>
+            <path class="band" d="M128 0C10 170-14 420 70 600c78 168 40 300-22 400H1000V0Z"/>
+            <path class="fill" d="M178 0C60 170 36 420 120 600c78 168 40 300-22 400H1000V0Z"/>
+          </svg>
+          <!-- forma do painel no celular: onda no topo -->
+          <svg class="hs__shape-m" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true">
+            <path class="band" d="M0 40C200 0 360 0 520 34s320 52 480 10V120H0Z"/>
+            <path class="fill" d="M0 64C200 24 360 24 520 58s320 52 480 10V120H0Z"/>
+          </svg>
+
+          <!-- ilustrações -->
+          <span class="hs__blob hs__blob--1" aria-hidden="true"></span>
+          <span class="hs__blob hs__blob--2" aria-hidden="true"></span>
+          <svg class="ill ill--sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="ill ill--palm" aria-hidden="true"><use href="#i-palm"/></svg>
+          <svg class="ill ill--palm2" aria-hidden="true"><use href="#i-palm"/></svg>
+
+          <div class="hs__copy">
+            <!-- TEXTOS DA HERO ✏️ -->
+            <p class="hs__eyebrow" data-reveal style="--d:.35s">Um grande projeto está nascendo em Jaru</p>
+
+            <h1 class="hs__title" id="hero-titulo" data-reveal="up" style="--d:.5s">
+              <span class="hs__t1">Faça Parte</span>
+              <span class="hs__t2">desde o começo</span>
+              <svg class="hs__marks" viewBox="0 0 40 80" aria-hidden="true"><path d="M8 10c14 10 14 50 0 60M22 2c20 16 20 60 0 76"/></svg>
+            </h1>
+
+            <p class="hs__kicker" data-reveal="up" style="--d:.7s">Seja <strong>Sócio Fundador Remido</strong></p>
+            <p class="hs__lead" data-reveal="up" style="--d:.8s">
+              Garanta o seu título e faça parte de um <mark>projeto único</mark>
+              de <mark>lazer, natureza e diversão</mark> para toda a família.
+            </p>
+
+            <!-- Botão verde ✏️ abre o WhatsApp configurado em js/config.js -->
+            <a class="hs__btn" href="#" data-whatsapp target="_blank" rel="noopener" data-reveal="up" style="--d:.95s">
+              <svg class="hs__btn-icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              Quero garantir meu título
+              <svg class="hs__btn-arrow" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- OS TRÊS BOTÕES PRINCIPAIS, em forma de abas ✏️ textos e links -->
+      <nav class="hs__tabs" aria-label="Atalhos principais">
+        <!-- 1. Verde — WhatsApp do vendedor -->
+        <a class="hs-tab hs-tab--green" href="#" data-whatsapp target="_blank" rel="noopener" data-reveal="up" style="--d:1.05s">
+          <span class="hs-tab__badge"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
+          <small>Fale com um</small><b>Vendedor</b>
+        </a>
+        <!-- 2. Azul — página "O Parque" -->
+        <a class="hs-tab hs-tab--blue" href="o-parque.html" data-reveal="up" style="--d:1.15s">
+          <span class="hs-tab__badge"><svg aria-hidden="true"><use href="#i-wave"/></svg></span>
+          <small>Conheça</small><b>O Parque</b>
+        </a>
+        <!-- 3. Laranja — seção Sócio Remido -->
+        <a class="hs-tab hs-tab--orange" href="#socio-remido" data-reveal="up" style="--d:1.25s">
+          <span class="hs-tab__badge"><svg aria-hidden="true"><use href="#i-people"/></svg></span>
+          <small>Saiba mais sobre o</small><b>Sócio Remido</b>
+        </a>
+      </nav>
+
+      <!-- botão de rolar para a próxima seção -->
+      <a class="scroll-down hs__scroll" href="#socio-remido" aria-label="Rolar para a próxima seção" data-reveal style="--d:1.45s">
+        <svg aria-hidden="true"><use href="#i-chevron-down"/></svg>
+      </a>
+    </section>
+
+
+    <!-- ===================================================================
+         A PARTIR DAQUI: ESTRUTURA DAS PRÓXIMAS SEÇÕES (Página 1 — Início)
+         Os textos marcados com "Conteúdo oficial em breve" estão esperando
+         as informações reais do título. Nada de preço, benefício ou
+         condição foi inventado.
+         =================================================================== -->
+
+    <!-- SÓCIO REMIDO -->
+    <section class="section" id="socio-remido" aria-labelledby="t-socio">
+      <div class="container split">
+        <div class="split__text">
+          <p class="eyebrow">Título de sócio</p>
+          <h2 class="display" id="t-socio">Sócio Fundador <span>Remido</span></h2>
+          <p class="lead">Faça parte do Acqua Park Resort Jaru desde o primeiro dia e acompanhe de perto o nascimento de um projeto de lazer, natureza e diversão para toda a família.</p>
+          <div class="pending" role="note">
+            <strong>Conteúdo oficial em breve</strong>
+            <!-- ✏️ EDITAR: aqui entram as informações reais do título (o que inclui, condições, etc.) -->
+            Aqui entram as informações oficiais do título: o que está incluído e as condições de adesão.
+          </div>
+          <a class="btn-pill btn-pill--whats btn-pill--lg" href="#" data-whatsapp target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            Quero ser sócio
+          </a>
+        </div>
+        <figure class="split__media photo photo--joca">
+          <img src="assets/img/joca-boia.jpg" alt="Joca, mascote do Acqua Park, descendo o tobogã na boia" loading="lazy" width="1672" height="941">
+        </figure>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="section section--tint" id="como-funciona" aria-labelledby="t-como">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Passo a passo</p>
+          <h2 class="display" id="t-como">Como <span>funciona</span></h2>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="step__n">1</span>
+            <h3>Fale com um vendedor</h3>
+            <p>Chame no WhatsApp e converse com a nossa equipe de vendas.</p>
+          </li>
+          <li class="step">
+            <span class="step__n">2</span>
+            <h3>Tire suas dúvidas</h3>
+            <p>Conheça o projeto e entenda como funciona o título de Sócio Fundador Remido.</p>
+          </li>
+          <li class="step">
+            <span class="step__n">3</span>
+            <h3>Garanta seu título</h3>
+            <p>Faça parte do Acqua Park Resort Jaru desde o começo.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         DESCIDA NO TOBOGÃ (animação controlada pela rolagem)
+         Enquanto a pessoa rola, a tela fica parada e a "descida" acontece.
+         Vídeos: assets/video/descida-computador.mp4 e assets/video/descida-celular.mp4
+         Para trocar o vídeo: veja as instruções no topo de js/descida.js
+         =================================================================== -->
+    <section class="ride" id="descida" aria-labelledby="t-descida" data-ride>
+      <div class="ride__sticky">
+        <!-- VÍDEO DA DESCIDA ✏️ arquivos em assets/video (veja js/descida.js) -->
+        <video class="ride__video" muted playsinline preload="none" disablepictureinpicture aria-hidden="true" poster=""></video>
+        <div class="ride__shade" aria-hidden="true"></div>
+
+        <!-- carregando -->
+        <div class="ride__loader" aria-hidden="true"><span></span></div>
+
+        <!-- ETAPA 1: topo do tobogã ✏️ -->
+        <div class="ride__step ride__step--1" data-from="0" data-to=".16">
+          <p class="ride__eyebrow">Acqua Park Resort Jaru</p>
+          <h2 class="ride__big" id="t-descida">Bora <span>descer?</span></h2>
+          <p class="ride__hint">
+            Role a página
+            <svg aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </p>
+        </div>
+
+        <!-- ETAPA 2: dentro do tubo ✏️ -->
+        <div class="ride__step ride__step--2" data-from=".24" data-to=".46">
+          <p class="ride__line">Lazer, natureza</p>
+          <p class="ride__line ride__line--gold">e diversão</p>
+        </div>
+
+        <!-- ETAPA 3: saindo do tubo ✏️ -->
+        <div class="ride__step ride__step--3" data-from=".54" data-to=".7">
+          <p class="ride__line">para toda</p>
+          <p class="ride__line ride__line--gold">a família</p>
+        </div>
+
+        <!-- ETAPA FINAL: Joca aparece na piscina ✏️ -->
+        <div class="ride__final" data-from=".88">
+          <div class="ride__final-copy">
+            <p class="ride__eyebrow">Um grande projeto está nascendo em Jaru</p>
+            <p class="ride__final-title"><span class="t1">Faça Parte</span><span class="t2">desde o começo</span></p>
+            <p class="ride__final-text">Seja <strong>Sócio Fundador Remido</strong> do Acqua Park Resort Jaru.</p>
+            <div class="ride__final-actions">
+              <a class="hs__btn" href="#" data-whatsapp target="_blank" rel="noopener">
+                <svg class="hs__btn-icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                Fale com um vendedor
+                <svg class="hs__btn-arrow" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+              </a>
+              <a class="ride__link" href="#socio-remido">Saiba mais sobre o Sócio Remido</a>
+            </div>
+          </div>
+          <div class="ride__joca">
+            <span class="ride__ring ride__ring--1" aria-hidden="true"></span>
+            <span class="ride__ring ride__ring--2" aria-hidden="true"></span>
+            <span class="ride__drops" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            <!-- JOCA OFICIAL ✏️ arquivo assets/img/joca.webp -->
+            <img src="assets/img/joca.webp" alt="Joca, mascote do Acqua Park, fazendo sinal de positivo" width="743" height="1000" loading="lazy">
+          </div>
+        </div>
+
+        <!-- barra de progresso (nível da água) -->
+        <div class="ride__progress" aria-hidden="true"><span></span></div>
+      </div>
+    </section>
+
+    <!-- CONHEÇA O ACQUA PARK -->
+    <section class="section" id="conheca-o-parque" aria-labelledby="t-conheca">
+      <div class="container feature">
+        <img class="feature__img" src="assets/img/joca-boia.jpg" alt="" loading="lazy" width="1672" height="941">
+        <div class="feature__box">
+          <p class="eyebrow eyebrow--light">Acqua Park Resort Jaru</p>
+          <h2 class="display display--light" id="t-conheca">Conheça <span>o parque</span></h2>
+          <p>Água, natureza e diversão para toda a família, em Jaru, Rondônia.</p>
+          <a class="btn-pill btn-pill--white" href="o-parque.html">
+            Ver a página do parque
+            <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- O PROJETO / FUTURO DO PARQUE -->
+    <section class="section section--tint" id="o-projeto" aria-labelledby="t-projeto">
+      <div class="container narrow">
+        <p class="eyebrow">O futuro do parque</p>
+        <h2 class="display" id="t-projeto">Nosso <span>projeto</span></h2>
+        <p class="lead">Um grande projeto está nascendo em Jaru. Quem entra agora acompanha cada etapa da construção.</p>
+        <div class="pending" role="note">
+          <strong>Conteúdo oficial em breve</strong>
+          <!-- ✏️ EDITAR: etapas da obra, atrações previstas, imagens do projeto -->
+          Espaço reservado para as etapas da obra e as atrações previstas.
+        </div>
+      </div>
+    </section>
+
+    <!-- VÍDEO DO PROJETO -->
+    <section class="section" id="video" aria-labelledby="t-video">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Veja como vai ficar</p>
+          <h2 class="display" id="t-video">O Acqua Park <span>do futuro</span></h2>
+        </div>
+        <!-- COMPONENTE DE VÍDEO ✏️ O endereço do vídeo fica em js/config.js (videoProjetoUrl).
+             Também dá para colocar direto aqui: data-video-src="https://www.youtube.com/watch?v=..." -->
+        <div class="video" data-video>
+          <button class="video__cover" type="button" aria-label="Assistir ao vídeo do projeto">
+            <img class="video__poster" src="assets/img/video-poster.jpg" alt="" loading="lazy" width="960" height="540">
+            <span class="video__play"><svg aria-hidden="true"><use href="#i-play"/></svg></span>
+            <span class="video__label">Assistir ao vídeo do projeto</span>
+          </button>
+        </div>
+        <p class="video__hint">Vídeo de demonstração. O vídeo oficial do parque entra aqui.</p>
+      </div>
+    </section>
+
+    <!-- QUEM JÁ É SÓCIO -->
+    <section class="section section--tint" id="quem-ja-e-socio" aria-labelledby="t-socios">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Família Acqua Park</p>
+          <h2 class="display" id="t-socios">Quem já é <span>sócio</span></h2>
+          <p class="lead">Em breve, as fotos dos nossos primeiros sócios fundadores.</p>
+        </div>
+        <!-- ✏️ EDITAR: troque cada bloco por <figure><img src="..." alt="Nome do sócio"><figcaption>Nome</figcaption></figure> -->
+        <ul class="members">
+          <li class="members__slot"><svg aria-hidden="true"><use href="#i-people"/></svg>Foto do sócio</li>
+          <li class="members__slot"><svg aria-hidden="true"><use href="#i-people"/></svg>Foto do sócio</li>
+          <li class="members__slot"><svg aria-hidden="true"><use href="#i-people"/></svg>Foto do sócio</li>
+          <li class="members__slot"><svg aria-hidden="true"><use href="#i-people"/></svg>Foto do sócio</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA FINAL / CONTATO -->
+    <section class="final-cta" id="contato" aria-labelledby="t-contato">
+      <div class="container final-cta__inner">
+        <h2 class="display display--light" id="t-contato">Faça Parte <span>desde o começo</span></h2>
+        <p>Fale agora com um vendedor e garanta o seu título de Sócio Fundador Remido.</p>
+        <a class="cta cta--green cta--solo" href="#" data-whatsapp target="_blank" rel="noopener">
+          <svg class="cta__icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+          <span class="cta__text"><small>Fale com um</small><b>Vendedor</b></span>
+          <svg class="cta__end cta__end--chat" aria-hidden="true"><use href="#i-chat"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <img class="site-footer__logo" src="assets/img/logo-acqua-park.png" alt="Acqua Park Resort Jaru" width="720" height="467" loading="lazy">
+      <nav aria-label="Rodapé">
+        <a href="index.html#socio-remido">Sócio Remido</a>
+        <a href="o-parque.html">O Parque</a>
+        <a href="index.html#o-projeto">O Projeto</a>
+        <a href="index.html#contato">Contato</a>
+      </nav>
+      <p>© <span data-year>2026</span> Acqua Park Resort Jaru · Jaru, Rondônia</p>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE DO WHATSAPP (aparece em todas as telas, canto inferior direito) -->
+  <a class="whats-fab" href="#" data-whatsapp target="_blank" rel="noopener" aria-label="Falar com um vendedor no WhatsApp">
+    <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+  </a>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/descida.js"></script>
+</body>
+</html>
