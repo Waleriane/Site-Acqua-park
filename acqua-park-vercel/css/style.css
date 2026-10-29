@@ -1,639 +1,1843 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Acqua Park Resort Jaru</title>
-  <meta name="claude:viewport-fit-sides" content="cover">
-  <meta name="description" content="Seja Sócio Fundador Remido do Acqua Park Resort Jaru. Um projeto de lazer, natureza e diversão para toda a família em Jaru/RO.">
-  <meta name="theme-color" content="#0069d6">
-
-  <!-- FONTES: Montserrat (textos, menu, botões e a linha "DESDE O COMEÇO")
-       A Qimberly (títulos) é carregada no css/style.css a partir de assets/fonts/ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
-
-  <!-- IMAGEM DO FUNDO: pré-carregada para a Hero aparecer rápido -->
-  <link rel="preload" as="image" href="assets/img/site/hero-entrada-full.jpg" media="(min-width: 761px)">
-  <link rel="preload" as="image" href="assets/img/site/hero-entrada-m.jpg" media="(max-width: 760px)">
-  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/Qimberly.woff2" crossorigin>
-
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="page-home">
-
-  <!-- Ícones reutilizados no site (WhatsApp, onda, pessoas, setas) -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="i-whatsapp" viewBox="0 0 32 32"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.11.56 4.17 1.62 5.99L4 29l8.25-2.15a12.1 12.1 0 0 0 3.79.6C22.66 27.45 28 22.1 28 15.5 28 8.9 22.66 3 16.04 3Zm0 21.98c-1.84 0-3.64-.5-5.21-1.43l-.37-.22-4.9 1.28 1.31-4.76-.24-.39a9.83 9.83 0 0 1-1.52-5.25c0-5.47 4.47-9.92 9.95-9.92 5.47 0 9.92 4.92 9.92 10.4 0 5.48-4.46 10.29-8.94 10.29Zm5.45-7.43c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.96 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.63-.93-2.23-.24-.58-.5-.5-.68-.51h-.58c-.2 0-.53.07-.8.37-.28.3-1.05 1.02-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.08-.13-.28-.2-.58-.35Z"/></symbol>
-    <symbol id="i-wave" viewBox="0 0 48 48"><path fill="currentColor" d="M33.6 7.2c-8.9-.6-17.3 4.6-20.7 12.8 3.6-3.7 9.2-5.2 14-3.5-6 1.2-10.7 6.2-11.4 12.4 3-3 7.4-4.3 11.5-3.2-4.2 1.7-7.1 5.6-7.5 10.1h.1c3.3-4 8.3-6.4 13.6-6.4 4.4 0 8.5 1.6 11.6 4.4-1.3-6.8-6.8-12-13.6-12.8 2.8-1.6 6.1-2.2 9.4-1.6C38.6 15.9 35 12 30.4 10.5c1.1-.3 2.2-.4 3.3-.4h.1c2.6 0 5.2.7 7.4 2-1.7-2.8-4.5-4.7-7.6-4.9ZM4 39.2c2.3 0 3.6-.9 4.9-1.8 1.3-.9 2.6-1.8 4.8-1.8s3.5.9 4.8 1.8c1.3.9 2.6 1.8 4.9 1.8s3.6-.9 4.9-1.8c1.3-.9 2.6-1.8 4.8-1.8s3.5.9 4.8 1.8c1.3.9 2.6 1.8 4.9 1.8v3.3c-2.3 0-3.6-.9-4.9-1.8-1.3-.9-2.6-1.8-4.8-1.8s-3.5.9-4.8 1.8c-1.3.9-2.6 1.8-4.9 1.8s-3.6-.9-4.9-1.8c-1.3-.9-2.6-1.8-4.8-1.8s-3.5.9-4.8 1.8C7.6 41.6 6.3 42.5 4 42.5v-3.3Z"/></symbol>
-    <symbol id="i-people" viewBox="0 0 48 48"><path fill="currentColor" d="M24 10.5a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13Zm-13 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm26 0a5 5 0 1 1 0 10 5 5 0 0 1 0-10ZM24 26c6.6 0 12 4.2 12 9.4V38H12v-2.6C12 30.2 17.4 26 24 26Zm-13 .5c1.1 0 2.2.2 3.2.5-2.3 2.2-3.7 5-3.7 8.1V38H2v-2.4c0-5 4-9.1 9-9.1Zm26 0c5 0 9 4.1 9 9.1V38h-8.5v-2.9c0-3.1-1.4-5.9-3.7-8.1 1-.3 2.1-.5 3.2-.5Z"/></symbol>
-    <symbol id="i-chevron-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7"/></symbol>
-    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="m5 9 7 7 7-7"/></symbol>
-    <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5h16v10H10l-4.5 3.5v-3.5H4z"/><circle cx="9" cy="10.5" r="1" fill="currentColor"/><circle cx="12" cy="10.5" r="1" fill="currentColor"/><circle cx="15" cy="10.5" r="1" fill="currentColor"/></symbol>
-    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8a1 1 0 0 0 0-1.8L9.6 4.3C8.9 3.9 8 4.4 8 5.2Z"/></symbol>
-    <!-- ilustrações da Hero: coqueiro e sol -->
-    <symbol id="i-palm" viewBox="100 80 840 920"><g fill="currentColor"><path d="M410.0 1000.0 L424.2 970.0 L437.4 939.8 L449.6 909.5 L460.8 879.2 L471.0 848.8 L480.2 818.2 L488.4 787.5 L495.6 756.8 L501.8 726.0 L507.0 695.0 L511.2 664.0 L514.4 632.8 L516.6 601.5 L517.8 570.2 L518.0 538.8 L517.2 507.2 L515.4 475.5 L512.6 443.8 L508.8 412.0 L504.0 380.0 L536.0 380.0 L542.2 412.0 L547.4 443.8 L551.6 475.5 L554.8 507.2 L557.0 538.8 L558.2 570.2 L558.4 601.5 L557.6 632.8 L555.8 664.0 L553.0 695.0 L549.2 726.0 L544.4 756.8 L538.6 787.5 L531.8 818.2 L524.0 848.8 L515.2 879.2 L505.4 909.5 L494.6 939.8 L482.8 970.0 L470.0 1000.0Z"/><path d="M520.0 380.0 L504.3 371.9 L487.9 367.0 L471.5 363.8 L454.9 362.2 L438.4 362.2 L421.9 363.8 L405.6 367.0 L389.4 371.8 L373.5 378.1 L357.8 386.0 L342.4 395.4 L327.4 406.2 L312.8 418.5 L298.5 432.3 L284.6 447.4 L271.1 463.9 L258.0 481.8 L245.3 501.0 L233.0 521.6 L221.0 543.5 L209.4 566.8 L198.3 591.4 L187.5 617.3 L177.2 644.6 L167.6 673.4 L160.0 704.0 L160.0 704.0 L174.1 675.9 L204.9 671.9 L199.7 622.8 L237.2 634.0 L225.1 574.9 L265.9 599.2 L250.8 532.4 L291.7 567.9 L276.7 495.2 L314.8 540.2 L303.0 463.4 L335.4 515.6 L329.5 436.8 L354.0 493.4 L356.4 415.3 L371.4 472.9 L383.7 398.8 L389.2 453.2 L411.6 387.0 L409.6 434.3 L440.6 379.7 L435.3 416.6 L470.8 377.1 L468.9 400.8 L502.8 378.8 L520.0 380.0Z"/><path d="M520.0 380.0 L509.6 365.9 L498.1 354.0 L486.4 343.3 L474.5 333.6 L462.6 325.0 L450.7 317.4 L438.7 310.9 L426.7 305.4 L414.7 300.9 L402.6 297.6 L390.6 295.4 L378.6 294.4 L366.7 294.5 L355.0 295.8 L343.5 298.2 L332.2 301.8 L321.3 306.5 L310.8 312.3 L300.6 319.2 L290.8 327.1 L281.5 336.0 L272.5 345.8 L264.0 356.7 L256.0 368.5 L248.6 381.4 L242.9 396.0 L242.9 396.0 L253.9 385.1 L274.2 399.9 L273.4 364.9 L294.3 395.3 L292.5 348.3 L309.5 391.3 L311.5 335.4 L320.7 387.9 L330.3 326.1 L328.9 384.0 L349.1 320.3 L336.3 378.9 L368.3 317.6 L345.2 372.8 L388.1 318.1 L358.2 366.8 L409.0 321.8 L376.4 362.6 L431.0 328.8 L400.4 361.6 L454.4 339.3 L430.3 364.7 L479.1 353.4 L466.6 372.2 L505.4 370.9 L520.0 380.0Z"/><path d="M520.0 380.0 L518.3 366.5 L515.3 353.9 L512.1 342.0 L508.7 330.6 L505.2 319.8 L501.7 309.6 L498.1 299.9 L494.4 290.7 L490.7 282.2 L487.0 274.1 L483.2 266.6 L479.3 259.7 L475.4 253.3 L471.4 247.4 L467.4 242.1 L463.3 237.4 L459.1 233.2 L454.8 229.7 L450.4 226.7 L446.0 224.5 L441.5 222.9 L437.0 222.2 L432.7 222.3 L428.6 223.3 L425.1 225.2 L422.8 229.0 L422.8 229.0 L426.4 230.5 L419.1 251.8 L431.5 232.5 L409.9 257.7 L436.0 235.5 L402.1 258.2 L440.8 239.7 L398.4 258.0 L446.3 245.7 L398.9 259.5 L452.5 253.7 L402.8 263.7 L459.3 263.7 L409.7 271.0 L466.7 275.9 L419.3 281.3 L474.8 290.2 L431.5 294.7 L483.4 306.6 L446.3 311.1 L492.6 325.1 L464.0 330.6 L502.5 345.7 L485.3 353.2 L513.3 368.3 L520.0 380.0Z"/><path d="M520.0 380.0 L519.9 365.1 L521.3 351.1 L523.0 337.7 L524.9 325.0 L526.8 313.0 L528.9 301.6 L531.0 290.8 L533.2 280.7 L535.5 271.2 L537.9 262.3 L540.3 254.0 L542.8 246.4 L545.3 239.4 L548.0 233.0 L550.7 227.2 L553.6 222.1 L556.5 217.5 L559.6 213.6 L562.9 210.2 L566.5 207.6 L570.3 205.6 L574.4 204.7 L578.5 205.1 L582.0 206.7 L584.3 209.4 L584.7 213.5 L584.7 213.5 L581.4 214.2 L584.8 237.9 L578.6 215.8 L603.5 241.2 L577.5 217.9 L617.7 234.2 L575.5 221.4 L623.3 229.5 L572.4 227.2 L624.0 229.8 L568.5 235.7 L621.5 234.8 L564.0 246.7 L616.2 243.9 L558.9 260.3 L608.6 257.0 L553.3 276.5 L598.5 273.7 L547.3 295.2 L586.1 294.1 L540.7 316.4 L571.0 318.0 L533.5 340.1 L552.2 345.9 L525.4 366.2 L520.0 380.0Z"/><path d="M520.0 380.0 L529.5 365.1 L540.2 352.2 L551.2 340.6 L562.3 330.1 L573.4 320.7 L584.7 312.3 L596.0 305.1 L607.4 298.9 L618.8 293.9 L630.3 290.0 L641.8 287.2 L653.3 285.7 L664.8 285.5 L676.0 286.5 L687.1 288.8 L697.9 292.3 L708.4 297.0 L718.5 302.8 L728.1 309.8 L737.4 317.8 L746.2 326.9 L754.6 337.0 L762.6 348.1 L770.1 360.2 L777.0 373.5 L782.1 388.5 L782.1 388.5 L771.5 377.0 L750.6 390.9 L752.9 355.9 L730.8 385.5 L734.7 338.7 L716.4 381.4 L716.7 325.6 L706.6 378.1 L699.1 316.4 L700.5 374.5 L681.5 310.9 L695.8 369.4 L663.7 308.7 L689.4 363.0 L645.2 309.8 L678.3 356.7 L625.7 314.3 L661.2 352.8 L604.9 322.4 L637.9 352.9 L582.7 334.4 L608.7 357.9 L559.2 350.2 L572.9 368.0 L534.1 369.7 L520.0 380.0Z"/><path d="M520.0 380.0 L536.2 371.8 L553.0 366.9 L570.0 363.8 L587.0 362.4 L604.0 362.7 L620.9 364.7 L637.8 368.4 L654.4 373.7 L670.8 380.8 L686.8 389.4 L702.6 399.6 L718.0 411.4 L733.0 424.8 L747.6 439.6 L761.8 455.9 L775.7 473.7 L789.1 493.0 L802.2 513.6 L814.9 535.8 L827.2 559.3 L839.0 584.3 L850.5 610.7 L861.6 638.6 L872.2 667.9 L882.1 698.7 L890.0 731.5 L890.0 731.5 L875.6 701.2 L844.1 694.7 L849.4 643.8 L810.8 652.7 L823.2 592.1 L781.1 614.1 L796.8 546.2 L754.3 579.5 L770.1 506.0 L730.2 548.9 L743.1 471.5 L708.5 521.9 L715.8 442.6 L689.0 497.8 L688.1 419.2 L670.9 475.9 L660.0 401.1 L652.6 455.2 L631.2 388.2 L631.8 435.4 L601.5 380.2 L605.8 417.0 L570.5 377.1 L571.8 400.8 L537.6 378.7 L520.0 380.0Z"/><path d="M520.0 380.0 L509.2 380.1 L498.5 382.6 L488.0 386.3 L477.6 391.3 L467.3 397.4 L457.2 404.7 L447.2 412.9 L437.5 422.2 L428.0 432.6 L418.7 443.9 L409.6 456.2 L400.7 469.5 L392.1 483.7 L383.8 498.9 L375.6 515.1 L367.7 532.2 L360.0 550.2 L352.5 569.2 L345.3 589.1 L338.3 609.9 L331.6 631.7 L325.1 654.4 L318.8 678.0 L312.9 702.6 L307.5 728.2 L303.5 755.0 L303.5 755.0 L312.5 729.5 L335.8 720.1 L328.3 680.8 L358.3 681.5 L344.0 635.8 L378.2 644.9 L359.8 594.5 L396.2 610.9 L375.7 556.9 L412.6 579.4 L391.8 523.0 L427.4 550.5 L408.1 492.9 L440.8 524.0 L424.6 466.3 L452.9 499.4 L441.2 443.4 L463.9 476.6 L458.1 423.9 L474.6 454.8 L475.2 407.9 L485.9 433.4 L492.7 395.0 L499.5 411.3 L510.8 385.0 L520.0 380.0Z"/><path d="M520.0 380.0 L530.9 380.1 L541.5 382.7 L552.1 386.7 L562.5 392.0 L572.9 398.5 L583.0 406.1 L593.0 414.9 L602.7 424.8 L612.2 435.8 L621.5 447.8 L630.6 460.9 L639.4 475.1 L648.0 490.2 L656.4 506.4 L664.5 523.6 L672.4 541.9 L680.1 561.1 L687.5 581.3 L694.8 602.6 L701.7 624.9 L708.5 648.1 L715.0 672.4 L721.2 697.7 L727.1 724.0 L732.5 751.4 L736.5 780.0 L736.5 780.0 L727.5 752.6 L703.9 741.1 L711.7 700.3 L681.2 698.9 L696.0 652.0 L661.1 659.0 L680.2 607.7 L642.9 622.0 L664.2 567.4 L626.3 588.0 L648.1 531.2 L611.3 556.8 L631.8 498.9 L597.8 528.4 L615.3 470.6 L585.7 502.3 L598.6 446.2 L574.7 478.3 L581.8 425.6 L564.2 455.8 L564.7 408.7 L553.3 433.9 L547.2 395.3 L540.1 411.5 L529.2 385.0 L520.0 380.0Z"/><circle cx="506" cy="404" r="16"/><circle cx="536" cy="408" r="16"/><circle cx="521" cy="428" r="16"/></g></symbol>
-    <symbol id="i-sun" viewBox="0 0 400 400"><path fill="currentColor" d="M318.0 200.0 L400.0 200.0 L398.3 226.1 L317.0 215.4Z M314.0 230.5 L393.2 251.8 L384.8 276.5 L309.0 245.2Z M302.2 259.0 L373.2 300.0 L358.7 321.8 L293.6 271.8Z M283.4 283.4 L341.4 341.4 L321.8 358.7 L271.8 293.6Z M259.0 302.2 L300.0 373.2 L276.5 384.8 L245.2 309.0Z M230.5 314.0 L251.8 393.2 L226.1 398.3 L215.4 317.0Z M200.0 318.0 L200.0 400.0 L173.9 398.3 L184.6 317.0Z M169.5 314.0 L148.2 393.2 L123.5 384.8 L154.8 309.0Z M141.0 302.2 L100.0 373.2 L78.2 358.7 L128.2 293.6Z M116.6 283.4 L58.6 341.4 L41.3 321.8 L106.4 271.8Z M97.8 259.0 L26.8 300.0 L15.2 276.5 L91.0 245.2Z M86.0 230.5 L6.8 251.8 L1.7 226.1 L83.0 215.4Z M82.0 200.0 L0.0 200.0 L1.7 173.9 L83.0 184.6Z M86.0 169.5 L6.8 148.2 L15.2 123.5 L91.0 154.8Z M97.8 141.0 L26.8 100.0 L41.3 78.2 L106.4 128.2Z M116.6 116.6 L58.6 58.6 L78.2 41.3 L128.2 106.4Z M141.0 97.8 L100.0 26.8 L123.5 15.2 L154.8 91.0Z M169.5 86.0 L148.2 6.8 L173.9 1.7 L184.6 83.0Z M200.0 82.0 L200.0 0.0 L226.1 1.7 L215.4 83.0Z M230.5 86.0 L251.8 6.8 L276.5 15.2 L245.2 91.0Z M259.0 97.8 L300.0 26.8 L321.8 41.3 L271.8 106.4Z M283.4 116.6 L341.4 58.6 L358.7 78.2 L293.6 128.2Z M302.2 141.0 L373.2 100.0 L384.8 123.5 L309.0 154.8Z M314.0 169.5 L393.2 148.2 L398.3 173.9 L317.0 184.6Z"/><circle cx="200" cy="200" r="98" fill="currentColor"/></symbol>
-    <!-- ícones dos benefícios -->
-    <symbol id="i-nofee" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="11" width="34" height="30" rx="5"/><path d="M7 19h34M16 6v9M32 6v9"/><path d="m18 27 12 8M30 27l-12 8"/></g></symbol>
-    <symbol id="i-guests" viewBox="0 0 48 48"><g fill="currentColor"><circle cx="17" cy="15" r="7"/><path d="M4 39c0-7.7 5.8-13 13-13s13 5.3 13 13v2H4z"/></g><path fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" d="M37 15v14M30 22h14"/></symbol>
-    <symbol id="i-key" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 23 24 8l18 15"/><path d="M11 20v20h26V20"/><circle cx="24" cy="27" r="4"/><path d="M24 31v5"/></g></symbol>
-    <symbol id="i-info" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></g></symbol>
-    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
-    <symbol id="i-drop" viewBox="0 0 24 32"><path fill="currentColor" d="M12 1.5C9 7.3 3 13.2 3 20a9 9 0 0 0 18 0c0-6.8-6-12.7-9-18.5Z"/></symbol>
-  </svg>
-
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-
-  <!-- =====================================================================
-       CABEÇALHO (logo + menu + botão "Quero ser sócio")
-       O mesmo bloco está repetido em o-parque.html. Se mudar um item do
-       menu aqui, mude lá também.
-       ===================================================================== -->
-  <header class="site-header" id="topo" data-header>
-    <div class="site-header__inner container">
-
-      <!-- LOGO ✏️ Para trocar, substitua o arquivo assets/img/logo-acqua-park.png -->
-      <a class="brand" href="index.html#inicio" aria-label="Acqua Park Resort Jaru — página inicial">
-        <img class="brand__logo" src="assets/img/logo-acqua-park.png" alt="Acqua Park Resort Jaru" width="720" height="467">
-      </a>
-
-      <!-- MENU ✏️ Textos e links dos itens -->
-      <nav class="main-nav" id="menu-principal" aria-label="Menu principal" data-nav>
-        <ul class="main-nav__list">
-          <li><a class="main-nav__link is-active" href="index.html#inicio" aria-current="page">Início</a></li>
-          <li><a class="main-nav__link" href="index.html#socio-remido">Sócio Remido</a></li>
-          <li><a class="main-nav__link" href="o-parque.html">O Parque</a></li>
-          <li><a class="main-nav__link" href="index.html#o-projeto">O Projeto</a></li>
-          <li><a class="main-nav__link" href="index.html#quem-ja-e-socio">Quem já é sócio</a></li>
-          <li><a class="main-nav__link" href="index.html#contato">Contato</a></li>
-        </ul>
-        <!-- Botão de WhatsApp que aparece só dentro do menu do celular -->
-        <a class="btn-pill btn-pill--whats main-nav__cta" href="#" data-whatsapp target="_blank" rel="noopener">
-          <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
-          Quero ser sócio
-        </a>
-      </nav>
-
-      <!-- BOTÃO "QUERO SER SÓCIO" (desktop) — abre o WhatsApp configurado em js/config.js -->
-      <a class="btn-pill btn-pill--whats header-cta" href="#" data-whatsapp target="_blank" rel="noopener">
-        <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
-        Quero ser sócio
-      </a>
-
-      <!-- Botão hamburger (só no celular/tablet) -->
-      <button class="nav-toggle" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu" data-nav-toggle>
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <main id="conteudo">
-
-    <!-- ===================================================================
-         HERO
-         Esquerda: foto com o Joca apontando para o texto (assets/img/hero-bg.jpg)
-         Direita: painel azul com ilustrações (sol e coqueiros) e borda curva
-         Base: 3 abas coloridas (os 3 botões principais)
-         =================================================================== -->
-    <section class="hs" id="inicio" aria-labelledby="hero-titulo">
-      <div class="hs__frame">
-
-        <!-- FOTO ✏️ troque o arquivo assets/img/hero-bg.jpg -->
-        <div class="hs__photo" role="img" aria-label="Joca, mascote do Acqua Park, de chapéu na entrada do resort"></div>
-
-        <!-- PAINEL -->
-        <div class="hs__panel">
-          <!-- forma do painel: curva grande + faixa azul-água (computador) -->
-          <svg class="hs__shape" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true">
-            <defs>
-              <linearGradient id="hsPanelGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#0b6ade"/>
-                <stop offset="1" stop-color="#0747b0"/>
-              </linearGradient>
-            </defs>
-            <path class="band" d="M128 0C10 170-14 420 70 600c78 168 40 300-22 400H1000V0Z"/>
-            <path class="fill" d="M178 0C60 170 36 420 120 600c78 168 40 300-22 400H1000V0Z"/>
-          </svg>
-          <!-- forma do painel no celular: onda no topo -->
-          <svg class="hs__shape-m" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true">
-            <path class="band" d="M0 40C200 0 360 0 520 34s320 52 480 10V120H0Z"/>
-            <path class="fill" d="M0 64C200 24 360 24 520 58s320 52 480 10V120H0Z"/>
-          </svg>
-
-          <!-- ilustrações -->
-          <span class="hs__blob hs__blob--1" aria-hidden="true"></span>
-          <span class="hs__blob hs__blob--2" aria-hidden="true"></span>
-          <svg class="ill ill--sun" aria-hidden="true"><use href="#i-sun"/></svg>
-          <svg class="ill ill--palm" aria-hidden="true"><use href="#i-palm"/></svg>
-          <svg class="ill ill--palm2" aria-hidden="true"><use href="#i-palm"/></svg>
-
-          <div class="hs__copy">
-            <!-- TEXTOS DA HERO ✏️ -->
-            <p class="hs__eyebrow" data-reveal style="--d:.35s">Um grande projeto está nascendo em Jaru</p>
-
-            <h1 class="hs__title" id="hero-titulo" data-reveal="up" style="--d:.5s">
-              <span class="hs__t1">Faça Parte</span>
-              <span class="hs__t2">desde o começo</span>
-              <svg class="hs__marks" viewBox="0 0 40 80" aria-hidden="true"><path d="M8 10c14 10 14 50 0 60M22 2c20 16 20 60 0 76"/></svg>
-            </h1>
-
-            <p class="hs__kicker" data-reveal="up" style="--d:.7s">Seja <strong>Sócio Fundador Remido</strong></p>
-            <p class="hs__lead" data-reveal="up" style="--d:.8s">
-              Garanta o seu título e faça parte de um <mark>projeto único</mark>
-              de <mark>lazer, natureza e diversão</mark> para toda a família.
-            </p>
-
-            <!-- Botão verde ✏️ abre o WhatsApp configurado em js/config.js -->
-            <a class="hs__btn" href="#" data-whatsapp target="_blank" rel="noopener" data-reveal="up" style="--d:.95s">
-              <svg class="hs__btn-icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
-              Quero garantir meu título
-              <svg class="hs__btn-arrow" aria-hidden="true"><use href="#i-chevron-right"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- OS TRÊS BOTÕES PRINCIPAIS, em forma de abas ✏️ textos e links -->
-      <nav class="hs__tabs" aria-label="Atalhos principais">
-        <!-- 1. Verde — WhatsApp do vendedor -->
-        <a class="hs-tab hs-tab--green" href="#" data-whatsapp target="_blank" rel="noopener" data-reveal="up" style="--d:1.05s">
-          <span class="hs-tab__badge"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
-          <small>Fale com um</small><b>Vendedor</b>
-        </a>
-        <!-- 2. Azul — página "O Parque" -->
-        <a class="hs-tab hs-tab--blue" href="o-parque.html" data-reveal="up" style="--d:1.15s">
-          <span class="hs-tab__badge"><svg aria-hidden="true"><use href="#i-wave"/></svg></span>
-          <small>Conheça</small><b>O Parque</b>
-        </a>
-        <!-- 3. Laranja — seção Sócio Remido -->
-        <a class="hs-tab hs-tab--orange" href="#socio-remido" data-reveal="up" style="--d:1.25s">
-          <span class="hs-tab__badge"><svg aria-hidden="true"><use href="#i-people"/></svg></span>
-          <small>Saiba mais sobre o</small><b>Sócio Remido</b>
-        </a>
-      </nav>
-
-      <!-- botão de rolar para a próxima seção -->
-      <a class="scroll-down hs__scroll" href="#socio-remido" aria-label="Rolar para a próxima seção" data-reveal style="--d:1.45s">
-        <svg aria-hidden="true"><use href="#i-chevron-down"/></svg>
-      </a>
-    </section>
+/* =========================================================================
+   ACQUA PARK RESORT JARU — ESTILOS
+   -------------------------------------------------------------------------
+   Índice
+   1. Fonte Qimberly
+   2. CORES, FONTES E TAMANHOS  ✏️ (o lugar mais fácil para editar)
+   3. Base
+   4. Botões
+   5. Cabeçalho e menu
+   6. HERO (desktop)
+   7. Animações de entrada
+   8. Seções da página inicial
+   9. Página "O Parque"
+   10. Rodapé
+   11. Tablet / celular (composição própria)
+   12. Movimento reduzido
+   ========================================================================= */
 
 
-    <!-- ===================================================================
-         A PARTIR DAQUI: ESTRUTURA DAS PRÓXIMAS SEÇÕES (Página 1 — Início)
-         Os textos marcados com "Conteúdo oficial em breve" estão esperando
-         as informações reais do título. Nada de preço, benefício ou
-         condição foi inventado.
-         =================================================================== -->
+/* 1. FONTE QIMBERLY ✏️ — usada SOMENTE nos títulos grandes (classe .display e a headline da Hero) */
+@font-face {
+  font-family: "Qimberly";
+  src: url("../assets/fonts/Qimberly.woff2") format("woff2"),
+       url("../assets/fonts/Qimberly.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-    <!-- SÓCIO REMIDO ✏️ informações do título (conforme explicação do vendedor) -->
-    <section class="section socio" id="socio-remido" aria-labelledby="t-socio">
-      <div class="container socio__grid">
-        <div class="socio__text">
-          <p class="eyebrow">Título de sócio</p>
-          <h2 class="display" id="t-socio">Sócio Fundador <span>Remido</span></h2>
-          <p class="socio__badge"><svg aria-hidden="true"><use href="#i-people"/></svg> Primeiro lançamento · apenas <strong>300 títulos</strong></p>
-          <p class="lead"><strong>Remido</strong> quer dizer <strong>isento de taxa de manutenção mensal</strong>: você garante o seu título e não paga mensalidade para usar o parque.</p>
 
-          <ul class="perks">
-            <li class="perk perk--green">
-              <span class="perk__icon"><svg aria-hidden="true"><use href="#i-nofee"/></svg></span>
-              <div><h3>Sem mensalidade</h3><p>Isento de taxa de manutenção mensal.</p></div>
-            </li>
-            <li class="perk perk--blue">
-              <span class="perk__icon"><svg aria-hidden="true"><use href="#i-people"/></svg></span>
-              <div><h3>6 pessoas no título</h3><p>O titular e mais 5 pessoas.</p></div>
-            </li>
-            <li class="perk perk--orange">
-              <span class="perk__icon"><svg aria-hidden="true"><use href="#i-guests"/></svg></span>
-              <div><h3>2 convidados por fim de semana</h3><p>No sábado ou no domingo, durante 2 anos. Benefício dos fundadores.</p></div>
-            </li>
-            <li class="perk perk--navy">
-              <span class="perk__icon"><svg aria-hidden="true"><use href="#i-key"/></svg></span>
-              <div><h3>É seu patrimônio</h3><p>Pode vender ou passar para os filhos. A transferência custa 20% do salário mínimo.</p></div>
-            </li>
-          </ul>
+/* 2. CORES, FONTES E TAMANHOS ✏️
+   Layout: Hero em tela cheia com texto à esquerda e o Joca à direita; seções claras
+   com tom azul-piscina alternado; fechamento em azul profundo. */
+:root {
+  /* Cores do Acqua Park */
+  --c-navy:       #071f4d;   /* azul-marinho da logo (textos escuros) */
+  --c-blue-deep:  #0a47bd;   /* azul forte (botão "Conheça o parque") */
+  --c-blue:       #0069d6;   /* azul do céu da imagem */
+  --c-blue-soft:  #1f8ef0;
+  --c-aqua:       #2dc9f9;   /* azul claro da água */
+  --c-green:      #1fb446;   /* verde WhatsApp / sócio */
+  --c-green-dark: #0f8a32;
+  --c-gold:       #ffd21f;   /* amarelo/dourado do título */
+  --c-gold-deep:  #f29a00;
+  --c-orange:     #ff9b1c;
+  --c-white:      #ffffff;
+  --c-paper:      #f2f8fe;   /* fundo claro das seções (branco puxado para o azul) */
+  --c-line:       #cfe3f7;
+  --c-text:       #20365e;   /* texto corrido nas seções claras */
 
-          <div class="socio__cta">
-            <a class="btn-pill btn-pill--whats btn-pill--lg" href="#" data-whatsapp target="_blank" rel="noopener">
-              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
-              Consultar valores e condições
-            </a>
-            <p>Fale com o vendedor pelo WhatsApp.</p>
-          </div>
-        </div>
+  /* Fontes */
+  --f-display: "Qimberly", "Montserrat", system-ui, sans-serif;  /* só títulos grandes */
+  --f-body:    "Montserrat", "Garet", system-ui, -apple-system, "Segoe UI", sans-serif;
 
-        <figure class="socio__media">
-          <img src="assets/img/joca-boia.jpg" alt="Joca, mascote do Acqua Park, na boia na piscina do parque" loading="lazy" width="1672" height="941">
-          <!-- SELO "300 TÍTULOS" ✏️ -->
-          <figcaption class="ticket">
-            <span class="ticket__num">300</span>
-            <span class="ticket__txt"><b>Títulos fundadores</b><small>Primeiro lançamento</small></span>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
+  /* Tamanhos principais da Hero (desktop) — baseados na largura da tela */
+  --logo-w:        clamp(140px, 13.4vw, 250px);
+  --hero-title:    clamp(64px, 9.4vw, 182px);   /* "Faça Parte" (Qimberly) */
+  --hero-title-2:  clamp(30px, 4.55vw, 88px);   /* "DESDE O COMEÇO" (Montserrat Black) */
+  --hero-kicker:   clamp(18px, 1.95vw, 36px);   /* "SEJA SÓCIO FUNDADOR REMIDO" */
+  --hero-lead:     clamp(15px, 1.12vw, 21px);
+  --cta-h:         clamp(66px, 6vw, 108px);     /* altura dos 3 botões */
+  --cta-w:         clamp(250px, 21.6vw, 400px); /* largura dos 3 botões */
 
-    <!-- COMO FUNCIONA -->
-    <section class="section section--tint" id="como-funciona" aria-labelledby="t-como">
-      <div class="palms" aria-hidden="true"></div>
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Passo a passo</p>
-          <h2 class="display" id="t-como">Como <span>funciona</span></h2>
-        </div>
-        <ol class="steps">
-          <li class="step">
-            <span class="step__n">1</span>
-            <h3>Fale com um vendedor</h3>
-            <p>Chame no WhatsApp e converse com a nossa equipe de vendas.</p>
-          </li>
-          <li class="step">
-            <span class="step__n">2</span>
-            <h3>Tire suas dúvidas</h3>
-            <p>Conheça o projeto e entenda como funciona o título de Sócio Fundador Remido.</p>
-          </li>
-          <li class="step">
-            <span class="step__n">3</span>
-            <h3>Garanta seu título</h3>
-            <p>Faça parte do Acqua Park Resort Jaru desde o começo.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
+  /* Imagem de fundo da Hero ✏️ */
+  --hero-bg: url("../assets/img/hero-bg.jpg");
 
-    <!-- ===================================================================
-         DESCIDA NO TOBOGÃ (animação controlada pela rolagem)
-         Enquanto a pessoa rola, a tela fica parada e a "descida" acontece.
-         Vídeos: assets/video/descida-computador.mp4 e assets/video/descida-celular.mp4
-         Para trocar o vídeo: veja as instruções no topo de js/descida.js
-         =================================================================== -->
-    <section class="ride" id="descida" aria-labelledby="t-descida" data-ride>
-      <div class="ride__sticky">
-        <!-- VÍDEO DA DESCIDA ✏️ arquivos em assets/video (veja js/descida.js) -->
-        <canvas class="ride__canvas" aria-hidden="true"></canvas>
-        <video class="ride__video" muted playsinline preload="none" disablepictureinpicture aria-hidden="true" poster=""></video>
-        <div class="ride__shade" aria-hidden="true"></div>
+  --radius-lg: 28px;
+  --shadow-lg: 0 24px 60px -24px rgba(7, 31, 77, .45);
+  --ease-out: cubic-bezier(.2, .8, .2, 1);
+  --header-pad: 18px;
 
-        <!-- carregando -->
-        <div class="ride__loader" aria-hidden="true"><span></span></div>
+  color-scheme: light;
+}
 
-        <!-- ETAPA 1: topo do tobogã ✏️ -->
-        <div class="ride__step ride__step--1" data-from="0" data-to=".12">
-          <p class="ride__eyebrow">Acqua Park Resort Jaru</p>
-          <h2 class="ride__big" id="t-descida">Bora <span>descer?</span></h2>
-          <p class="ride__hint">
-            Role a página
-            <svg aria-hidden="true"><use href="#i-chevron-down"/></svg>
-          </p>
-        </div>
 
-        <!-- ETAPA 2: dentro do tubo ✏️ -->
-        <div class="ride__step ride__step--2" data-from=".19" data-to=".36">
-          <p class="ride__line">Lazer, natureza</p>
-          <p class="ride__line ride__line--gold">e diversão</p>
-        </div>
+/* 3. BASE */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--c-text);
+  background: var(--c-white);
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3 { margin: 0; }
+p { margin: 0; }
+.icon { width: 1.25em; height: 1.25em; flex: none; }
 
-        <!-- ETAPA 3: saindo do tubo ✏️ -->
-        <div class="ride__step ride__step--3" data-from=".42" data-to=".56">
-          <p class="ride__line">para toda</p>
-          <p class="ride__line ride__line--gold">a família</p>
-        </div>
+.container {
+  width: 100%;
+  max-width: 1380px;
+  margin-inline: auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+.narrow { max-width: 820px; }
 
-        <!-- ETAPA 4: chegou na piscina ✏️ (só a mensagem, sem o Joca) -->
-        <div class="ride__final" data-from=".72" data-to=".9">
-          <div class="ride__final-copy">
-            <p class="ride__eyebrow">Um grande projeto está nascendo em Jaru</p>
-            <p class="ride__final-title"><span class="t1">Faça Parte</span><span class="t2">desde o começo</span></p>
-            <p class="ride__final-text">Continue rolando e conheça o título de <strong>Sócio Fundador Remido</strong>.</p>
-          </div>
-        </div>
+.skip-link {
+  position: absolute; left: 12px; top: -60px; z-index: 100;
+  background: var(--c-white); color: var(--c-navy); padding: 10px 16px; border-radius: 10px;
+  font-weight: 700; text-decoration: none;
+}
+.skip-link:focus { top: 12px; }
 
-        <!-- ETAPA 5: onda sobe e traz o "slide" com o Joca e o título ✏️ -->
-        <div class="ride__slide" data-from=".86">
-          <svg class="ride__wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
-            <path class="w1" d="M0 60c120-40 240-40 360 0s240 40 360 0 240-40 360 0 240 40 360 0v60H0Z"/>
-            <path class="w2" d="M0 80c120-34 240-34 360 0s240 34 360 0 240-34 360 0 240 34 360 0v40H0Z"/>
-          </svg>
-          <div class="ride__slide-body">
-            <div class="ride__slide-joca">
-              <span class="ride__ripple ride__ripple--1" aria-hidden="true"></span>
-              <span class="ride__ripple ride__ripple--2" aria-hidden="true"></span>
-              <span class="ride__ripple ride__ripple--3" aria-hidden="true"></span>
-              <!-- JOCA OFICIAL ✏️ arquivo assets/img/joca.webp -->
-              <img src="assets/img/joca.webp" alt="Joca, mascote do Acqua Park, fazendo sinal de positivo" width="743" height="1000" loading="lazy">
-            </div>
-            <div class="ride__slide-copy">
-              <p class="ride__badge"><b>300</b> títulos · primeiro lançamento</p>
-              <p class="ride__slide-title">Sócio Fundador <span>Remido</span></p>
-              <ul class="ride__perks">
-                <li style="--i:0"><span class="ride__pi"><svg aria-hidden="true"><use href="#i-nofee"/></svg></span><div><b>Sem mensalidade</b>Isento de taxa de manutenção</div></li>
-                <li style="--i:1"><span class="ride__pi"><svg aria-hidden="true"><use href="#i-people"/></svg></span><div><b>6 pessoas</b>Você e mais 5 no título</div></li>
-                <li style="--i:2"><span class="ride__pi"><svg aria-hidden="true"><use href="#i-guests"/></svg></span><div><b>2 convidados</b>Por fim de semana, durante 2 anos</div></li>
-                <li style="--i:3"><span class="ride__pi"><svg aria-hidden="true"><use href="#i-key"/></svg></span><div><b>Seu patrimônio</b>Pode vender ou passar aos filhos</div></li>
-              </ul>
-              <div class="ride__final-actions">
-                <a class="hs__btn" href="#" data-whatsapp target="_blank" rel="noopener">
-                  <svg class="hs__btn-icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
-                  Fale com um vendedor
-                  <svg class="hs__btn-arrow" aria-hidden="true"><use href="#i-chevron-right"/></svg>
-                </a>
-                <a class="ride__btn2" href="#socio-remido">
-                  Saiba mais sobre o título
-                  <svg aria-hidden="true"><use href="#i-chevron-right"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+:focus-visible { outline: 3px solid var(--c-gold); outline-offset: 3px; border-radius: 8px; }
 
-        <!-- barra de progresso (nível da água) -->
-        <div class="ride__progress" aria-hidden="true"><span></span></div>
-      </div>
-    </section>
 
-    <!-- ATRAÇÕES ✏️ fotos em assets/img/site -->
-    <section class="section atracoes" id="atracoes" aria-labelledby="t-atracoes">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Diversão para todas as idades</p>
-          <h2 class="display" id="t-atracoes">Atrações <span>do parque</span></h2>
-          <p class="lead">Do frio na barriga ao descanso na boia: tem lugar para cada um da família.</p>
-        </div>
-        <div class="carousel" data-carousel>
-          <ul class="atr-grid" data-track>
-          <li class="atr atr--big">
-            <img class="atr__img" src="assets/img/site/piscina-ondas.jpg" srcset="assets/img/site/piscina-ondas-m.jpg 760w, assets/img/site/piscina-ondas.jpg 1400w" sizes="(max-width: 760px) 84vw, 50vw" alt="Piscina de ondas" loading="lazy" decoding="async">
-            <div class="atr__body">
-              <span class="atr__tag atr__tag--família">Família</span>
-              <h3>Piscina de ondas</h3>
-              <p>Ondas de verdade e uma praia de areia para a família inteira.</p>
-            </div>
-          </li>
-          <li class="atr atr--wide">
-            <img class="atr__img" src="assets/img/site/surf-hill.jpg" srcset="assets/img/site/surf-hill-m.jpg 760w, assets/img/site/surf-hill.jpg 1400w" sizes="(max-width: 760px) 84vw, 50vw" alt="Surf Hill" loading="lazy" decoding="async">
-            <div class="atr__body">
-              <span class="atr__tag atr__tag--radical">Radical</span>
-              <h3>Surf Hill</h3>
-              <p>Pistas lado a lado para descer apostando corrida.</p>
-            </div>
-          </li>
-          <li class="atr ">
-            <img class="atr__img" src="assets/img/site/tirolesa-bike.jpg" srcset="assets/img/site/tirolesa-bike-m.jpg 760w, assets/img/site/tirolesa-bike.jpg 1400w" sizes="(max-width: 760px) 84vw, 50vw" alt="Tirolesa de bicicleta" loading="lazy" decoding="async">
-            <div class="atr__body">
-              <span class="atr__tag atr__tag--aventura">Aventura</span>
-              <h3>Tirolesa de bicicleta</h3>
-              <p>Pedale suspenso no ar, com a vista do parque lá de cima.</p>
-            </div>
-          </li>
-          <li class="atr ">
-            <img class="atr__img" src="assets/img/site/toboga-capsula.jpg" srcset="assets/img/site/toboga-capsula-m.jpg 760w, assets/img/site/toboga-capsula.jpg 1400w" sizes="(max-width: 760px) 84vw, 50vw" alt="Tobogã cápsula" loading="lazy" decoding="async">
-            <div class="atr__body">
-              <span class="atr__tag atr__tag--radical">Radical</span>
-              <h3>Tobogã cápsula</h3>
-              <p>O chão se abre e você despenca. Encara?</p>
-            </div>
-          </li>
-          <li class="atr atr--wide">
-            <img class="atr__img" src="assets/img/site/rio-lento.jpg" srcset="assets/img/site/rio-lento-m.jpg 760w, assets/img/site/rio-lento.jpg 1400w" sizes="(max-width: 760px) 84vw, 50vw" alt="Rio lento" loading="lazy" decoding="async">
-            <div class="atr__body">
-              <span class="atr__tag atr__tag--relax">Relax</span>
-              <h3>Rio lento</h3>
-              <p>Boia, sombra e água fresca, no seu ritmo.</p>
-            </div>
-          </li>
-          <li class="atr atr--wide">
-            <img class="atr__img" src="assets/img/site/bar-molhado.jpg" srcset="assets/img/site/bar-molhado-m.jpg 760w, assets/img/site/bar-molhado.jpg 1400w" sizes="(max-width: 760px) 84vw, 50vw" alt="Bar molhado" loading="lazy" decoding="async">
-            <div class="atr__body">
-              <span class="atr__tag atr__tag--relax">Relax</span>
-              <h3>Bar molhado</h3>
-              <p>Drinks e petiscos sem sair da piscina.</p>
-            </div>
-          </li>
-          </ul>
-          <div class="carousel__nav" aria-hidden="true"><span class="carousel__dots" data-dots></span></div>
-        </div>
-        <p class="ilustra"><svg aria-hidden="true"><use href="#i-info"/></svg>Imagens ilustrativas do projeto. O resultado final pode ter variações.</p>
-      </div>
-    </section>
+/* 4. BOTÕES ---------------------------------------------------------------- */
 
-    <!-- ESPAÇOS DO RESORT -->
-    <section class="section section--tint espacos" id="espacos" aria-labelledby="t-espacos">
-      <div class="palms" aria-hidden="true"></div>
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Estrutura de resort</p>
-          <h2 class="display" id="t-espacos">Espaços <span>pensados para você</span></h2>
-        </div>
-        <div class="carousel" data-carousel>
-          <ul class="esp-row" data-track data-accordion>
-          <li class="esp is-open" tabindex="0">
-            <img class="esp__img" src="assets/img/site/entrada.jpg" srcset="assets/img/site/entrada-m.jpg 760w, assets/img/site/entrada.jpg 1400w" sizes="(max-width: 760px) 84vw, 60vw" alt="Recepção" loading="lazy" decoding="async">
-            <div class="esp__body"><h3>Recepção</h3><p>A chegada ao resort, com estacionamento e jardim tropical.</p></div>
-          </li>
-          <li class="esp" tabindex="0">
-            <img class="esp__img" src="assets/img/site/restaurante.jpg" srcset="assets/img/site/restaurante-m.jpg 760w, assets/img/site/restaurante.jpg 1400w" sizes="(max-width: 760px) 84vw, 60vw" alt="Restaurante" loading="lazy" decoding="async">
-            <div class="esp__body"><h3>Restaurante</h3><p>Varanda com vista para o verde e cozinha completa.</p></div>
-          </li>
-          <li class="esp" tabindex="0">
-            <img class="esp__img" src="assets/img/site/praca-alimentacao.jpg" srcset="assets/img/site/praca-alimentacao-m.jpg 760w, assets/img/site/praca-alimentacao.jpg 1400w" sizes="(max-width: 760px) 84vw, 60vw" alt="Praça de alimentação" loading="lazy" decoding="async">
-            <div class="esp__body"><h3>Praça de alimentação</h3><p>Açaí, café e lanchonete para todos os gostos.</p></div>
-          </li>
-          </ul>
-          <div class="carousel__nav" aria-hidden="true"><span class="carousel__dots" data-dots></span></div>
-        </div>
-        <p class="ilustra"><svg aria-hidden="true"><use href="#i-info"/></svg>Imagens ilustrativas do projeto. O resultado final pode ter variações.</p>
-      </div>
-    </section>
+/* Botão pílula (menu "Quero ser sócio" e botões das seções) */
+.btn-pill {
+  display: inline-flex; align-items: center; justify-content: center; gap: .6em;
+  padding: .85em 1.6em;
+  border-radius: 999px;
+  font: 800 clamp(13px, .92vw, 16px)/1 var(--f-body);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform .25s var(--ease-out), box-shadow .25s var(--ease-out), filter .25s;
+}
+.btn-pill .icon { width: 1.7em; height: 1.7em; }
+.btn-pill:hover { transform: translateY(-2px); filter: brightness(1.06); }
+.btn-pill--whats {
+  color: var(--c-white);
+  background: linear-gradient(180deg, #34d15a 0%, var(--c-green) 55%, var(--c-green-dark) 100%);
+  border: 2px solid rgba(255, 255, 255, .85);
+  box-shadow: 0 10px 24px -8px rgba(15, 138, 50, .8), inset 0 1px 0 rgba(255, 255, 255, .45);
+}
+.btn-pill--whats:hover { box-shadow: 0 16px 30px -10px rgba(15, 138, 50, .9), inset 0 1px 0 rgba(255, 255, 255, .45); }
+.btn-pill--white { color: var(--c-blue-deep); background: var(--c-white); box-shadow: 0 10px 24px -10px rgba(0, 0, 0, .4); }
+.btn-pill--lg { font-size: 15px; padding: 1em 1.8em; }
 
-    <!-- CHALÉS ✏️ texto geral (sem condições definidas) -->
-    <section class="chales" id="chales" aria-labelledby="t-chales">
-      <div class="container chales__grid">
-        <figure class="chales__media">
-          <img class="" src="assets/img/site/chale.jpg" srcset="assets/img/site/chale-m.jpg 760w, assets/img/site/chale.jpg 1400w" sizes="(max-width: 760px) 100vw, 55vw" alt="Chalé em estilo triangular com deck de madeira ao entardecer" loading="lazy" decoding="async">
-        </figure>
-        <div class="chales__text">
-          <p class="eyebrow eyebrow--light">Chalés Acqua Park</p>
-          <h2 class="display display--light" id="t-chales">Seu chalé <span>dentro do resort</span></h2>
-          <p class="chales__lead">Imagine ter o seu cantinho a poucos passos do parque, cercado de natureza. Os chalés do Acqua Park são uma oportunidade para quem quer viver essa experiência de perto.</p>
-          <ul class="chales__uses">
-            <li><svg aria-hidden="true"><use href="#i-key"/></svg><b>Para morar</b><span>Tranquilidade e lazer no dia a dia.</span></li>
-            <li><svg aria-hidden="true"><use href="#i-sun"/></svg><b>Para curtir</b><span>Fins de semana e férias com a família.</span></li>
-            <li><svg aria-hidden="true"><use href="#i-people"/></svg><b>Para alugar</b><span>Uma forma de gerar renda com o seu imóvel.</span></li>
-          </ul>
-          <a class="btn-pill btn-pill--whats btn-pill--lg" href="#" data-whatsapp data-whatsapp-msg="Olá! Vi o site do Acqua Park Resort Jaru e quero saber mais sobre os chalés." target="_blank" rel="noopener">
-            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
-            Quero saber mais sobre os chalés
-          </a>
-          <p class="chales__note">Imagem ilustrativa. Disponibilidade e condições sob consulta.</p>
-        </div>
-      </div>
-    </section>
+/* Os 3 botões grandes da Hero */
+.cta {
+  --cta-top: #3ad85f; --cta-mid: var(--c-green); --cta-bot: var(--c-green-dark); --cta-ring: #9af5ae;
+  position: relative;
+  display: flex; align-items: center; gap: clamp(8px, .75vw, 14px);
+  width: var(--cta-w); height: var(--cta-h);
+  padding: 0 clamp(14px, 1.3vw, 26px) 0 clamp(16px, 1.7vw, 32px);
+  border-radius: 999px;
+  color: var(--c-white);
+  text-decoration: none;
+  background: linear-gradient(180deg, var(--cta-top) 0%, var(--cta-mid) 52%, var(--cta-bot) 100%);
+  border: clamp(2px, .2vw, 3px) solid var(--cta-ring);
+  box-shadow:
+    0 18px 34px -14px rgba(3, 25, 70, .75),
+    inset 0 2px 0 rgba(255, 255, 255, .45),
+    inset 0 -4px 0 rgba(0, 0, 0, .12);
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform .3s var(--ease-out), box-shadow .3s var(--ease-out), filter .3s;
+}
+/* brilho que atravessa o botão no hover */
+.cta::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, .35) 48%, transparent 64%);
+  transform: translateX(-120%);
+  transition: transform .7s var(--ease-out);
+}
+.cta:hover { transform: translateY(-5px); filter: brightness(1.05); box-shadow: 0 26px 40px -16px rgba(3, 25, 70, .85), inset 0 2px 0 rgba(255, 255, 255, .45), inset 0 -4px 0 rgba(0, 0, 0, .12); }
+.cta:hover::after { transform: translateX(120%); }
+.cta:active { transform: translateY(-1px); }
 
-    <!-- O PROJETO / FUTURO DO PARQUE ✏️ lista da primeira etapa (conforme folder) -->
-    <section class="section section--tint" id="o-projeto" aria-labelledby="t-projeto">
-      <div class="palms" aria-hidden="true"></div>
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">O futuro do parque</p>
-          <h2 class="display" id="t-projeto">A obra <span>já começou</span></h2>
-          <p class="lead">Um grande projeto está nascendo em Jaru. Compare como está a obra hoje com o que vem por aí.</p>
-        </div>
-        <!-- ANTES E DEPOIS ✏️ bar molhado: obra hoje × projeto (mesmo lugar) -->
-        <div class="ba-wrap">
-          <h3 class="ba-title">Bar molhado <span>primeira etapa</span></h3>
-          <div class="ba" data-ba>
-            <img class="ba__after" src="assets/img/site/bar-molhado.jpg" srcset="assets/img/site/bar-molhado-m.jpg 760w, assets/img/site/bar-molhado.jpg 1400w" sizes="(max-width: 760px) 100vw, 1100px" alt="Bar molhado: como vai ficar" loading="lazy" decoding="async">
-            <div class="ba__before"><img class="" src="assets/img/site/obra-3.jpg" srcset="assets/img/site/obra-3-m.jpg 760w, assets/img/site/obra-3.jpg 1400w" sizes="(max-width: 760px) 100vw, 1100px" alt="Bar molhado: a obra hoje" loading="lazy" decoding="async"></div>
-            <span class="ba__label ba__label--before">A obra hoje</span>
-            <span class="ba__label ba__label--after">Como vai ficar</span>
-            <span class="ba__handle" aria-hidden="true"><svg><use href="#i-chevron-right"/></svg></span>
-            <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Arraste para comparar a obra do bar molhado com o projeto">
-          </div>
-          <p class="ba-hint"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg>Arraste para comparar</p>
-          <p class="ilustra"><svg aria-hidden="true"><use href="#i-info"/></svg>Imagem do projeto ilustrativa. O resultado final pode ter variações.</p>
-          <!-- FOTOS DA OBRA ✏️ -->
-          <ul class="obra-fotos">
-            <li><img class="" src="assets/img/site/obra-1.jpg" srcset="assets/img/site/obra-1-m.jpg 760w, assets/img/site/obra-1.jpg 1400w" sizes="(max-width: 760px) 100vw, 540px" alt="Obra do Acqua Park em andamento" loading="lazy" decoding="async"><span>Obra em andamento</span></li>
-            <li><img class="" src="assets/img/site/obra-2.jpg" srcset="assets/img/site/obra-2-m.jpg 760w, assets/img/site/obra-2.jpg 1400w" sizes="(max-width: 760px) 100vw, 540px" alt="Obra do Acqua Park em andamento" loading="lazy" decoding="async"><span>Obra em andamento</span></li>
-          </ul>
-        </div>
-        <h3 class="stage-title">O que vem na primeira etapa</h3>
-        <ul class="stage">
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Bar molhado de 1.000 m²</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Piscina adulta de 1.000 m²</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Parque aquático infantil de 1.000 m²</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Tobogã + Kamikaze</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Surf Hill de 4 pistas</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Rampa de 15 metros</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Rampa infantil de 10 metros</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>2 baldes malucos</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Playground infantil</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Brinquedos Pelicano, Sapo e Dinossauro</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Jogo de arco e jogo de cogumelo</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Restaurante climatizado</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Praça de alimentação e lanchonete</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Área de chalés</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Lojas de acessórios para banho</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Bilheteria, portaria, administrativo e banheiros</li>
-        </ul>
-      </div>
-    </section>
+.cta--blue   { --cta-top: #2a7ef5; --cta-mid: #135fe0; --cta-bot: #0a3fb0; --cta-ring: #7fb6ff; }
+.cta--orange { --cta-top: #ffc23d; --cta-mid: #ffa21e; --cta-bot: #f07c00; --cta-ring: #ffe08a; }
 
-    <!-- PERGUNTAS FREQUENTES ✏️ respostas conforme explicação do vendedor -->
-    <section class="section" id="duvidas" aria-labelledby="t-duvidas">
-      <div class="container faq-grid">
-        <div class="faq-side">
-          <p class="eyebrow">Tire suas dúvidas</p>
-          <h2 class="display" id="t-duvidas">Perguntas <span>frequentes</span></h2>
-          <p class="lead">Tudo o que você precisa saber sobre o título de Sócio Fundador Remido.</p>
-          <div class="faq-cta">
-            <img src="assets/img/joca.webp" alt="" width="743" height="1000" loading="lazy">
-            <div>
-              <b>Ficou com alguma dúvida?</b>
-              <a class="btn-pill btn-pill--whats" href="#" data-whatsapp target="_blank" rel="noopener">
-                <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
-                Chamar no WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="faq-list">
-          <details class="faq" open>
-            <summary>O que quer dizer “Sócio Remido”?<span class="faq__icon" aria-hidden="true"></span></summary>
-            <div class="faq__a"><p>Remido quer dizer <strong>isento de taxa de manutenção mensal</strong>. Você garante o seu título e não tem mensalidade para usar o parque.</p></div>
-          </details>
-          <details class="faq">
-            <summary>Quantas pessoas o título cobre?<span class="faq__icon" aria-hidden="true"></span></summary>
-            <div class="faq__a"><p>O título é para <strong>6 pessoas</strong>: o titular e mais 5.</p></div>
-          </details>
-          <details class="faq">
-            <summary>Posso levar convidados?<span class="faq__icon" aria-hidden="true"></span></summary>
-            <div class="faq__a"><p>Sim. Os sócios fundadores podem levar <strong>2 convidados por fim de semana</strong> (no sábado ou no domingo), durante <strong>2 anos</strong>.</p></div>
-          </details>
-          <details class="faq">
-            <summary>Quantos títulos de fundador existem?<span class="faq__icon" aria-hidden="true"></span></summary>
-            <div class="faq__a"><p>São apenas os <strong>300 primeiros contratos</strong>, do primeiro lançamento do parque.</p></div>
-          </details>
-          <details class="faq">
-            <summary>Posso vender ou passar o título para os meus filhos?<span class="faq__icon" aria-hidden="true"></span></summary>
-            <div class="faq__a"><p>Pode. O título é um <strong>patrimônio seu</strong>. A transferência custa <strong>20% do salário mínimo</strong> vigente.</p></div>
-          </details>
-          <details class="faq">
-            <summary>Quanto custa e como posso pagar?<span class="faq__icon" aria-hidden="true"></span></summary>
-            <div class="faq__a"><p>Os valores e as formas de pagamento são informados pela nossa equipe. <a href="#" data-whatsapp target="_blank" rel="noopener">Fale com um vendedor no WhatsApp</a>.</p></div>
-          </details>
-          <details class="faq">
-            <summary>Quando o parque fica pronto?<span class="faq__icon" aria-hidden="true"></span></summary>
-            <div class="faq__a"><p>A obra já está em andamento. O vendedor pode passar as informações atualizadas sobre as etapas da construção.</p></div>
-          </details>
-        </div>
-      </div>
-    </section>
+.cta__icon { width: clamp(32px, 3.1vw, 58px); height: clamp(32px, 3.1vw, 58px); flex: none; filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .18)); }
+.cta__text {
+  flex: 1; min-width: 0;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  line-height: 1; text-transform: uppercase;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, .2);
+}
+.cta__text small { font-weight: 700; font-size: clamp(11px, .98vw, 18px); letter-spacing: 0; margin-bottom: .22em; white-space: nowrap; }
+.cta__text b { font-weight: 900; font-size: clamp(16px, 1.56vw, 29px); letter-spacing: -.015em; white-space: nowrap; }
+.cta__text--stack b + b { margin-top: .08em; }
+.cta__end { width: clamp(20px, 1.8vw, 32px); height: clamp(20px, 1.8vw, 32px); flex: none; transition: transform .3s var(--ease-out); }
+.cta__end--chat { width: clamp(18px, 1.5vw, 28px); height: clamp(18px, 1.5vw, 28px); align-self: flex-end; margin-bottom: 22%; }
+.cta:hover .cta__end:not(.cta__end--chat) { transform: translateX(4px); }
 
-    <!-- QUEM JÁ É SÓCIO ✏️ fotos em assets/img/site/socio-*.jpg -->
-    <section class="section section--tint" id="quem-ja-e-socio" aria-labelledby="t-socios">
-      <div class="palms" aria-hidden="true"></div>
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Família Acqua Park</p>
-          <h2 class="display" id="t-socios">Quem já é <span>sócio</span></h2>
-          <p class="lead">Eles já garantiram o título de Sócio Fundador Remido. Faltam poucos para fechar os 300.</p>
-        </div>
-        <div class="carousel carousel--socios" data-carousel data-autoplay>
-          <button class="carousel__arrow carousel__arrow--prev" type="button" data-prev aria-label="Fotos anteriores"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
-          <ul class="soc-track" data-track>
-            <li class="soc"><img class="" src="assets/img/site/socio-1.jpg" srcset="assets/img/site/socio-1-m.jpg 760w, assets/img/site/socio-1.jpg 1400w" sizes="(max-width: 760px) 78vw, 360px" alt="Sócio fundador recebendo o certificado do título" loading="lazy" decoding="async"><span class="soc__tag"><svg aria-hidden="true"><use href="#i-check"/></svg>Sócio fundador</span></li>
-            <li class="soc"><img class="" src="assets/img/site/socio-2.jpg" srcset="assets/img/site/socio-2-m.jpg 760w, assets/img/site/socio-2.jpg 1400w" sizes="(max-width: 760px) 78vw, 360px" alt="Sócio fundador recebendo o certificado do título" loading="lazy" decoding="async"><span class="soc__tag"><svg aria-hidden="true"><use href="#i-check"/></svg>Sócio fundador</span></li>
-            <li class="soc"><img class="" src="assets/img/site/socio-3.jpg" srcset="assets/img/site/socio-3-m.jpg 760w, assets/img/site/socio-3.jpg 1400w" sizes="(max-width: 760px) 78vw, 360px" alt="Sócio fundador recebendo o certificado do título" loading="lazy" decoding="async"><span class="soc__tag"><svg aria-hidden="true"><use href="#i-check"/></svg>Sócio fundador</span></li>
-            <li class="soc"><img class="" src="assets/img/site/socio-4.jpg" srcset="assets/img/site/socio-4-m.jpg 760w, assets/img/site/socio-4.jpg 1400w" sizes="(max-width: 760px) 78vw, 360px" alt="Sócio fundador recebendo o certificado do título" loading="lazy" decoding="async"><span class="soc__tag"><svg aria-hidden="true"><use href="#i-check"/></svg>Sócio fundador</span></li>
-            <li class="soc"><img class="" src="assets/img/site/socio-5.jpg" srcset="assets/img/site/socio-5-m.jpg 760w, assets/img/site/socio-5.jpg 1400w" sizes="(max-width: 760px) 78vw, 360px" alt="Sócio fundador recebendo o certificado do título" loading="lazy" decoding="async"><span class="soc__tag"><svg aria-hidden="true"><use href="#i-check"/></svg>Sócio fundador</span></li>
-            <li class="soc"><img class="" src="assets/img/site/socio-6.jpg" srcset="assets/img/site/socio-6-m.jpg 760w, assets/img/site/socio-6.jpg 1400w" sizes="(max-width: 760px) 78vw, 360px" alt="Sócio fundador recebendo o certificado do título" loading="lazy" decoding="async"><span class="soc__tag"><svg aria-hidden="true"><use href="#i-check"/></svg>Sócio fundador</span></li>
-          </ul>
-          <button class="carousel__arrow carousel__arrow--next" type="button" data-next aria-label="Próximas fotos"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
-          <div class="carousel__nav" aria-hidden="true"><span class="carousel__dots" data-dots></span></div>
-        </div>
-      </div>
-    </section>
 
-    <!-- CTA FINAL / CONTATO -->
-    <section class="final-cta" id="contato" aria-labelledby="t-contato">
-      <div class="container final-cta__inner">
-        <h2 class="display display--light" id="t-contato">Faça Parte <span>desde o começo</span></h2>
-        <p>Fale agora com um vendedor e garanta o seu título de Sócio Fundador Remido.</p>
-        <a class="cta cta--green cta--solo" href="#" data-whatsapp target="_blank" rel="noopener">
-          <svg class="cta__icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
-          <span class="cta__text"><small>Fale com um</small><b>Vendedor</b></span>
-          <svg class="cta__end cta__end--chat" aria-hidden="true"><use href="#i-chat"/></svg>
-        </a>
-      </div>
-    </section>
-  </main>
+/* 5. CABEÇALHO E MENU ------------------------------------------------------- */
+.site-header {
+  position: fixed; inset: 0 0 auto; z-index: 50;
+  padding-top: calc(var(--header-pad) + env(safe-area-inset-top, 0px));
+  padding-bottom: var(--header-pad);
+  transition: background-color .35s, box-shadow .35s, padding .35s, backdrop-filter .35s;
+}
+.site-header__inner {
+  display: flex; align-items: flex-start; gap: clamp(16px, 2.5vw, 48px);
+  max-width: none;
+  padding-left: max(20px, 6vw, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, 6vw, env(safe-area-inset-right, 0px));
+}
+/* no desktop o menu fica alinhado ao topo da logo, como na referência */
+.main-nav, .header-cta { margin-top: clamp(4px, 1.6vw, 30px); }
+.site-header.is-scrolled .site-header__inner { align-items: center; }
+.site-header.is-scrolled .main-nav, .site-header.is-scrolled .header-cta { margin-top: 0; }
 
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <img class="site-footer__logo" src="assets/img/logo-acqua-park.png" alt="Acqua Park Resort Jaru" width="720" height="467" loading="lazy">
-      <nav aria-label="Rodapé">
-        <a href="index.html#socio-remido">Sócio Remido</a>
-        <a href="o-parque.html">O Parque</a>
-        <a href="index.html#o-projeto">O Projeto</a>
-        <a href="index.html#contato">Contato</a>
-      </nav>
-      <p>© <span data-year>2026</span> Acqua Park Resort Jaru · Jaru, Rondônia</p>
-      <p class="site-footer__note">As imagens do projeto são ilustrativas e podem ter variações no resultado final.</p>
-    </div>
-  </footer>
+.brand { flex: none; display: block; line-height: 0; }
+.brand__logo {
+  width: var(--logo-w); height: auto;
+  filter: drop-shadow(0 6px 12px rgba(0, 25, 80, .35));
+  transition: width .35s var(--ease-out);
+}
 
-  <!-- BOTÃO FLUTUANTE DO WHATSAPP (aparece em todas as telas, canto inferior direito) -->
-  <a class="whats-fab" href="#" data-whatsapp target="_blank" rel="noopener" aria-label="Falar com um vendedor no WhatsApp">
-    <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
-  </a>
+.main-nav { flex: 1; display: flex; justify-content: center; }
+.main-nav__list { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: clamp(14px, 2.6vw, 50px); }
+.main-nav__link {
+  position: relative; display: block; padding: 10px 2px 12px;
+  font: 700 clamp(12px, .9vw, 15.5px)/1 var(--f-body);
+  letter-spacing: .02em; text-transform: uppercase; text-decoration: none;
+  color: var(--c-white);
+  text-shadow: 0 1px 6px rgba(0, 30, 90, .55);
+  white-space: nowrap;
+  transition: color .2s;
+}
+/* sublinhado do item ativo / hover */
+.main-nav__link::after {
+  content: ""; position: absolute; left: -10%; right: -10%; bottom: 0; height: 3px; border-radius: 3px;
+  background: var(--c-white);
+  transform: scaleX(0); transform-origin: center; transition: transform .3s var(--ease-out);
+}
+.main-nav__link::before { /* pequeno triângulo amarelo sob o item ativo */
+  content: ""; position: absolute; left: 50%; bottom: -9px; width: 0; height: 0;
+  border: 5px solid transparent; border-top-color: var(--c-gold);
+  transform: translateX(-50%); opacity: 0; transition: opacity .3s;
+}
+.main-nav__link:hover::after, .main-nav__link.is-active::after { transform: scaleX(1); }
+.main-nav__link.is-active::before { opacity: 1; }
+.main-nav__link:hover { color: #e9f4ff; }
+.main-nav__cta { display: none; }
 
-  <script src="js/config.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/descida.js"></script>
-  <script src="js/galeria.js"></script>
-</body>
-</html>
+.header-cta { flex: none; padding: .95em 1.7em; font-size: clamp(13px, 1vw, 17px); }
+
+.nav-toggle { display: none; }
+
+/* cabeçalho ao rolar a página */
+.site-header.is-scrolled {
+  --header-pad: 10px;
+  background: rgba(4, 52, 140, .95);   /* sem desfoque: deixa a rolagem bem mais leve */
+  box-shadow: 0 10px 30px -18px rgba(0, 0, 0, .6);
+}
+.site-header.is-scrolled .brand__logo { width: clamp(96px, 7vw, 130px); }
+
+
+/* 6. HERO (desktop) --------------------------------------------------------- */
+.hero {
+  position: relative;
+  min-height: max(100vh, 640px);
+  min-height: max(100svh, 640px);
+  color: var(--c-white);
+  background: var(--c-blue);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* imagem limpa com o Joca */
+.hero__bg {
+  position: absolute; inset: 0; z-index: -2;
+  background-image: var(--hero-bg);
+  background-size: cover;
+  background-position: 62% center;
+  background-repeat: no-repeat;
+  animation: bg-in 1.8s var(--ease-out) both;
+}
+
+/* sombra suave à esquerda e no topo para os textos ficarem legíveis */
+.hero__shade {
+  position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(0, 38, 110, .42) 0%, rgba(0, 38, 110, 0) 22%),
+    linear-gradient(90deg, rgba(0, 52, 150, .62) 0%, rgba(0, 62, 165, .38) 30%, rgba(0, 70, 170, 0) 54%),
+    linear-gradient(0deg, rgba(0, 60, 140, .28) 0%, rgba(0, 60, 140, 0) 26%);
+}
+
+.hero__content {
+  position: relative;
+  max-width: none;
+  min-height: inherit;
+  display: flex; flex-direction: column; justify-content: space-between;
+  gap: clamp(28px, 4vh, 60px);
+  padding-top: calc(var(--logo-w) * .68 + var(--header-pad) * 2 + clamp(10px, 2.2vw, 44px));
+  padding-bottom: clamp(78px, 6.3vw, 118px);
+  padding-left: max(20px, 5.9vw, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, 4vw, env(safe-area-inset-right, 0px));
+}
+
+.hero__copy { max-width: 48vw; }
+
+.hero__eyebrow {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 14px;
+  font: 500 clamp(13px, 1.2vw, 22px)/1.2 var(--f-body);
+  letter-spacing: .06em; text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0, 30, 90, .5);
+}
+.hero__eyebrow::after { /* pequena onda sob o texto */
+  content: ""; position: absolute; left: -2.6vw; bottom: 0; width: clamp(48px, 4.6vw, 84px); height: 8px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 8'%3E%3Cpath d='M1 4c6.5-4 13-4 19.5 0S33.5 8 40 4s13-4 19.5 0S72.5 8 79 4' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat left center / contain;
+  opacity: .9;
+}
+
+/* Headline: "Faça Parte" na Qimberly (fonte manuscrita — fica melhor com
+   iniciais maiúsculas) + "DESDE O COMEÇO" em Montserrat Black, como na referência */
+.hero__title {
+  position: relative;
+  display: inline-block;
+  margin-top: clamp(6px, 1vw, 20px);
+  font-weight: 400;
+  line-height: 1;
+}
+.hero__title-line { display: block; white-space: nowrap; }
+.hero__title-line--white {
+  font-family: var(--f-display);
+  font-size: var(--hero-title);
+  line-height: .95;
+  margin-left: -.04em;
+  color: var(--c-white);
+  text-shadow:
+    0 .015em 0 #e3f1ff,
+    0 .03em 0 #4f9df5,
+    0 .045em 0 #1e6fdc,
+    0 .06em 0 #1459c4,
+    0 .075em 0 #0d47a6,
+    0 .14em .14em rgba(0, 25, 80, .45);
+}
+.hero__title-line--gold {
+  margin-top: .08em;
+  font-family: var(--f-body);
+  font-weight: 900;
+  font-size: var(--hero-title-2);
+  line-height: 1;
+  letter-spacing: -.015em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  text-shadow:
+    0 .02em 0 #ffe36a,
+    0 .04em 0 #f6b400,
+    0 .06em 0 #ea9200,
+    0 .08em 0 #cf7200,
+    0 .15em .16em rgba(70, 30, 0, .4);
+}
+
+/* gotas d'água decorativas ao redor da headline */
+.drop { position: absolute; color: #bfe6ff; filter: drop-shadow(0 2px 3px rgba(0, 40, 120, .35)); }
+.drop--1 { width: .14em; height: .19em; left: -.42em; top: .55em; font-size: var(--hero-title); transform: rotate(-38deg); }
+.drop--2 { width: .08em; height: .11em; left: -.24em; top: .28em; font-size: var(--hero-title); transform: rotate(-20deg); opacity: .85; }
+.drop--3 { width: .07em; height: .1em; left: 2.7em; top: -.12em; font-size: var(--hero-title); transform: rotate(15deg); opacity: .8; }
+.drop--4 { width: .1em; height: .13em; right: -.2em; bottom: .25em; font-size: var(--hero-title-2); transform: rotate(40deg); opacity: .8; }
+
+.hero__kicker {
+  margin-top: clamp(14px, 2.2vw, 40px);
+  font: 500 var(--hero-kicker)/1.15 var(--f-body);
+  letter-spacing: .04em; text-transform: uppercase;
+  text-shadow: 0 2px 10px rgba(0, 30, 90, .55);
+}
+.hero__kicker strong { font-weight: 800; }
+
+.hero__lead {
+  margin-top: clamp(8px, .9vw, 16px);
+  max-width: 31em;
+  font-size: var(--hero-lead);
+  line-height: 1.45;
+  text-shadow: 0 1px 8px rgba(0, 30, 90, .6);
+}
+.hero__lead strong { font-weight: 800; }
+
+.hero__ctas {
+  display: flex; justify-content: center; gap: clamp(12px, 1.15vw, 22px);
+  margin-left: calc(-1 * max(20px, 5.9vw) + max(20px, 4vw)); /* centraliza na tela inteira */
+}
+
+/* recado "Joca te espera!" */
+.hero__note {
+  position: absolute; right: 3.6%; top: 35%;
+  font: 400 clamp(24px, 2.55vw, 48px)/.85 var(--f-display);
+  color: var(--c-white);
+  text-align: center;
+  transform: rotate(-11deg);
+  text-shadow: 0 2px 0 rgba(10, 60, 130, .55), 0 4px 14px rgba(0, 30, 80, .45);
+  animation: note-in .9s 1.5s var(--ease-out) both;
+}
+.hero__note span {
+  position: relative; display: inline-block; padding-bottom: .12em;
+  background: linear-gradient(var(--c-gold), var(--c-gold)) no-repeat 20% 100% / 70% .09em;
+}
+.hero__note-sparks { /* tracinhos de "brilho" */
+  position: absolute; right: -.55em; top: -.55em; width: .8em; height: .8em;
+  background:
+    linear-gradient(var(--c-gold), var(--c-gold)) no-repeat 50% 0 / .08em .32em,
+    linear-gradient(var(--c-gold), var(--c-gold)) no-repeat 100% 50% / .32em .08em;
+  transform: rotate(20deg);
+}
+
+/* onda branca + botão de rolar */
+.hero__wave { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: clamp(26px, 4vw, 64px); fill: var(--c-white); pointer-events: none; }
+.scroll-down {
+  position: absolute; left: 50%; bottom: clamp(8px, 1.1vw, 20px); z-index: 2;
+  display: grid; place-items: center;
+  width: clamp(40px, 3vw, 54px); height: clamp(40px, 3vw, 54px);
+  margin-left: calc(clamp(40px, 3vw, 54px) / -2);
+  border-radius: 50%;
+  background: var(--c-white); color: var(--c-blue);
+  box-shadow: 0 8px 20px -6px rgba(0, 40, 110, .45);
+  transition: transform .25s var(--ease-out), box-shadow .25s;
+}
+.scroll-down svg { width: 55%; height: 55%; animation: nudge 2.2s 2.4s ease-in-out infinite; }
+.scroll-down:hover { transform: translateY(3px); box-shadow: 0 12px 24px -6px rgba(0, 40, 110, .55); }
+
+
+/* 7. ANIMAÇÕES DE ENTRADA (discretas) --------------------------------------- */
+@keyframes bg-in { from { transform: scale(1.06); opacity: .6; } to { transform: none; opacity: 1; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+@keyframes drop-in { from { opacity: 0; transform: translateY(-14px); } to { opacity: 1; transform: none; } }
+@keyframes note-in { from { opacity: 0; transform: rotate(-11deg) scale(.85); } to { opacity: 1; transform: rotate(-11deg); } }
+@keyframes nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
+
+.brand { animation: fade-in 1s .1s var(--ease-out) both; }
+.main-nav__list > li, .header-cta { animation: drop-in .7s var(--ease-out) both; }
+.main-nav__list > li:nth-child(1) { animation-delay: .2s; }
+.main-nav__list > li:nth-child(2) { animation-delay: .26s; }
+.main-nav__list > li:nth-child(3) { animation-delay: .32s; }
+.main-nav__list > li:nth-child(4) { animation-delay: .38s; }
+.main-nav__list > li:nth-child(5) { animation-delay: .44s; }
+.main-nav__list > li:nth-child(6) { animation-delay: .5s; }
+.header-cta { animation-delay: .56s; }
+[data-reveal] { animation: fade-in .9s var(--d, 0s) var(--ease-out) both; }
+[data-reveal="up"] { animation-name: rise; }
+
+
+/* 8. SEÇÕES DA PÁGINA INICIAL ---------------------------------------------- */
+.section { padding-block: clamp(64px, 8vw, 120px); background: var(--c-white); scroll-margin-top: 70px; }
+.section--tint { background: var(--c-paper); }
+.final-cta, .page-hero + .section { scroll-margin-top: 70px; }
+
+.section-head { max-width: 760px; margin: 0 auto clamp(32px, 4vw, 56px); text-align: center; }
+.section-head .lead { margin-inline: auto; }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  margin-bottom: 12px;
+  font: 700 13px/1 var(--f-body); letter-spacing: .16em; text-transform: uppercase;
+  color: var(--c-blue);
+}
+.eyebrow::before {
+  content: ""; width: 34px; height: 8px; flex: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 8'%3E%3Cpath d='M1 4c6.5-4 13-4 19.5 0S33.5 8 40 4s13-4 19.5 0S72.5 8 79 4' fill='none' stroke='%232dc9f9' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+.eyebrow--light { color: #d9ecff; }
+
+/* Títulos grandes das seções — Qimberly */
+.display {
+  font-family: var(--f-display); font-weight: 400;
+  font-size: clamp(44px, 5.6vw, 80px); line-height: 1.05;
+  color: var(--c-navy);
+  text-wrap: balance;
+}
+.display span { color: var(--c-blue); }
+/* parte em destaque dos títulos das seções: Montserrat Black em caixa alta */
+.display span { display: block; margin-top: .12em; font: 900 .52em/1 var(--f-body); letter-spacing: -.01em; text-transform: uppercase; }
+.display--light { color: var(--c-white); text-shadow: 0 .05em 0 rgba(4, 50, 140, .7), 0 .12em .2em rgba(0, 20, 70, .35); }
+.display--light span { color: var(--c-gold); }
+
+.lead { margin-top: 18px; max-width: 34em; font-size: clamp(16px, 1.25vw, 19px); line-height: 1.6; }
+
+/* aviso de conteúdo pendente */
+.pending {
+  margin-top: 24px; padding: 16px 20px;
+  border: 2px dashed var(--c-line); border-radius: 16px;
+  background: rgba(45, 201, 249, .06);
+  font-size: 14.5px; line-height: 1.55; color: #4a6390;
+}
+.pending strong { display: block; margin-bottom: 4px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--c-blue); }
+
+.split { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 5vw, 80px); align-items: center; }
+.split__text { min-width: 0; }
+.split__text .btn-pill { margin-top: 28px; }
+.photo { margin: 0; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); }
+.photo img { width: 100%; height: 100%; object-fit: cover; }
+.photo--joca { aspect-ratio: 4 / 4.4; max-width: 100%; }
+.photo--joca img { object-position: 82% 52%; }
+
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2vw, 28px); }
+.step {
+  position: relative; padding: 30px 28px 32px;
+  background: var(--c-white); border-radius: 22px;
+  box-shadow: 0 18px 40px -26px rgba(7, 31, 77, .35);
+}
+.step__n {
+  display: grid; place-items: center; width: 54px; height: 54px; margin-bottom: 18px;
+  border-radius: 50%;
+  font: 900 24px/1 var(--f-body); color: var(--c-white);
+  background: linear-gradient(180deg, var(--c-blue-soft), var(--c-blue-deep));
+  box-shadow: 0 8px 16px -8px rgba(10, 71, 189, .8);
+}
+.step:nth-child(2) .step__n { background: linear-gradient(180deg, #ffc23d, #f07c00); box-shadow: 0 8px 16px -8px rgba(240, 124, 0, .8); }
+.step:nth-child(3) .step__n { background: linear-gradient(180deg, #3ad85f, var(--c-green-dark)); box-shadow: 0 8px 16px -8px rgba(15, 138, 50, .8); }
+.step h3 { font: 800 19px/1.25 var(--f-body); color: var(--c-navy); margin-bottom: 8px; }
+.step p { font-size: 15.5px; }
+
+.feature { position: relative; }
+.feature__img { width: 100%; height: auto; aspect-ratio: 21 / 9; object-fit: cover; object-position: 60% 45%; border-radius: 32px; box-shadow: var(--shadow-lg); }
+.feature__box {
+  position: absolute; left: clamp(36px, 4vw, 64px); top: 50%; transform: translateY(-50%);
+  max-width: 440px; padding: clamp(24px, 3vw, 44px);
+  border-radius: 26px; color: var(--c-white);
+  background: linear-gradient(160deg, rgba(10, 80, 200, .9), rgba(7, 31, 77, .88));
+  box-shadow: var(--shadow-lg);
+}
+.feature__box p:not(.eyebrow) { margin: 14px 0 24px; font-size: 16.5px; }
+
+/* componente de vídeo */
+.video {
+  position: relative; max-width: 1080px; margin: 0 auto;
+  aspect-ratio: 16 / 9; border-radius: var(--radius-lg); overflow: hidden;
+  background: var(--c-navy); box-shadow: var(--shadow-lg);
+}
+.video__cover { all: unset; position: absolute; inset: 0; cursor: pointer; display: grid; place-items: center; }
+.video__cover:focus-visible { outline: 3px solid var(--c-gold); outline-offset: -6px; }
+.video__poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease-out); }
+.video__cover::before { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(7, 31, 77, .6), rgba(7, 31, 77, .05) 55%); z-index: 1; }
+.video__cover:hover .video__poster { transform: scale(1.03); }
+.video__play {
+  position: relative; z-index: 2; display: grid; place-items: center;
+  width: clamp(70px, 8vw, 104px); height: clamp(70px, 8vw, 104px); border-radius: 50%;
+  background: var(--c-white); color: var(--c-blue-deep);
+  transition: transform .3s var(--ease-out);
+}
+.video__play::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 3px solid rgba(255, 255, 255, .7); animation: ring-pulse 2.4s ease-out infinite; }
+.video__play svg { width: 42%; height: 42%; margin-left: 6%; }
+.video__cover:hover .video__play { transform: scale(1.07); }
+.video__label { position: absolute; z-index: 2; left: clamp(18px, 3vw, 36px); bottom: clamp(16px, 2.6vw, 30px); font: 800 clamp(13px, 1.2vw, 17px)/1.2 var(--f-body); color: var(--c-white); letter-spacing: .06em; text-transform: uppercase; }
+.video video, .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #000; }
+.video__hint { margin-top: 14px; text-align: center; font-size: 13.5px; color: #6a82ab; }
+
+.members { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(12px, 2vw, 24px); }
+.members__slot {
+  aspect-ratio: 1; display: grid; place-content: center; justify-items: center; gap: 10px;
+  border: 2px dashed var(--c-line); border-radius: 22px; background: var(--c-white);
+  font-size: 13px; font-weight: 600; color: #7d93b8;
+}
+.members__slot svg { width: 44px; height: 44px; color: #b5d3f2; }
+
+.final-cta {
+  position: relative; overflow: hidden; isolation: isolate;
+  padding-block: clamp(80px, 10vw, 140px);
+  text-align: center; color: var(--c-white);
+  background: linear-gradient(180deg, var(--c-blue) 0%, #0a58c9 55%, #083b98 100%);
+}
+.final-cta::before { /* reflexos de água */
+  content: ""; position: absolute; inset: 0; z-index: -1; opacity: .5;
+  background:
+    radial-gradient(60% 50% at 15% 110%, rgba(45, 201, 249, .55), transparent 70%),
+    radial-gradient(50% 45% at 90% -10%, rgba(45, 201, 249, .4), transparent 70%);
+}
+.final-cta__inner { display: flex; flex-direction: column; align-items: center; gap: 18px; }
+.final-cta p { max-width: 34em; font-size: clamp(16px, 1.3vw, 19px); opacity: .95; }
+.cta--solo { margin-top: 14px; }
+
+
+/* 9. PÁGINA "O PARQUE" ------------------------------------------------------ */
+.page-hero {
+  position: relative; isolation: isolate; overflow: hidden;
+  min-height: clamp(460px, 68vh, 720px);
+  display: flex; align-items: flex-end;
+  padding-top: 140px; padding-bottom: clamp(70px, 7vw, 110px);
+  color: var(--c-white); background: var(--c-blue);
+}
+.page-hero .hero__bg { background-position: 70% 50%; }
+.page-hero .hero__shade { background: linear-gradient(90deg, rgba(0, 45, 140, .78) 0%, rgba(0, 60, 160, .45) 45%, rgba(0, 60, 160, .05) 75%), linear-gradient(180deg, rgba(0, 38, 110, .45), rgba(0, 38, 110, 0) 30%); }
+.page-hero__title { font-size: clamp(64px, 9vw, 150px); }
+.page-hero__title .hero__title-line--white { font-size: 1em; }
+.page-hero__title .hero__title-line--gold { font-size: .36em; margin-top: .14em; }
+.page-hero p:not(.hero__eyebrow) { margin-top: 18px; max-width: 30em; font-size: clamp(16px, 1.3vw, 20px); text-shadow: 0 1px 8px rgba(0, 30, 90, .6); }
+
+.park-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 2vw, 26px); }
+.park-card { padding: 28px; border-radius: 22px; background: var(--c-white); box-shadow: 0 18px 40px -26px rgba(7, 31, 77, .35); }
+.park-card h3 { font: 800 18px/1.3 var(--f-body); color: var(--c-navy); margin-bottom: 8px; }
+.park-card p { font-size: 15px; color: #4a6390; }
+.park-card__icon { width: 48px; height: 48px; margin-bottom: 16px; padding: 10px; border-radius: 14px; color: var(--c-white); background: linear-gradient(180deg, var(--c-blue-soft), var(--c-blue-deep)); }
+
+
+/* 10. RODAPÉ ---------------------------------------------------------------- */
+.site-footer { padding-block: 48px calc(36px + env(safe-area-inset-bottom, 0px)); background: var(--c-navy); color: #b9cdee; font-size: 14px; }
+.site-footer__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; }
+.site-footer__logo { width: 120px; height: auto; }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 8px 26px; }
+.site-footer a { text-decoration: none; font-weight: 600; color: var(--c-white); }
+.site-footer a:hover { color: var(--c-gold); }
+
+
+/* 11. TABLET / CELULAR --------------------------------------------------------
+   Menu vira hamburger até 1180px. */
+@media (max-width: 1180px) {
+  :root { --logo-w: clamp(118px, 15vw, 170px); }
+  .nav-toggle {
+    display: grid; place-content: center; gap: 5px;
+    width: 48px; height: 48px; margin-left: auto; flex: none;
+    border: 0; border-radius: 14px; cursor: pointer;
+    background: rgba(255, 255, 255, .16);
+    -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+    position: relative; z-index: 60;
+  }
+  .nav-toggle span { display: block; width: 22px; height: 2.5px; border-radius: 2px; background: var(--c-white); transition: transform .3s var(--ease-out), opacity .2s; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+  .header-cta { margin-left: auto; }
+  .site-header__inner { align-items: center; padding-left: max(16px, 3vw, env(safe-area-inset-left, 0px)); padding-right: max(16px, 3vw, env(safe-area-inset-right, 0px)); }
+  .main-nav, .header-cta { margin-top: 0; }
+  .header-cta + .nav-toggle { margin-left: 0; }
+
+  .main-nav {
+    position: fixed; top: 0; right: 0; bottom: 0; z-index: 55;
+    width: min(86vw, 380px);
+    flex-direction: column; justify-content: flex-start; gap: 28px;
+    padding: calc(96px + env(safe-area-inset-top, 0px)) max(28px, env(safe-area-inset-right, 0px)) calc(32px + env(safe-area-inset-bottom, 0px)) 28px;
+    background: linear-gradient(180deg, #0a58c9 0%, var(--c-navy) 100%);
+    box-shadow: -20px 0 50px -20px rgba(0, 0, 0, .5);
+    transform: translateX(105%);
+    visibility: hidden;
+    transition: transform .45s var(--ease-out), visibility 0s .45s;
+    overflow-y: auto;
+  }
+  .main-nav.is-open { transform: none; visibility: visible; transition: transform .45s var(--ease-out), visibility 0s; }
+  .main-nav__list { flex-direction: column; align-items: stretch; gap: 0; }
+  .main-nav__list > li { animation: none; border-bottom: 1px solid rgba(255, 255, 255, .12); }
+  .main-nav__link { padding: 18px 4px; font-size: 16px; text-shadow: none; }
+  .main-nav__link::after { left: 0; right: auto; width: 36px; bottom: 10px; height: 3px; transform-origin: left; background: var(--c-gold); }
+  .main-nav__link::before { display: none; }
+  .main-nav__cta { display: inline-flex; align-self: stretch; padding: 1.1em 1.4em; font-size: 15px; }
+
+  .nav-backdrop { position: fixed; inset: 0; z-index: 54; background: rgba(3, 20, 55, .5); opacity: 0; visibility: hidden; transition: opacity .35s, visibility 0s .35s; }
+  .nav-open .nav-backdrop { opacity: 1; visibility: visible; transition: opacity .35s; }
+  .nav-open { overflow: hidden; }
+}
+
+/* Notebook / tablet deitado: tudo um pouco mais compacto, ainda na composição do desktop */
+@media (max-width: 1180px) and (orientation: landscape), (min-width: 761px) and (max-width: 1180px) and (min-aspect-ratio: 1/1) {
+  .hero__copy { max-width: 56vw; }
+  .hero__bg { background-position: 70% center; }
+  :root { --cta-w: clamp(220px, 28vw, 300px); --cta-h: clamp(62px, 7.4vw, 86px); }
+  .hero__ctas { flex-wrap: wrap; }
+  .hero__note { display: none; }
+}
+
+/* ===== CELULAR e TABLET EM PÉ: composição própria =====
+   Ordem: textos no céu → cena com o Joca → os 3 botões empilhados. */
+@media (max-width: 760px), (max-width: 1180px) and (orientation: portrait) and (max-aspect-ratio: 1/1) {
+  .header-cta { display: none; }
+  .nav-toggle, .header-cta + .nav-toggle { margin-left: auto; }
+  :root { --logo-w: clamp(104px, 27vw, 160px); --header-pad: 12px; }
+  .site-header.is-scrolled .brand__logo { width: 92px; }
+
+  .hero {
+    display: grid; grid-template-columns: 100%;
+    min-height: 0;
+    /* céu no topo → água embaixo, nas cores da própria imagem */
+    background: linear-gradient(180deg, #0062cf 0%, #0a76e2 32%, #0b86ee 55%, #1aa6ee 78%, #26b8f3 100%);
+    padding-bottom: 70px;
+  }
+  .hero__shade { display: none; }
+  .hero__content { display: contents; }
+
+  .hero__copy {
+    grid-row: 1;
+    width: 100%; min-width: 0; max-width: 640px; margin-inline: auto;
+    padding-top: calc(var(--logo-w) * .68 + var(--header-pad) * 2 + env(safe-area-inset-top, 0px) + 18px);
+    padding-left: max(20px, env(safe-area-inset-left, 0px));
+    padding-right: max(20px, env(safe-area-inset-right, 0px));
+    text-align: center;
+    position: relative; z-index: 2;
+  }
+  .hero__eyebrow { font-size: clamp(11px, 3.1vw, 16px); letter-spacing: .05em; padding-bottom: 12px; }
+  .hero__eyebrow::after { left: 50%; transform: translateX(-50%); }
+  .hero__title { margin-top: 14px; margin-left: 0; }
+  :root {
+    --hero-title:   clamp(58px, 19vw, 120px);
+    --hero-title-2: clamp(26px, 8.6vw, 54px);
+    --hero-kicker:  clamp(15px, 4.4vw, 24px);
+    --hero-lead:    clamp(14.5px, 3.9vw, 18px);
+  }
+  .drop--1 { left: -.2em; top: .95em; }
+  .drop--2 { left: -.02em; top: -.02em; }
+  .drop--3 { left: auto; right: .05em; top: -.18em; }
+  .drop--4 { right: -.05em; bottom: -.1em; }
+  .hero__kicker { margin-top: 16px; letter-spacing: .02em; }
+  .hero__lead { margin: 8px auto 0; max-width: 26em; }
+
+  /* cena com o Joca — mesma imagem, background-size: cover */
+  .hero__bg {
+    grid-row: 2;
+    position: relative; inset: auto; z-index: 1;
+    height: clamp(330px, 112vw, 640px);
+    margin-top: -48px;
+    background-position: 93% 52%;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 16%, #000 86%, transparent 100%);
+            mask-image: linear-gradient(180deg, transparent 0%, #000 16%, #000 86%, transparent 100%);
+  }
+  .hero__note { display: block; right: 5%; top: 17%; font-size: clamp(24px, 7vw, 40px); }
+
+  .hero__ctas {
+    grid-row: 3;
+    position: relative; z-index: 2;
+    flex-direction: column; align-items: center; gap: 12px;
+    margin: -64px 0 0;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .cta { width: 100%; max-width: 440px; height: 66px; padding: 0 22px 0 24px; }
+  .cta__icon { width: 38px; height: 38px; }
+  .cta__text small { font-size: 12.5px; }
+  .cta__text b { font-size: 20px; }
+  .cta__end { width: 22px; height: 22px; }
+  .cta__end--chat { width: 20px; height: 20px; margin-bottom: 0; align-self: center; }
+  .cta--solo { width: 100%; }
+
+  .scroll-down { width: 42px; height: 42px; margin-left: -21px; bottom: 12px; }
+  .hero__wave { height: 34px; }
+
+  /* seções */
+  .split { grid-template-columns: 1fr; }
+  .photo--joca { aspect-ratio: 4 / 3.4; }
+  .steps { grid-template-columns: 1fr; }
+  .feature__img { aspect-ratio: 4 / 3; border-radius: 24px; }
+  .feature__box { position: relative; left: auto; top: auto; transform: none; max-width: none; margin: -60px 12px 0; }
+  .members { grid-template-columns: repeat(2, 1fr); }
+  .park-grid { grid-template-columns: 1fr; }
+  .page-hero { min-height: 520px; padding-top: 130px; }
+  .page-hero .hero__bg { position: absolute; inset: 0; height: auto; margin: 0; -webkit-mask-image: none; mask-image: none; background-position: 84% 50%; }
+  .page-hero .hero__shade { display: block; background: linear-gradient(180deg, rgba(0, 45, 140, .55) 0%, rgba(0, 45, 140, .25) 40%, rgba(0, 35, 110, .8) 100%); }
+  .site-footer__inner { flex-direction: column; text-align: center; }
+  .site-footer nav { justify-content: center; }
+}
+
+@media (max-width: 1100px) and (min-width: 761px) {
+  .steps, .park-grid { grid-template-columns: repeat(2, 1fr); }
+  .members { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Celulares bem estreitos (até 360px) */
+@media (max-width: 360px) {
+  .cta { height: 60px; padding: 0 16px; }
+  .cta__text b { font-size: 18px; }
+}
+
+/* Celular deitado / telas baixas: a Hero cresce em vez de espremer */
+@media (max-height: 560px) and (orientation: landscape) {
+  .hero { min-height: 0; }
+  .hero__content { padding-top: calc(var(--logo-w) * .68 + 40px); }
+  :root { --hero-title: clamp(52px, 8.4vw, 100px); --hero-title-2: clamp(26px, 4.1vw, 48px); }
+}
+
+
+/* 12. MOVIMENTO REDUZIDO (acessibilidade) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* ajuste: no topo da página "O Parque" a segunda linha pode quebrar */
+.page-hero__title .hero__title-line { white-space: normal; text-wrap: balance; }
+
+
+/* =========================================================================
+   13. HERO "FOTO + PAINEL"  (classe .hs)
+   Esquerda: foto com o Joca · Direita: painel azul · Base: 3 abas.
+   ✏️ Tamanhos e cores principais logo abaixo.
+   ========================================================================= */
+.hs {
+  --hs-foto: url("../assets/img/hero-bg.jpg");  /* ✏️ foto */
+  --hs-band: #2dc9f9;                            /* ✏️ faixa azul-água da curva */
+  --hs-ill-1: #ffc21f;                           /* ✏️ cor das ilustrações (coqueiro) */
+  --hs-ill-2: #ff8f1c;                           /* ✏️ cor do sol */
+  --tab-h: clamp(78px, 6.2vw, 112px);            /* ✏️ altura das 3 abas */
+  position: relative;
+  background: var(--c-white);
+}
+.hs::after { /* faixa azul-água na base */
+  content: ""; display: block; height: 8px;
+  background: linear-gradient(90deg, var(--c-blue-deep), var(--c-blue-soft) 50%, var(--c-aqua));
+}
+
+.hs__frame {
+  position: relative;
+  min-height: max(632px, calc(100svh - 8px));
+  overflow: hidden; isolation: isolate;
+  background: #0747b0;
+}
+
+/* FOTO (ocupa a esquerda e continua por baixo da curva) */
+.hs__photo {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 58%;
+  background-image: var(--hs-foto);
+  background-size: cover;
+  background-position: 6% 50%;
+  background-repeat: no-repeat;
+  animation: bg-in 1.8s var(--ease-out) both;
+}
+.hs__photo::before { /* sombra no topo para a logo e o menu */
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0, 38, 110, .5) 0%, rgba(0, 38, 110, 0) 28%);
+}
+
+/* PAINEL com borda curva */
+.hs__panel {
+  position: absolute; right: 0; top: 0; bottom: 0; width: 56%;
+  z-index: 1;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.hs__shape, .hs__shape-m { position: absolute; z-index: 0; pointer-events: none; }
+.hs__shape { inset: 0; width: 100%; height: 100%; }
+.hs__shape .band, .hs__shape-m .band { fill: var(--hs-band); }
+.hs__shape .fill { fill: url(#hsPanelGrad); }
+.hs__shape-m .fill { fill: #0b6ade; }
+.hs__shape-m { display: none; }
+
+/* manchas claras ao fundo (dão profundidade, como na referência) */
+.hs__blob { position: absolute; z-index: 0; border-radius: 50%; background: rgba(255, 255, 255, .06); pointer-events: none; }
+.hs__blob--1 { width: 46%; aspect-ratio: 1; left: 22%; top: -14%; }
+.hs__blob--2 { width: 38%; aspect-ratio: 1; right: 12%; bottom: -16%; background: rgba(45, 201, 249, .1); }
+
+/* ilustrações chapadas */
+.ill { position: absolute; z-index: 1; pointer-events: none; }
+.ill--sun  { width: clamp(180px, 19vw, 360px); aspect-ratio: 1; height: auto; right: calc(-1 * clamp(60px, 6vw, 120px)); top: calc(-1 * clamp(60px, 6vw, 120px)); color: var(--hs-ill-2); opacity: .95; animation: sun-spin 60s linear infinite; }
+.ill--palm { width: clamp(200px, 21vw, 400px); height: auto; aspect-ratio: 840 / 920; right: calc(-1 * clamp(30px, 3vw, 60px)); bottom: calc(-1 * clamp(20px, 3vh, 50px)); color: var(--hs-ill-1); transform-origin: 50% 100%; animation: palm-sway 6s ease-in-out infinite alternate; }
+.ill--palm2 { width: clamp(110px, 11vw, 210px); height: auto; aspect-ratio: 840 / 920; right: clamp(150px, 15vw, 290px); bottom: calc(-1 * clamp(10px, 2vh, 30px)); color: #ffd85c; opacity: .55; transform: scaleX(-1); transform-origin: 50% 100%; }
+@keyframes sun-spin { to { transform: rotate(360deg); } }
+.ill--sun, .ill--palm { will-change: transform; }
+/* animações da Hero pausam quando ela sai da tela */
+.hs.is-off .ill, .hs.is-off .hs__photo { animation-play-state: paused; }
+@keyframes palm-sway { from { transform: rotate(-1.5deg); } to { transform: rotate(1.5deg); } }
+
+/* risquinhos ao lado do título (como na referência) */
+.hs__marks { position: absolute; right: -.9em; top: .1em; width: .42em; height: .84em; font-size: clamp(64px, 7vw, 134px); fill: none; stroke: var(--c-gold); stroke-width: 6; stroke-linecap: round; }
+
+/* textos */
+.hs__copy {
+  position: relative; z-index: 2;
+  width: 100%; max-width: 760px;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  padding: calc(var(--header-pad) + clamp(70px, 6vw, 110px)) clamp(24px, 3.5vw, 64px) calc(var(--tab-h) + clamp(28px, 3vw, 56px)) clamp(70px, 9vw, 170px);
+  color: var(--c-white);
+}
+.hs__eyebrow {
+  display: inline-flex; align-items: center; gap: .8em;
+  font: 600 clamp(11px, .9vw, 16px)/1.2 var(--f-body); letter-spacing: .08em; text-transform: uppercase; white-space: nowrap;
+  text-shadow: 0 1px 6px rgba(0, 30, 90, .4);
+}
+.hs__eyebrow::before, .hs__eyebrow::after {
+  content: ""; width: clamp(26px, 2.4vw, 44px); height: 8px; flex: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 8'%3E%3Cpath d='M1 4c6.5-4 13-4 19.5 0S33.5 8 40 4s13-4 19.5 0S72.5 8 79 4' fill='none' stroke='%23ffd21f' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+.hs__title { position: relative; display: flex; flex-direction: column; align-items: center; margin-top: clamp(8px, 1vw, 18px); font-weight: 400; line-height: 1; }
+.hs__t1 {
+  font: 400 clamp(64px, 7vw, 134px)/.95 var(--f-display);
+  color: var(--c-white);
+  text-shadow: 0 .015em 0 #e3f1ff, 0 .03em 0 #4f9df5, 0 .045em 0 #1e6fdc, 0 .06em 0 #1459c4, 0 .075em 0 #0d47a6, 0 .14em .14em rgba(0, 25, 80, .45);
+  white-space: nowrap;
+}
+.hs__t2 {
+  margin-top: .1em;
+  font: 900 clamp(30px, 3.75vw, 72px)/1 var(--f-body);
+  letter-spacing: -.015em; text-transform: uppercase; white-space: nowrap;
+  color: var(--c-gold);
+  text-shadow: 0 .02em 0 #ffe36a, 0 .04em 0 #f6b400, 0 .06em 0 #ea9200, 0 .08em 0 #cf7200, 0 .15em .16em rgba(4, 30, 90, .4);
+}
+
+.hs__kicker {
+  margin-top: clamp(16px, 1.8vw, 32px);
+  font: 500 clamp(17px, 1.6vw, 30px)/1.15 var(--f-body); letter-spacing: .04em; text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0, 30, 90, .45);
+}
+.hs__kicker strong { font-weight: 800; }
+.hs__lead {
+  margin-top: clamp(8px, .8vw, 14px); max-width: 32em;
+  font-size: clamp(15px, 1.08vw, 20px); font-weight: 600; line-height: 1.5;
+  text-shadow: 0 1px 4px rgba(0, 30, 90, .45);
+}
+.hs__lead mark { background: none; color: var(--c-gold); font-weight: 800; }
+
+.hs__btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .6em;
+  min-height: clamp(52px, 3.8vw, 68px); margin-top: clamp(18px, 2vw, 34px); padding: 0 1.6em;
+  border-radius: 14px;
+  font: 800 clamp(14px, 1.08vw, 19px)/1 var(--f-body); letter-spacing: .05em; text-transform: uppercase; text-decoration: none;
+  color: var(--c-white);
+  background: linear-gradient(180deg, #3ad85f, var(--c-green) 60%, var(--c-green-dark));
+  border: 2px solid rgba(255, 255, 255, .7);
+  box-shadow: 0 14px 26px -12px rgba(0, 50, 20, .75), inset 0 2px 0 rgba(255, 255, 255, .35);
+  transition: transform .25s var(--ease-out), box-shadow .25s, filter .25s;
+}
+.hs__btn-icon { width: 1.7em; height: 1.7em; }
+.hs__btn-arrow { width: 1.1em; height: 1.1em; transition: transform .25s var(--ease-out); }
+.hs__btn:hover { transform: translateY(-3px); filter: brightness(1.05); box-shadow: 0 18px 30px -12px rgba(0, 50, 20, .85), inset 0 2px 0 rgba(255, 255, 255, .35); }
+.hs__btn:hover .hs__btn-arrow { transform: translateX(4px); }
+
+/* ABAS (os 3 botões principais) */
+.hs__tabs {
+  position: relative; z-index: 3;
+  display: flex; justify-content: center; align-items: flex-end; gap: clamp(8px, .7vw, 14px);
+  height: var(--tab-h); margin-top: calc(-1 * var(--tab-h));
+  padding-inline: max(12px, env(safe-area-inset-left, 0px)) max(12px, env(safe-area-inset-right, 0px));
+  pointer-events: none;
+}
+.hs-tab {
+  --tab-bg: var(--c-green); --tab-dark: var(--c-green-dark); --tab-light: #3ad85f;
+  position: relative; pointer-events: auto;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: clamp(180px, 17vw, 320px); height: 100%;
+  padding-top: clamp(14px, 1.1vw, 22px);
+  border-radius: clamp(26px, 2.6vw, 48px) clamp(26px, 2.6vw, 48px) 0 0;
+  background: linear-gradient(180deg, var(--tab-light), var(--tab-bg) 55%, var(--tab-dark));
+  box-shadow: inset 0 3px 0 rgba(255, 255, 255, .35), 0 -8px 24px -12px rgba(0, 20, 60, .5);
+  text-decoration: none; text-transform: uppercase; line-height: 1; color: var(--c-white);
+  overflow: visible;
+  transition: transform .3s var(--ease-out), filter .3s;
+}
+.hs-tab::after { /* pequena onda branca na base da aba */
+  content: ""; position: absolute; left: 14%; right: 14%; bottom: 10px; height: 6px; opacity: .45;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 8'%3E%3Cpath d='M1 4c6.5-4 13-4 19.5 0S33.5 8 40 4s13-4 19.5 0S72.5 8 79 4' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x left center / 40px 6px;
+}
+.hs-tab small { font-size: clamp(11px, .9vw, 16px); font-weight: 800; color: #fff6c8; text-shadow: 0 1px 0 rgba(0, 0, 0, .25); white-space: nowrap; }
+.hs-tab b {
+  margin-top: .14em; margin-bottom: .5em;
+  font-size: clamp(18px, 1.75vw, 33px); font-weight: 900; letter-spacing: -.01em; white-space: nowrap;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, .2);
+}
+.hs-tab__badge {
+  position: absolute; top: 0; left: 50%; transform: translate(-50%, -55%);
+  display: grid; place-items: center;
+  width: clamp(40px, 3.2vw, 58px); height: clamp(40px, 3.2vw, 58px); border-radius: 50%;
+  background: var(--tab-bg); border: 3px solid var(--c-white); color: var(--c-white);
+  box-shadow: 0 6px 14px -4px rgba(0, 0, 0, .35);
+}
+.hs-tab__badge svg { width: 58%; height: 58%; }
+.hs-tab:hover { transform: translateY(-6px); filter: brightness(1.06); }
+.hs-tab--blue   { --tab-light: #2a7ef5; --tab-bg: #135fe0; --tab-dark: #0a3fb0; }
+.hs-tab--orange { --tab-light: #ffc23d; --tab-bg: #ffa21e; --tab-dark: #f07c00; }
+
+/* botão de rolar: ao lado direito das abas */
+.hs__scroll { left: auto; right: max(20px, 3vw); margin-left: 0; bottom: calc(8px + clamp(14px, 1.4vw, 24px)); color: var(--c-blue-deep); }
+
+/* botão flutuante do WhatsApp */
+.whats-fab {
+  position: fixed; z-index: 45;
+  right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  display: grid; place-items: center;
+  width: 58px; height: 58px; border-radius: 50%;
+  color: var(--c-white); background: #25d366;
+  box-shadow: 0 10px 24px -8px rgba(0, 60, 20, .7);
+  animation: fab-in .6s 1.8s var(--ease-out) both;
+  transition: transform .25s var(--ease-out);
+}
+.whats-fab::after { /* anel pulsando (só transform/opacity = leve) */
+  content: ""; position: absolute; inset: 0; border-radius: 50%;
+  border: 3px solid rgba(37, 211, 102, .6);
+  animation: ring-pulse 2.8s 3s ease-out infinite;
+  pointer-events: none;
+}
+@keyframes ring-pulse { 0% { transform: scale(1); opacity: .9; } 70%, 100% { transform: scale(1.5); opacity: 0; } }
+.whats-fab svg { width: 32px; height: 32px; }
+.whats-fab:hover { transform: scale(1.08); }
+@keyframes fab-in { from { opacity: 0; transform: scale(.6); } to { opacity: 1; transform: none; } }
+/* na Hero o botão flutuante some (as abas já fazem esse papel) e volta ao rolar */
+.whats-fab.is-hidden { opacity: 0; pointer-events: none; transform: scale(.6); animation: none; transition: opacity .3s, transform .3s; }
+
+/* notebook / tablet deitado */
+@media (max-width: 1180px) and (min-width: 761px) {
+  .hs__photo { width: 56%; background-position: 19% 50%; }
+  .hs__panel { width: 52%; }
+  .hs__copy { padding-left: clamp(60px, 7vw, 90px); padding-right: 20px; }
+  .ill--palm2 { display: none; }
+  .hs__scroll { display: none; }
+}
+
+/* CELULAR e TABLET EM PÉ: foto em cima (com logo e menu), painel embaixo, abas lado a lado */
+@media (max-width: 760px), (max-width: 1180px) and (orientation: portrait) and (max-aspect-ratio: 1/1) {
+  .hs { --tab-h: 86px; }
+  .hs__frame { display: flex; flex-direction: column; min-height: 0; }
+  .hs__photo { position: relative; width: 100%; height: clamp(320px, 90vw, 600px); background-position: 22% 60%; flex: none; }
+  .hs__panel { position: relative; width: 100%; margin-top: -54px; overflow: visible; }
+  .hs__shape { display: none; }
+  .hs__shape-m { display: block; left: 0; right: 0; top: -1px; width: 100%; height: 60px; }
+  .hs__panel::before { content: ""; position: absolute; left: 0; right: 0; top: 58px; bottom: 0; z-index: 0; background: linear-gradient(180deg, #0b6ade, #0747b0); }
+  .hs__panel { overflow: hidden; }
+  .ill--sun { display: none; }
+  .ill--palm { width: 150px; right: -40px; bottom: 40px; opacity: .9; }
+  .ill--palm2 { display: none; }
+  .hs__blob--1 { width: 80%; left: -20%; top: 20%; }
+  .hs__marks { display: none; }
+  .hs__copy { position: relative; z-index: 2; padding: 84px max(18px, env(safe-area-inset-left, 0px)) calc(var(--tab-h) + 30px); }
+  .hs__eyebrow { font-size: clamp(10px, 2.8vw, 14px); letter-spacing: .03em; gap: .5em; white-space: nowrap; }
+  .hs__eyebrow::before, .hs__eyebrow::after { width: 16px; }
+  .hs__t1 { font-size: clamp(60px, 18.5vw, 120px); }
+  .hs__t2 { font-size: clamp(26px, 8.4vw, 54px); }
+  .hs__lead { font-size: clamp(14.5px, 3.9vw, 18px); }
+  .hs__btn { width: 100%; max-width: 420px; padding: 0 1em; font-size: 14px; }
+  .hs__tabs { gap: 6px; padding-inline: max(8px, env(safe-area-inset-left, 0px)) max(8px, env(safe-area-inset-right, 0px)); }
+  .hs-tab { flex: 1; width: auto; min-width: 0; max-width: 240px; border-radius: 22px 22px 0 0; padding: 16px 4px 0; }
+  .hs-tab small { font-size: clamp(8.5px, 2.5vw, 12px); white-space: normal; text-align: center; }
+  .hs-tab b { font-size: clamp(13px, 4vw, 19px); white-space: normal; text-align: center; }
+  .hs-tab::after { bottom: 7px; }
+  .hs-tab__badge { width: 36px; height: 36px; }
+  .hs__scroll { display: none; }
+  .whats-fab { width: 54px; height: 54px; }
+}
+
+
+/* =========================================================================
+   14. DESCIDA NO TOBOGÃ (animação pela rolagem)
+   ✏️ --ride-length = quanto a pessoa precisa rolar para descer tudo
+   ========================================================================= */
+.ride {
+  --ride-length: 560vh;   /* ✏️ maior = descida mais lenta */
+  --p: 0;
+  position: relative;
+  height: var(--ride-length);
+  background: #0a3f9e;
+}
+.ride__sticky {
+  position: sticky; top: 0;
+  height: 100vh; height: 100svh;
+  overflow: hidden; isolation: isolate;
+  background: linear-gradient(180deg, #0a5fd0, #2dc9f9);
+}
+.ride__canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: none; z-index: -2; }
+.ride.is-pc .ride__canvas { display: block; }
+.ride.is-pc .ride__video { display: none; }
+.ride__video { position: absolute; inset: 0; width: 100%; height: 100%; display: block; object-fit: cover; z-index: -2; pointer-events: none; }
+.ride__shade {
+  position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(80% 70% at 50% 50%, rgba(0, 20, 60, 0) 40%, rgba(0, 20, 60, .35) 100%);
+}
+.ride.is-end .ride__shade {
+  background: linear-gradient(90deg, rgba(0, 40, 120, .6) 0%, rgba(0, 40, 120, .25) 45%, rgba(0, 40, 120, 0) 70%);
+}
+
+/* carregando */
+.ride__loader {
+  --l: 0;
+  position: absolute; left: 50%; bottom: 28px; z-index: 5;
+  width: min(220px, 50vw); height: 4px; margin-left: calc(min(220px, 50vw) / -2);
+  border-radius: 4px; background: rgba(255, 255, 255, .25); overflow: hidden;
+}
+.ride__loader span { display: block; height: 100%; background: var(--c-white); transform-origin: left; transform: scaleX(var(--l)); transition: transform .3s; }
+
+/* textos de cada etapa */
+.ride__step {
+  position: absolute; inset: 0; z-index: 2;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  padding: 0 max(20px, env(safe-area-inset-left, 0px));
+  color: var(--c-white);
+  opacity: 0; transform: translateY(30px) scale(.97);
+  transition: opacity .5s var(--ease-out), transform .6s var(--ease-out);
+  pointer-events: none;
+}
+.ride__step.is-on { opacity: 1; transform: none; }
+.ride__step--1 { justify-content: flex-end; padding-bottom: 14vh; }
+
+.ride__eyebrow {
+  font: 700 clamp(12px, 1vw, 16px)/1.2 var(--f-body); letter-spacing: .14em; text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0, 30, 90, .6);
+}
+.ride__big {
+  margin-top: 6px;
+  font: 400 clamp(64px, 8vw, 150px)/1 var(--f-display);
+  text-shadow: 0 .03em 0 #4f9df5, 0 .06em 0 #1459c4, 0 .08em 0 #0d47a6, 0 .16em .2em rgba(0, 25, 80, .55);
+}
+.ride__big span { color: var(--c-gold); text-shadow: 0 .03em 0 #f6b400, 0 .06em 0 #cf7200, 0 .16em .2em rgba(0, 25, 80, .5); }
+.ride__hint {
+  display: inline-flex; flex-direction: column; align-items: center; gap: 6px; margin-top: 22px;
+  font: 700 13px/1 var(--f-body); letter-spacing: .14em; text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0, 30, 90, .6);
+}
+.ride__hint svg { width: 26px; height: 26px; animation: nudge 1.6s ease-in-out infinite; }
+
+.ride__line {
+  font: 900 clamp(40px, 6.4vw, 120px)/1 var(--f-body); letter-spacing: -.02em; text-transform: uppercase;
+  text-shadow: 0 .04em 0 rgba(10, 60, 150, .9), 0 .1em .25em rgba(0, 20, 60, .55);
+}
+.ride__line--gold { color: var(--c-gold); text-shadow: 0 .03em 0 #f6b400, 0 .06em 0 #cf7200, 0 .14em .25em rgba(0, 20, 60, .5); }
+
+/* final: Joca na piscina */
+.ride__final {
+  position: absolute; inset: 0; z-index: 3;
+  display: grid; grid-template-columns: 1fr 1fr; align-items: center;
+  padding: 90px max(24px, 6vw, env(safe-area-inset-right, 0px)) 0 max(24px, 6vw, env(safe-area-inset-left, 0px));
+  color: var(--c-white);
+  pointer-events: none;
+}
+.ride__final.is-on { pointer-events: auto; }
+.ride__final-copy {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity .6s .25s var(--ease-out), transform .7s .25s var(--ease-out);
+}
+.ride__final.is-on .ride__final-copy { opacity: 1; transform: none; }
+.ride__final-title { display: flex; flex-direction: column; margin-top: 10px; }
+.ride__final-title .t1 {
+  font: 400 clamp(60px, 6.6vw, 128px)/.95 var(--f-display);
+  text-shadow: 0 .015em 0 #e3f1ff, 0 .03em 0 #4f9df5, 0 .045em 0 #1e6fdc, 0 .06em 0 #1459c4, 0 .075em 0 #0d47a6, 0 .14em .14em rgba(0, 25, 80, .45);
+}
+.ride__final-title .t2 {
+  margin-top: .1em;
+  font: 900 clamp(28px, 3.5vw, 66px)/1 var(--f-body); letter-spacing: -.015em; text-transform: uppercase;
+  color: var(--c-gold);
+  text-shadow: 0 .02em 0 #ffe36a, 0 .04em 0 #f6b400, 0 .06em 0 #ea9200, 0 .08em 0 #cf7200, 0 .15em .16em rgba(4, 30, 90, .4);
+}
+.ride__final-text { margin-top: 16px; font-size: clamp(16px, 1.3vw, 22px); font-weight: 600; text-shadow: 0 1px 6px rgba(0, 30, 90, .6); }
+.ride__final-text strong { font-weight: 800; color: var(--c-gold); }
+.ride__final-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 6px; }
+.ride__link { font-weight: 800; font-size: 15px; color: var(--c-white); text-underline-offset: 5px; text-shadow: 0 1px 6px rgba(0, 30, 90, .6); }
+.ride__link:hover { color: var(--c-gold); }
+
+.ride__joca {
+  position: relative; align-self: end; justify-self: center;
+  width: min(36vw, 62vh, 560px);
+  margin-bottom: -4vh;
+}
+.ride__joca img {
+  position: relative; z-index: 2;
+  width: 100%; height: auto;
+  /* parte de baixo "dentro da água" */
+  -webkit-mask-image: linear-gradient(180deg, #000 78%, transparent 96%);
+          mask-image: linear-gradient(180deg, #000 78%, transparent 96%);
+  filter: drop-shadow(0 20px 30px rgba(0, 30, 80, .35));
+  transform: translateY(70%) rotate(8deg) scale(.8);
+  opacity: 0;
+  transition: transform .9s cubic-bezier(.2, 1.4, .4, 1), opacity .3s;
+}
+.ride__final.is-on .ride__joca img { transform: none; opacity: 1; }
+
+/* anéis de água e gotas quando o Joca sai da água */
+.ride__ring {
+  position: absolute; left: 50%; bottom: 10%; z-index: 1;
+  width: 80%; height: 16%; margin-left: -40%;
+  border: 3px solid rgba(255, 255, 255, .85); border-radius: 50%;
+  opacity: 0; transform: scale(.3);
+}
+.ride__ring--2 { z-index: 3; border-width: 2px; }
+.ride__final.is-on .ride__ring--1 { animation: ring 1.4s .15s ease-out both; }
+.ride__final.is-on .ride__ring--2 { animation: ring 1.6s .35s ease-out both; }
+@keyframes ring { 0% { opacity: .95; transform: scale(.3); } 100% { opacity: 0; transform: scale(1.5); } }
+
+.ride__drops { position: absolute; left: 50%; bottom: 14%; z-index: 3; width: 0; height: 0; }
+.ride__drops i {
+  position: absolute; width: 14px; height: 18px;
+  background: radial-gradient(circle at 35% 35%, #fff 0 25%, #bfe9ff 60%, rgba(191, 233, 255, .4));
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  opacity: 0;
+}
+.ride__final.is-on .ride__drops i { animation: drop-fly 1.1s ease-out both; }
+.ride__drops i:nth-child(1) { --x: -140px; --y: -170px; animation-delay: .1s !important; }
+.ride__drops i:nth-child(2) { --x: -80px;  --y: -230px; animation-delay: .15s !important; }
+.ride__drops i:nth-child(3) { --x: -20px;  --y: -260px; animation-delay: .12s !important; }
+.ride__drops i:nth-child(4) { --x: 60px;   --y: -240px; animation-delay: .18s !important; }
+.ride__drops i:nth-child(5) { --x: 130px;  --y: -190px; animation-delay: .1s !important; }
+.ride__drops i:nth-child(6) { --x: 170px;  --y: -120px; animation-delay: .2s !important; }
+@keyframes drop-fly {
+  0% { opacity: 0; transform: translate(0, 0) scale(.5); }
+  15% { opacity: 1; }
+  60% { opacity: 1; transform: translate(var(--x), var(--y)) scale(1); }
+  100% { opacity: 0; transform: translate(calc(var(--x) * 1.3), calc(var(--y) * .2)) scale(.7); }
+}
+
+/* barra de progresso (nível da água) */
+.ride__progress {
+  position: absolute; right: max(18px, env(safe-area-inset-right, 0px)); top: 50%; z-index: 4;
+  width: 6px; height: 34vh; margin-top: -17vh;
+  border-radius: 6px; background: rgba(255, 255, 255, .25); overflow: hidden;
+}
+.ride__progress span { display: block; height: 100%; background: linear-gradient(180deg, var(--c-gold), var(--c-aqua)); transform-origin: top; transform: scaleY(0); }
+.ride.is-end .ride__progress { opacity: 0; transition: opacity .4s; }
+
+/* celular / tela em pé */
+@media (max-width: 760px), (orientation: portrait) and (max-aspect-ratio: 1/1) {
+  .ride { --ride-length: 500vh; }
+  .ride__final { grid-template-columns: 100%; grid-template-rows: auto 1fr; align-items: start; padding-top: calc(80px + env(safe-area-inset-top, 0px)); text-align: center; }
+  .ride__final-copy { display: flex; flex-direction: column; align-items: center; }
+  .ride__final-title { align-items: center; }
+  .ride__final-title .t1 { font-size: clamp(56px, 17vw, 110px); }
+  .ride__final-title .t2 { font-size: clamp(25px, 8vw, 50px); }
+  .ride__final-text { font-size: 15.5px; max-width: 22em; }
+  .ride__final-actions { flex-direction: column; width: 100%; gap: 10px; }
+  .ride__final-actions .hs__btn { width: 100%; max-width: 380px; }
+  .ride.is-end .ride__shade { background: linear-gradient(180deg, rgba(0, 40, 120, .65) 0%, rgba(0, 40, 120, .3) 50%, rgba(0, 40, 120, 0) 75%); }
+  .ride__joca { width: min(64vw, 36vh, 340px); align-self: end; margin-bottom: -2vh; }
+  .ride__progress { right: 10px; height: 26vh; margin-top: -13vh; width: 5px; }
+}
+
+/* quem prefere menos movimento: sem rolagem longa, só o final */
+.ride.is-reduced { height: auto; }
+.ride.is-reduced .ride__sticky { position: relative; }
+.ride.is-reduced .ride__step, .ride.is-reduced .ride__progress { display: none; }
+
+
+/* =========================================================================
+   15. SEÇÃO SÓCIO REMIDO (benefícios) e PRIMEIRA ETAPA
+   ========================================================================= */
+.socio__grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(32px, 5vw, 80px); align-items: center; }
+.socio__text { min-width: 0; }
+.socio__badge {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 18px;
+  padding: 8px 16px 8px 10px; border-radius: 999px;
+  background: #fff4d6; color: #8a4b00; font-size: 14px; font-weight: 600;
+}
+.socio__badge svg { width: 22px; height: 22px; color: var(--c-orange); }
+.socio__badge strong { font-weight: 800; color: #b35a00; }
+.socio .lead { margin-top: 16px; }
+.socio .lead strong { color: var(--c-navy); }
+
+.perks { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.perk {
+  --perk: var(--c-green);
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 18px; border-radius: 18px;
+  background: var(--c-white); border: 1px solid var(--c-line);
+  box-shadow: 0 14px 30px -24px rgba(7, 31, 77, .45);
+  transition: transform .25s var(--ease-out), box-shadow .25s;
+}
+.perk:hover { transform: translateY(-3px); box-shadow: 0 18px 34px -22px rgba(7, 31, 77, .5); }
+.perk--blue { --perk: var(--c-blue); }
+.perk--orange { --perk: var(--c-orange); }
+.perk--navy { --perk: var(--c-navy); }
+.perk__icon {
+  flex: none; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px;
+  color: var(--c-white); background: var(--perk);
+}
+.perk__icon svg { width: 28px; height: 28px; }
+.perk h3 { font: 800 16px/1.25 var(--f-body); color: var(--c-navy); }
+.perk p { margin-top: 4px; font-size: 14px; line-height: 1.45; color: #4a6390; }
+
+.socio__cta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin-top: 28px; }
+.socio__cta p { font-size: 14px; color: #6a82ab; }
+
+.socio__media { position: relative; margin: 0; }
+.socio__media img {
+  width: 100%; height: auto; aspect-ratio: 4 / 4.6; object-fit: cover; object-position: 80% 50%;
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);
+}
+
+/* primeira etapa */
+.stage {
+  list-style: none; margin: 0 auto; padding: 0; max-width: 1280px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;   /* 16 itens = 4 linhas de 4 */
+}
+.stage li {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 16px; border-radius: 14px;
+  background: var(--c-white); border: 1px solid var(--c-line);
+  font-weight: 600; font-size: 15px; color: var(--c-navy);
+}
+.stage svg { flex: none; width: 26px; height: 26px; padding: 4px; border-radius: 50%; color: var(--c-white); background: var(--c-green); }
+
+@media (max-width: 1100px) { .stage { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 960px) {
+  .socio__grid { grid-template-columns: 1fr; }
+  .socio__media { order: -1; max-width: 560px; }
+  .socio__media img { aspect-ratio: 4 / 3; }
+  .ticket { left: 12px; right: 12px; bottom: -28px; }
+  .socio__media { margin-bottom: 34px; }
+}
+@media (max-width: 560px) {
+  .perks { grid-template-columns: 1fr; }
+  .stage { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .stage li { flex-direction: column; align-items: flex-start; gap: 8px; padding: 12px; font-size: 13px; line-height: 1.3; }
+  .stage svg { width: 22px; height: 22px; }
+  .socio__cta .btn-pill { width: 100%; white-space: normal; }
+}
+
+
+/* =========================================================================
+   16. AMBIENTAÇÃO (praia / piscina)
+   Regra: a água separa as seções (ondas), os coqueiros ficam "na beira"
+   dessas ondas, um sol nasce atrás dos títulos e o fechamento é um pôr do sol.
+   ========================================================================= */
+:root {
+  --amb-palm-tone: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='100 80 840 920'%3E%3Cg fill='%23c4dcf5'%3E%3Cpath d='M410.0 1000.0 L424.2 970.0 L437.4 939.8 L449.6 909.5 L460.8 879.2 L471.0 848.8 L480.2 818.2 L488.4 787.5 L495.6 756.8 L501.8 726.0 L507.0 695.0 L511.2 664.0 L514.4 632.8 L516.6 601.5 L517.8 570.2 L518.0 538.8 L517.2 507.2 L515.4 475.5 L512.6 443.8 L508.8 412.0 L504.0 380.0 L536.0 380.0 L542.2 412.0 L547.4 443.8 L551.6 475.5 L554.8 507.2 L557.0 538.8 L558.2 570.2 L558.4 601.5 L557.6 632.8 L555.8 664.0 L553.0 695.0 L549.2 726.0 L544.4 756.8 L538.6 787.5 L531.8 818.2 L524.0 848.8 L515.2 879.2 L505.4 909.5 L494.6 939.8 L482.8 970.0 L470.0 1000.0Z'/%3E%3Cpath d='M520.0 380.0 L504.3 371.9 L487.9 367.0 L471.5 363.8 L454.9 362.2 L438.4 362.2 L421.9 363.8 L405.6 367.0 L389.4 371.8 L373.5 378.1 L357.8 386.0 L342.4 395.4 L327.4 406.2 L312.8 418.5 L298.5 432.3 L284.6 447.4 L271.1 463.9 L258.0 481.8 L245.3 501.0 L233.0 521.6 L221.0 543.5 L209.4 566.8 L198.3 591.4 L187.5 617.3 L177.2 644.6 L167.6 673.4 L160.0 704.0 L160.0 704.0 L174.1 675.9 L204.9 671.9 L199.7 622.8 L237.2 634.0 L225.1 574.9 L265.9 599.2 L250.8 532.4 L291.7 567.9 L276.7 495.2 L314.8 540.2 L303.0 463.4 L335.4 515.6 L329.5 436.8 L354.0 493.4 L356.4 415.3 L371.4 472.9 L383.7 398.8 L389.2 453.2 L411.6 387.0 L409.6 434.3 L440.6 379.7 L435.3 416.6 L470.8 377.1 L468.9 400.8 L502.8 378.8 L520.0 380.0Z'/%3E%3Cpath d='M520.0 380.0 L509.6 365.9 L498.1 354.0 L486.4 343.3 L474.5 333.6 L462.6 325.0 L450.7 317.4 L438.7 310.9 L426.7 305.4 L414.7 300.9 L402.6 297.6 L390.6 295.4 L378.6 294.4 L366.7 294.5 L355.0 295.8 L343.5 298.2 L332.2 301.8 L321.3 306.5 L310.8 312.3 L300.6 319.2 L290.8 327.1 L281.5 336.0 L272.5 345.8 L264.0 356.7 L256.0 368.5 L248.6 381.4 L242.9 396.0 L242.9 396.0 L253.9 385.1 L274.2 399.9 L273.4 364.9 L294.3 395.3 L292.5 348.3 L309.5 391.3 L311.5 335.4 L320.7 387.9 L330.3 326.1 L328.9 384.0 L349.1 320.3 L336.3 378.9 L368.3 317.6 L345.2 372.8 L388.1 318.1 L358.2 366.8 L409.0 321.8 L376.4 362.6 L431.0 328.8 L400.4 361.6 L454.4 339.3 L430.3 364.7 L479.1 353.4 L466.6 372.2 L505.4 370.9 L520.0 380.0Z'/%3E%3Cpath d='M520.0 380.0 L518.3 366.5 L515.3 353.9 L512.1 342.0 L508.7 330.6 L505.2 319.8 L501.7 309.6 L498.1 299.9 L494.4 290.7 L490.7 282.2 L487.0 274.1 L483.2 266.6 L479.3 259.7 L475.4 253.3 L471.4 247.4 L467.4 242.1 L463.3 237.4 L459.1 233.2 L454.8 229.7 L450.4 226.7 L446.0 224.5 L441.5 222.9 L437.0 222.2 L432.7 222.3 L428.6 223.3 L425.1 225.2 L422.8 229.0 L422.8 229.0 L426.4 230.5 L419.1 251.8 L431.5 232.5 L409.9 257.7 L436.0 235.5 L402.1 258.2 L440.8 239.7 L398.4 258.0 L446.3 245.7 L398.9 259.5 L452.5 253.7 L402.8 263.7 L459.3 263.7 L409.7 271.0 L466.7 275.9 L419.3 281.3 L474.8 290.2 L431.5 294.7 L483.4 306.6 L446.3 311.1 L492.6 325.1 L464.0 330.6 L502.5 345.7 L485.3 353.2 L513.3 368.3 L520.0 380.0Z'/%3E%3Cpath d='M520.0 380.0 L519.9 365.1 L521.3 351.1 L523.0 337.7 L524.9 325.0 L526.8 313.0 L528.9 301.6 L531.0 290.8 L533.2 280.7 L535.5 271.2 L537.9 262.3 L540.3 254.0 L542.8 246.4 L545.3 239.4 L548.0 233.0 L550.7 227.2 L553.6 222.1 L556.5 217.5 L559.6 213.6 L562.9 210.2 L566.5 207.6 L570.3 205.6 L574.4 204.7 L578.5 205.1 L582.0 206.7 L584.3 209.4 L584.7 213.5 L584.7 213.5 L581.4 214.2 L584.8 237.9 L578.6 215.8 L603.5 241.2 L577.5 217.9 L617.7 234.2 L575.5 221.4 L623.3 229.5 L572.4 227.2 L624.0 229.8 L568.5 235.7 L621.5 234.8 L564.0 246.7 L616.2 243.9 L558.9 260.3 L608.6 257.0 L553.3 276.5 L598.5 273.7 L547.3 295.2 L586.1 294.1 L540.7 316.4 L571.0 318.0 L533.5 340.1 L552.2 345.9 L525.4 366.2 L520.0 380.0Z'/%3E%3Cpath d='M520.0 380.0 L529.5 365.1 L540.2 352.2 L551.2 340.6 L562.3 330.1 L573.4 320.7 L584.7 312.3 L596.0 305.1 L607.4 298.9 L618.8 293.9 L630.3 290.0 L641.8 287.2 L653.3 285.7 L664.8 285.5 L676.0 286.5 L687.1 288.8 L697.9 292.3 L708.4 297.0 L718.5 302.8 L728.1 309.8 L737.4 317.8 L746.2 326.9 L754.6 337.0 L762.6 348.1 L770.1 360.2 L777.0 373.5 L782.1 388.5 L782.1 388.5 L771.5 377.0 L750.6 390.9 L752.9 355.9 L730.8 385.5 L734.7 338.7 L716.4 381.4 L716.7 325.6 L706.6 378.1 L699.1 316.4 L700.5 374.5 L681.5 310.9 L695.8 369.4 L663.7 308.7 L689.4 363.0 L645.2 309.8 L678.3 356.7 L625.7 314.3 L661.2 352.8 L604.9 322.4 L637.9 352.9 L582.7 334.4 L608.7 357.9 L559.2 350.2 L572.9 368.0 L534.1 369.7 L520.0 380.0Z'/%3E%3Cpath d='M520.0 380.0 L536.2 371.8 L553.0 366.9 L570.0 363.8 L587.0 362.4 L604.0 362.7 L620.9 364.7 L637.8 368.4 L654.4 373.7 L670.8 380.8 L686.8 389.4 L702.6 399.6 L718.0 411.4 L733.0 424.8 L747.6 439.6 L761.8 455.9 L775.7 473.7 L789.1 493.0 L802.2 513.6 L814.9 535.8 L827.2 559.3 L839.0 584.3 L850.5 610.7 L861.6 638.6 L872.2 667.9 L882.1 698.7 L890.0 731.5 L890.0 731.5 L875.6 701.2 L844.1 694.7 L849.4 643.8 L810.8 652.7 L823.2 592.1 L781.1 614.1 L796.8 546.2 L754.3 579.5 L770.1 506.0 L730.2 548.9 L743.1 471.5 L708.5 521.9 L715.8 442.6 L689.0 497.8 L688.1 419.2 L670.9 475.9 L660.0 401.1 L652.6 455.2 L631.2 388.2 L631.8 435.4 L601.5 380.2 L605.8 417.0 L570.5 377.1 L571.8 400.8 L537.6 378.7 L520.0 380.0Z'/%3E%3Cpath d='M520.0 380.0 L509.2 380.1 L498.5 382.6 L488.0 386.3 L477.6 391.3 L467.3 397.4 L457.2 404.7 L447.2 412.9 L437.5 422.2 L428.0 432.6 L418.7 443.9 L409.6 456.2 L400.7 469.5 L392.1 483.7 L383.8 498.9 L375.6 515.1 L367.7 532.2 L360.0 550.2 L352.5 569.2 L345.3 589.1 L338.3 609.9 L331.6 631.7 L325.1 654.4 L318.8 678.0 L312.9 702.6 L307.5 728.2 L303.5 755.0 L303.5 755.0 L312.5 729.5 L335.8 720.1 L328.3 680.8 L358.3 681.5 L344.0 635.8 L378.2 644.9 L359.8 594.5 L396.2 610.9 L375.7 556.9 L412.6 579.4 L391.8 523.0 L427.4 550.5 L408.1 492.9 L440.8 524.0 L424.6 466.3 L452.9 499.4 L441.2 443.4 L463.9 476.6 L458.1 423.9 L474.6 454.8 L475.2 407.9 L485.9 433.4 L492.7 395.0 L499.5 411.3 L510.8 385.0 L520.0 380.0Z'/%3E%3Cpath d='M520.0 380.0 L530.9 380.1 L541.5 382.7 L552.1 386.7 L562.5 392.0 L572.9 398.5 L583.0 406.1 L593.0 414.9 L602.7 424.8 L612.2 435.8 L621.5 447.8 L630.6 460.9 L639.4 475.1 L648.0 490.2 L656.4 506.4 L664.5 523.6 L672.4 541.9 L680.1 561.1 L687.5 581.3 L694.8 602.6 L701.7 624.9 L708.5 648.1 L715.0 672.4 L721.2 697.7 L727.1 724.0 L732.5 751.4 L736.5 780.0 L736.5 780.0 L727.5 752.6 L703.9 741.1 L711.7 700.3 L681.2 698.9 L696.0 652.0 L661.1 659.0 L680.2 607.7 L642.9 622.0 L664.2 567.4 L626.3 588.0 L648.1 531.2 L611.3 556.8 L631.8 498.9 L597.8 528.4 L615.3 470.6 L585.7 502.3 L598.6 446.2 L574.7 478.3 L581.8 425.6 L564.2 455.8 L564.7 408.7 L553.3 433.9 L547.2 395.3 L540.1 411.5 L529.2 385.0 L520.0 380.0Z'/%3E%3Ccircle cx='506' cy='404' r='16'/%3E%3Ccircle cx='536' cy='408' r='16'/%3E%3Ccircle cx='521' cy='428' r='16'/%3E%3C/g%3E%3C/svg%3E");   /* coqueiro tom-sobre-tom (fundo claro) */
+  --amb-palm-navy: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='100 80 840 920'%3E%3Cg fill='%23063a8f'%3E%3Cpath d='M410.0 1000.0 L424.2 970.0 L437.4 939.8 L449.6 909.5 L460.8 879.2 L471.0 848.8 L480.2 818.2 L488.4 787.5 L495.6 756.8 L501.8 726.0 L507.0 695.0 L511.2 664.0 L514.4 632.8 L516.6 601.5 L517.8 570.2 L518.0 538.8 L517.2 507.2 L515.4 475.5 L512.6 443.8 L508.8 412.0 L504.0 380.0 L536.0 380.0 L542.2 412.0 L547.4 443.8 L551.6 475.5 L554.8 507.2 L557.0 538.8 L558.2 570.2 L558.4 601.5 L557.6 632.8 L555.8 664.0 L553.0 695.0 L549.2 726.0 L544.4 756.8 L538.6 787.5 L531.8 818.2 L524.0 848.8 L515.2 879.2 L505.4 909.5 L494.6 939.8 L482.8 970.0 L470.0 1000.0Z'/%3E%3Cpath d='M520.0 380.0 L504.3 371.9 L487.9 367.0 L471.5 363.8 L454.9 362.2 L438.4 362.2 L421.9 363.8 L405.6 367.0 L389.4 371.8 L373.5 378.1 L357.8 386.0 L342.4 395.4 L327.4 406.2 L312.8 418.5 L298.5 432.3 L284.6 447.4 L271.1 463.9 L258.0 481.8 L245.3 501.0 L233.0 521.6 L221.0 543.5 L209.4 566.8 L198.3 591.4 L187.5 617.3 L177.2 644.6 L167.6 673.4 L160.0 704.0 L160.0 704.0 L174.1 675.9 L204.9 671.9 L199.7 622.8 L237.2 634.0 L225.1 574.9 L265.9 599.2 L250.8 532.4 L291.7 567.9 L276.7 495.2 L314.8 540.2 L303.0 463.4 L335.4 515.6 L329.5 436.8 L354.0 493.4 L356.4 415.3 L371.4 472.9 L383.7 398.8 L389.2 453.2 L411.6 387.0 L409.6 434.3 L440.6 379.7 L435.3 416.6 L470.8 377.1 L468.9 400.8 L502.8 378.8 L520.0 380.0Z'/%3E%3Cpath d='M520.0 380.0 L509.6 365.9 L498.1 354.0 L486.4 343.3 L474.5 333.6 L462.6 325.0 L450.7 317.4 L438.7 310.9 L426.7 305.4 L414.7 300.9 L402.6 297.6 L390.6 295.4 L378.6 294.4 L366.7 294.5 L355.0 295.8 L343.5 298.2 L332.2 301.8 L321.3 306.5 L310.8 312.3 L300.6 319.2 L290.8 327.1 L281.5 336.0 L272.5 345.8 L264.0 356.7 L256.0 368.5 L248.6 381.4 L242.9 396.0 L242.9 396.0 L253.9 385.1 L274.2 399.9 L273.4 364.9 L294.3 395.3 L292.5 348.3 L309.5 391.3 L311.5 335.4 L320.7 387.9 L330.3 326.1 L328.9 384.0 L349.1 320.3 L336.3 378.9 L368.3 317.6 L345.2 372.8 L388.1 318.1 L358.2 366.8 L409.0 321.8 L376.4 362.6 L431.0 328.8 L400.4 361.6 L454.4 339.3 L430.3 364.7 L479.1 353.4 L466.6 372.2 L505.4 370.9 L520.0 380.0Z'/%3E%3Cpath d='M520.0 380.0 L518.3 366.5 L515.3 353.9 L512.1 342.0 L508.7 330.6 L505.2 319.8 L501.7 309.6 L498.1 299.9 L494.4 290.7 L490.7 282.2 L487.0 274.1 L483.2 266.6 L479.3 259.7 L475.4 253.3 L471.4 247.4 L467.4 242.1 L463.3 237.4 L459.1 233.2 L454.8 229.7 L450.4 226.7 L446.0 224.5 L441.5 222.9 L437.0 222.2 L432.7 222.3 L428.6 223.3 L425.1 225.2 L422.8 229.0 L422.8 229.0 L426.4 230.5 L419.1 251.8 L431.5 232.5 L409.9 257.7 L436.0 235.5 L402.1 258.2 L440.8 239.7 L398.4 258.0 L446.3 245.7 L398.9 259.5 L452.5 253.7 L402.8 263.7 L459.3 263.7 L409.7 271.0 L466.7 275.9 L419.3 281.3 L474.8 290.2 L431.5 294.7 L483.4 306.6 L446.3 311.1 L492.6 325.1 L464.0 330.6 L502.5 345.7 L485.3 353.2 L513.3 368.3 L520.0 380.0Z'/%3E%3Cpath d='M520.0 380.0 L519.9 365.1 L521.3 351.1 L523.0 337.7 L524.9 325.0 L526.8 313.0 L528.9 301.6 L531.0 290.8 L533.2 280.7 L535.5 271.2 L537.9 262.3 L540.3 254.0 L542.8 246.4 L545.3 239.4 L548.0 233.0 L550.7 227.2 L553.6 222.1 L556.5 217.5 L559.6 213.6 L562.9 210.2 L566.5 207.6 L570.3 205.6 L574.4 204.7 L578.5 205.1 L582.0 206.7 L584.3 209.4 L584.7 213.5 L584.7 213.5 L581.4 214.2 L584.8 237.9 L578.6 215.8 L603.5 241.2 L577.5 217.9 L617.7 234.2 L575.5 221.4 L623.3 229.5 L572.4 227.2 L624.0 229.8 L568.5 235.7 L621.5 234.8 L564.0 246.7 L616.2 243.9 L558.9 260.3 L608.6 257.0 L553.3 276.5 L598.5 273.7 L547.3 295.2 L586.1 294.1 L540.7 316.4 L571.0 318.0 L533.5 340.1 L552.2 345.9 L525.4 366.2 L520.0 380.0Z'/%3E%3Cpath d='M520.0 380.0 L529.5 365.1 L540.2 352.2 L551.2 340.6 L562.3 330.1 L573.4 320.7 L584.7 312.3 L596.0 305.1 L607.4 298.9 L618.8 293.9 L630.3 290.0 L641.8 287.2 L653.3 285.7 L664.8 285.5 L676.0 286.5 L687.1 288.8 L697.9 292.3 L708.4 297.0 L718.5 302.8 L728.1 309.8 L737.4 317.8 L746.2 326.9 L754.6 337.0 L762.6 348.1 L770.1 360.2 L777.0 373.5 L782.1 388.5 L782.1 388.5 L771.5 377.0 L750.6 390.9 L752.9 355.9 L730.8 385.5 L734.7 338.7 L716.4 381.4 L716.7 325.6 L706.6 378.1 L699.1 316.4 L700.5 374.5 L681.5 310.9 L695.8 369.4 L663.7 308.7 L689.4 363.0 L645.2 309.8 L678.3 356.7 L625.7 314.3 L661.2 352.8 L604.9 322.4 L637.9 352.9 L582.7 334.4 L608.7 357.9 L559.2 350.2 L572.9 368.0 L534.1 369.7 L520.0 380.0Z'/%3E%3Cpath d='M520.0 380.0 L536.2 371.8 L553.0 366.9 L570.0 363.8 L587.0 362.4 L604.0 362.7 L620.9 364.7 L637.8 368.4 L654.4 373.7 L670.8 380.8 L686.8 389.4 L702.6 399.6 L718.0 411.4 L733.0 424.8 L747.6 439.6 L761.8 455.9 L775.7 473.7 L789.1 493.0 L802.2 513.6 L814.9 535.8 L827.2 559.3 L839.0 584.3 L850.5 610.7 L861.6 638.6 L872.2 667.9 L882.1 698.7 L890.0 731.5 L890.0 731.5 L875.6 701.2 L844.1 694.7 L849.4 643.8 L810.8 652.7 L823.2 592.1 L781.1 614.1 L796.8 546.2 L754.3 579.5 L770.1 506.0 L730.2 548.9 L743.1 471.5 L708.5 521.9 L715.8 442.6 L689.0 497.8 L688.1 419.2 L670.9 475.9 L660.0 401.1 L652.6 455.2 L631.2 388.2 L631.8 435.4 L601.5 380.2 L605.8 417.0 L570.5 377.1 L571.8 400.8 L537.6 378.7 L520.0 380.0Z'/%3E%3Cpath d='M520.0 380.0 L509.2 380.1 L498.5 382.6 L488.0 386.3 L477.6 391.3 L467.3 397.4 L457.2 404.7 L447.2 412.9 L437.5 422.2 L428.0 432.6 L418.7 443.9 L409.6 456.2 L400.7 469.5 L392.1 483.7 L383.8 498.9 L375.6 515.1 L367.7 532.2 L360.0 550.2 L352.5 569.2 L345.3 589.1 L338.3 609.9 L331.6 631.7 L325.1 654.4 L318.8 678.0 L312.9 702.6 L307.5 728.2 L303.5 755.0 L303.5 755.0 L312.5 729.5 L335.8 720.1 L328.3 680.8 L358.3 681.5 L344.0 635.8 L378.2 644.9 L359.8 594.5 L396.2 610.9 L375.7 556.9 L412.6 579.4 L391.8 523.0 L427.4 550.5 L408.1 492.9 L440.8 524.0 L424.6 466.3 L452.9 499.4 L441.2 443.4 L463.9 476.6 L458.1 423.9 L474.6 454.8 L475.2 407.9 L485.9 433.4 L492.7 395.0 L499.5 411.3 L510.8 385.0 L520.0 380.0Z'/%3E%3Cpath d='M520.0 380.0 L530.9 380.1 L541.5 382.7 L552.1 386.7 L562.5 392.0 L572.9 398.5 L583.0 406.1 L593.0 414.9 L602.7 424.8 L612.2 435.8 L621.5 447.8 L630.6 460.9 L639.4 475.1 L648.0 490.2 L656.4 506.4 L664.5 523.6 L672.4 541.9 L680.1 561.1 L687.5 581.3 L694.8 602.6 L701.7 624.9 L708.5 648.1 L715.0 672.4 L721.2 697.7 L727.1 724.0 L732.5 751.4 L736.5 780.0 L736.5 780.0 L727.5 752.6 L703.9 741.1 L711.7 700.3 L681.2 698.9 L696.0 652.0 L661.1 659.0 L680.2 607.7 L642.9 622.0 L664.2 567.4 L626.3 588.0 L648.1 531.2 L611.3 556.8 L631.8 498.9 L597.8 528.4 L615.3 470.6 L585.7 502.3 L598.6 446.2 L574.7 478.3 L581.8 425.6 L564.2 455.8 L564.7 408.7 L553.3 433.9 L547.2 395.3 L540.1 411.5 L529.2 385.0 L520.0 380.0Z'/%3E%3Ccircle cx='506' cy='404' r='16'/%3E%3Ccircle cx='536' cy='408' r='16'/%3E%3Ccircle cx='521' cy='428' r='16'/%3E%3C/g%3E%3C/svg%3E");   /* coqueiro silhueta (fundo azul) */
+  --amb-sun-soft:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cpath fill='%23ffcf6a' d='M318.0 200.0 L400.0 200.0 L398.3 226.1 L317.0 215.4Z M314.0 230.5 L393.2 251.8 L384.8 276.5 L309.0 245.2Z M302.2 259.0 L373.2 300.0 L358.7 321.8 L293.6 271.8Z M283.4 283.4 L341.4 341.4 L321.8 358.7 L271.8 293.6Z M259.0 302.2 L300.0 373.2 L276.5 384.8 L245.2 309.0Z M230.5 314.0 L251.8 393.2 L226.1 398.3 L215.4 317.0Z M200.0 318.0 L200.0 400.0 L173.9 398.3 L184.6 317.0Z M169.5 314.0 L148.2 393.2 L123.5 384.8 L154.8 309.0Z M141.0 302.2 L100.0 373.2 L78.2 358.7 L128.2 293.6Z M116.6 283.4 L58.6 341.4 L41.3 321.8 L106.4 271.8Z M97.8 259.0 L26.8 300.0 L15.2 276.5 L91.0 245.2Z M86.0 230.5 L6.8 251.8 L1.7 226.1 L83.0 215.4Z M82.0 200.0 L0.0 200.0 L1.7 173.9 L83.0 184.6Z M86.0 169.5 L6.8 148.2 L15.2 123.5 L91.0 154.8Z M97.8 141.0 L26.8 100.0 L41.3 78.2 L106.4 128.2Z M116.6 116.6 L58.6 58.6 L78.2 41.3 L128.2 106.4Z M141.0 97.8 L100.0 26.8 L123.5 15.2 L154.8 91.0Z M169.5 86.0 L148.2 6.8 L173.9 1.7 L184.6 83.0Z M200.0 82.0 L200.0 0.0 L226.1 1.7 L215.4 83.0Z M230.5 86.0 L251.8 6.8 L276.5 15.2 L245.2 91.0Z M259.0 97.8 L300.0 26.8 L321.8 41.3 L271.8 106.4Z M283.4 116.6 L341.4 58.6 L358.7 78.2 L293.6 128.2Z M302.2 141.0 L373.2 100.0 L384.8 123.5 L309.0 154.8Z M314.0 169.5 L393.2 148.2 L398.3 173.9 L317.0 184.6Z'/%3E%3Ccircle cx='200' cy='200' r='98' fill='%23ffcf6a'/%3E%3C/svg%3E");
+  --amb-sun:       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cpath fill='%23ffb42a' d='M318.0 200.0 L400.0 200.0 L398.3 226.1 L317.0 215.4Z M314.0 230.5 L393.2 251.8 L384.8 276.5 L309.0 245.2Z M302.2 259.0 L373.2 300.0 L358.7 321.8 L293.6 271.8Z M283.4 283.4 L341.4 341.4 L321.8 358.7 L271.8 293.6Z M259.0 302.2 L300.0 373.2 L276.5 384.8 L245.2 309.0Z M230.5 314.0 L251.8 393.2 L226.1 398.3 L215.4 317.0Z M200.0 318.0 L200.0 400.0 L173.9 398.3 L184.6 317.0Z M169.5 314.0 L148.2 393.2 L123.5 384.8 L154.8 309.0Z M141.0 302.2 L100.0 373.2 L78.2 358.7 L128.2 293.6Z M116.6 283.4 L58.6 341.4 L41.3 321.8 L106.4 271.8Z M97.8 259.0 L26.8 300.0 L15.2 276.5 L91.0 245.2Z M86.0 230.5 L6.8 251.8 L1.7 226.1 L83.0 215.4Z M82.0 200.0 L0.0 200.0 L1.7 173.9 L83.0 184.6Z M86.0 169.5 L6.8 148.2 L15.2 123.5 L91.0 154.8Z M97.8 141.0 L26.8 100.0 L41.3 78.2 L106.4 128.2Z M116.6 116.6 L58.6 58.6 L78.2 41.3 L128.2 106.4Z M141.0 97.8 L100.0 26.8 L123.5 15.2 L154.8 91.0Z M169.5 86.0 L148.2 6.8 L173.9 1.7 L184.6 83.0Z M200.0 82.0 L200.0 0.0 L226.1 1.7 L215.4 83.0Z M230.5 86.0 L251.8 6.8 L276.5 15.2 L245.2 91.0Z M259.0 97.8 L300.0 26.8 L321.8 41.3 L271.8 106.4Z M283.4 116.6 L341.4 58.6 L358.7 78.2 L293.6 128.2Z M302.2 141.0 L373.2 100.0 L384.8 123.5 L309.0 154.8Z M314.0 169.5 L393.2 148.2 L398.3 173.9 L317.0 184.6Z'/%3E%3Ccircle cx='200' cy='200' r='98' fill='%23ffb42a'/%3E%3C/svg%3E");
+  --amb-wave-top:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath fill='%23f2f8fe' d='M0 40C180 8 360 8 540 30s360 34 540 12 270-30 360-20V80H0Z'/%3E%3C/svg%3E");
+  --amb-wave-bot:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath fill='%23f2f8fe' d='M0 0H1440V40C1260 72 1080 72 900 50S540 16 360 38 90 70 0 60Z'/%3E%3C/svg%3E");
+  --amb-wave-blue-top: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath fill='%230069d6' d='M0 40C180 8 360 8 540 30s360 34 540 12 270-30 360-20V80H0Z'/%3E%3C/svg%3E");
+  --amb-lines:     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 20'%3E%3Cpath d='M2 10c14-10 28-10 42 0s28 10 42 0 28-10 34-4' fill='none' stroke='%23ffffff' stroke-opacity='.35' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+/* 1) seções azul-claras começam e terminam em onda, com coqueiros na beira */
+.section--tint { position: relative; z-index: 1; }
+.section--tint::before, .section--tint::after {
+  content: ""; position: absolute; left: 0; right: 0; pointer-events: none;
+}
+.section--tint::before { top: -54px; height: 56px; background: var(--amb-wave-top) center bottom / 100% 100% no-repeat; }
+.section--tint::after {
+  bottom: -54px; height: 56px; background: var(--amb-wave-bot) center top / 100% 100% no-repeat;
+}
+/* coqueiros tom-sobre-tom, "plantados" no canto da seção */
+.section--tint > .container { position: relative; z-index: 1; }
+.section--tint .palms { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.section--tint .palms::before, .section--tint .palms::after {
+  content: ""; position: absolute; bottom: 0; background: var(--amb-palm-tone) center bottom / contain no-repeat;
+  transform-origin: 50% 100%; animation: palm-sway 7s ease-in-out infinite alternate;
+}
+.section--tint .palms::before { left: -30px; width: clamp(160px, 17vw, 300px); aspect-ratio: 840 / 920; }
+.section--tint .palms::after  { right: -20px; width: clamp(120px, 12vw, 220px); aspect-ratio: 840 / 920; transform: scaleX(-1); animation-delay: -3s; }
+
+/* 2) sol nascendo atrás de cada título de seção */
+.section-head { position: relative; isolation: isolate; }
+.section-head::before {
+  content: ""; position: absolute; z-index: -1; left: 50%; top: -128px;
+  width: 210px; aspect-ratio: 1; margin-left: -105px;
+  background: var(--amb-sun-soft) center / contain no-repeat; opacity: .38;
+  -webkit-mask-image: linear-gradient(180deg, #000 35%, transparent 58%);
+          mask-image: linear-gradient(180deg, #000 35%, transparent 58%);
+  animation: sun-spin 90s linear infinite;
+}
+.socio__text { position: relative; isolation: isolate; }
+.socio__text::before {
+  content: ""; position: absolute; z-index: -1; left: -80px; top: -80px; width: 240px; aspect-ratio: 1;
+  background: var(--amb-sun-soft) center / contain no-repeat; opacity: .45;
+  -webkit-mask-image: radial-gradient(circle, #000 40%, transparent 70%);
+          mask-image: radial-gradient(circle, #000 40%, transparent 70%);
+  animation: sun-spin 90s linear infinite;
+}
+
+/* 3) fechamento: pôr do sol na água, com coqueiros em silhueta */
+.final-cta { padding-top: clamp(110px, 12vw, 170px); padding-bottom: clamp(150px, 14vw, 210px); }
+.final-cta::before {
+  opacity: 1;
+  background:
+    var(--amb-wave-blue-top) center top / 100% 56px no-repeat,
+    radial-gradient(60% 45% at 50% 100%, rgba(255, 190, 70, .35), transparent 70%);
+}
+.final-cta::after {
+  content: ""; position: absolute; inset: auto 0 0 0; height: 100%; z-index: -1; pointer-events: none; opacity: 1;
+  background:
+    var(--amb-lines) center bottom 60px / 120px 20px repeat-x,
+    var(--amb-palm-navy) left -50px bottom / auto 78% no-repeat,
+    var(--amb-palm-navy) left 150px bottom / auto 48% no-repeat,
+    var(--amb-palm-navy) right -40px bottom / auto 70% no-repeat,
+    var(--amb-sun) center bottom -330px / 480px 480px no-repeat;
+}
+.final-cta { background: linear-gradient(180deg, #0069d6 0%, #0a58c9 50%, #0b4bb3 100%); }
+/* a onda de cima precisa "sair" da seção clara anterior */
+.final-cta { margin-top: -2px; }
+
+/* celular */
+@media (max-width: 760px) {
+  .section--tint::before, .section--tint::after { height: 30px; }
+  .section--tint::before { top: -28px; }
+  .section--tint::after { bottom: -28px; }
+  .section--tint .palms::before { width: 120px; left: -36px; opacity: .8; }
+  .section--tint .palms::after { display: none; }
+  .section-head::before { width: 160px; margin-left: -80px; top: -96px; }
+  .final-cta::after {
+    background:
+      var(--amb-palm-navy) left -40px bottom / auto 46% no-repeat,
+      var(--amb-palm-navy) right -40px bottom / auto 38% no-repeat,
+      var(--amb-sun) center bottom -230px / 320px 320px no-repeat;
+  }
+}
+
+/* =========================================================================
+   17. SELO "300 TÍTULOS" (ingresso)
+   ========================================================================= */
+.ticket {
+  position: absolute; left: -28px; bottom: 28px; z-index: 3;
+  display: flex; align-items: stretch;
+  border-radius: 18px; overflow: hidden;
+  background: var(--c-white);
+  box-shadow: 0 22px 40px -18px rgba(7, 31, 77, .55);
+  /* recortes laterais de ingresso */
+  -webkit-mask: radial-gradient(circle 9px at 96px 0, transparent 98%, #000) top / 100% 51% no-repeat,
+                radial-gradient(circle 9px at 96px 100%, transparent 98%, #000) bottom / 100% 51% no-repeat;
+          mask: radial-gradient(circle 9px at 96px 0, transparent 98%, #000) top / 100% 51% no-repeat,
+                radial-gradient(circle 9px at 96px 100%, transparent 98%, #000) bottom / 100% 51% no-repeat;
+}
+.ticket__num {
+  width: 96px; display: grid; place-items: center;
+  background: linear-gradient(160deg, #1f8ef0, #0747b0);
+  color: var(--c-white); font: 900 34px/1 var(--f-body); letter-spacing: -.03em;
+}
+.ticket__txt {
+  display: flex; flex-direction: column; justify-content: center; gap: 4px;
+  padding: 14px 20px 14px 18px; border-left: 2px dashed var(--c-line);
+}
+.ticket__txt b { font: 800 15px/1.15 var(--f-body); color: var(--c-navy); text-transform: uppercase; letter-spacing: .02em; }
+.ticket__txt small { font-size: 12.5px; font-weight: 600; color: var(--c-orange); }
+
+
+/* =========================================================================
+   18. HERO: foto nova (Joca na entrada do resort)
+   ========================================================================= */
+.hs { --hs-foto: url("../assets/img/site/hero-entrada-full.jpg"); }
+.hs__photo { background-position: 2% 50%; }
+@media (max-width: 1180px) and (min-width: 761px) { .hs__photo { background-position: 20% 50%; } }
+@media (max-width: 760px), (max-width: 1180px) and (orientation: portrait) and (max-aspect-ratio: 1/1) {
+  .hs { --hs-foto: url("../assets/img/site/hero-entrada-m.jpg"); }
+  .hs__photo { background-position: 14% 40%; }
+}
+
+/* aviso discreto de imagens ilustrativas */
+.ilustra {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  margin-top: 18px; font-size: 12px; color: #7d93b8; text-align: center;
+}
+.ilustra svg { width: 14px; height: 14px; flex: none; }
+.site-footer__note { width: 100%; font-size: 12px; opacity: .65; }
+
+/* =========================================================================
+   19. CARROSSEL (base: no computador vira grade; no celular arrasta)
+   ========================================================================= */
+.carousel { position: relative; }
+.carousel [data-track] { list-style: none; margin: 0; padding: 0; }
+.carousel__nav { display: none; justify-content: center; margin-top: 16px; }
+.carousel__dots { display: flex; gap: 6px; }
+.carousel__dots i { width: 8px; height: 8px; border-radius: 8px; background: var(--c-line); transition: width .3s, background-color .3s; }
+.carousel__dots i.is-on { width: 24px; background: var(--c-blue); }
+.carousel.is-scrollable .carousel__nav { display: flex; }
+
+/* modo "arrastar" no celular */
+@media (max-width: 760px) {
+  .carousel [data-track] {
+    display: flex !important; gap: 12px;
+    overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+    margin-inline: calc(-1 * max(20px, env(safe-area-inset-left, 0px)));
+    padding: 4px max(20px, env(safe-area-inset-left, 0px)) 10px;
+    scroll-padding-inline: max(20px, env(safe-area-inset-left, 0px));
+    scrollbar-width: none;
+  }
+  .carousel [data-track]::-webkit-scrollbar { display: none; }
+  .carousel [data-track] > * { scroll-snap-align: start; flex: 0 0 84%; }
+}
+
+/* =========================================================================
+   20. ATRAÇÕES (grade em mosaico)
+   ========================================================================= */
+.atr-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: clamp(190px, 17vw, 260px);
+  gap: clamp(10px, 1.2vw, 18px);
+}
+.atr { position: relative; overflow: hidden; border-radius: 24px; background: var(--c-navy); isolation: isolate; box-shadow: 0 20px 40px -28px rgba(7, 31, 77, .6); }
+.atr--big  { grid-column: span 2; grid-row: span 2; }
+.atr--wide { grid-column: span 2; }
+.atr__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; transition: transform .8s var(--ease-out); }
+.atr:hover .atr__img { transform: scale(1.06); }
+.atr::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(0deg, rgba(4, 30, 80, .88) 0%, rgba(4, 30, 80, .35) 38%, rgba(4, 30, 80, 0) 62%);
+}
+.atr__body { position: absolute; left: 0; right: 0; bottom: 0; padding: clamp(16px, 1.6vw, 26px); color: var(--c-white); }
+.atr__tag {
+  display: inline-block; padding: 5px 10px; border-radius: 999px; margin-bottom: 8px;
+  font: 800 11px/1 var(--f-body); letter-spacing: .1em; text-transform: uppercase; color: var(--c-white);
+  background: var(--c-blue);
+}
+.atr__tag--radical  { background: #ff5a3c; }
+.atr__tag--aventura { background: var(--c-orange); }
+.atr__tag--família  { background: var(--c-blue); }
+.atr__tag--relax    { background: var(--c-green); }
+.atr h3 { font: 900 clamp(19px, 1.6vw, 26px)/1.1 var(--f-body); letter-spacing: -.01em; text-shadow: 0 2px 8px rgba(0, 20, 60, .5); }
+.atr--big h3 { font-size: clamp(26px, 2.6vw, 40px); }
+.atr p { margin-top: 6px; max-width: 30em; font-size: 14.5px; line-height: 1.45; opacity: .92; }
+
+@media (max-width: 1100px) and (min-width: 761px) {
+  .atr-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 240px; }
+  .atr--big { grid-row: span 1; }
+}
+@media (max-width: 760px) {
+  .atr-grid > .atr { height: 430px; border-radius: 22px; }
+  .atr h3, .atr--big h3 { font-size: 26px; }
+}
+
+/* =========================================================================
+   21. ESPAÇOS (painéis que abrem)
+   ========================================================================= */
+.esp-row { display: flex; gap: 14px; height: clamp(380px, 34vw, 520px); }
+.esp {
+  position: relative; flex: 1; min-width: 0; overflow: hidden; border-radius: 26px; cursor: pointer; isolation: isolate;
+  transition: flex .7s var(--ease-out);
+  box-shadow: 0 20px 40px -28px rgba(7, 31, 77, .6);
+}
+.esp.is-open { flex: 3.2; cursor: default; }
+.esp__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+.esp::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, rgba(4, 30, 80, .85), rgba(4, 30, 80, .1) 55%); }
+.esp__body { position: absolute; left: 0; right: 0; bottom: 0; padding: 24px; color: var(--c-white); }
+.esp h3 { font: 900 clamp(18px, 1.6vw, 26px)/1.1 var(--f-body); white-space: nowrap; }
+.esp p { margin-top: 6px; max-width: 26em; font-size: 15px; opacity: 0; transform: translateY(8px); transition: opacity .4s .2s, transform .4s .2s; }
+.esp.is-open p { opacity: .95; transform: none; }
+.esp:not(.is-open) .esp__body { padding: 20px 16px; }
+.esp:not(.is-open) h3 { writing-mode: vertical-rl; transform: rotate(180deg); font-size: 18px; }
+.esp:focus-visible { outline: 3px solid var(--c-gold); outline-offset: 3px; }
+@media (max-width: 760px) {
+  .esp-row { height: auto; }
+  .esp, .esp.is-open { flex: 0 0 84% !important; height: 360px; }
+  .esp:not(.is-open) h3 { writing-mode: initial; transform: none; font-size: 22px; }
+  .esp p { opacity: .95; transform: none; }
+  .esp__body, .esp:not(.is-open) .esp__body { padding: 20px; }
+}
+
+/* =========================================================================
+   22. CHALÉS (cena de entardecer)
+   ========================================================================= */
+.chales {
+  position: relative; overflow: hidden; isolation: isolate;
+  padding-block: clamp(80px, 9vw, 140px);
+  color: var(--c-white);
+  background: linear-gradient(160deg, #0b3a8e 0%, #071f4d 60%, #1a1240 100%);
+}
+.chales::before { /* brilho do pôr do sol */
+  content: ""; position: absolute; right: -10%; top: -20%; width: 60%; aspect-ratio: 1; z-index: -1;
+  background: radial-gradient(circle, rgba(255, 170, 60, .35), transparent 65%);
+}
+.chales::after { /* estrelinhas */
+  content: ""; position: absolute; inset: 0; z-index: -1; opacity: .5;
+  background-image:
+    radial-gradient(1.5px 1.5px at 12% 18%, #fff, transparent), radial-gradient(1px 1px at 28% 8%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 46% 22%, #fff, transparent), radial-gradient(1px 1px at 64% 12%, #fff, transparent),
+    radial-gradient(1px 1px at 82% 30%, #fff, transparent), radial-gradient(1.5px 1.5px at 92% 10%, #fff, transparent);
+}
+.chales__grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(32px, 5vw, 80px); align-items: center; }
+.chales__media { margin: 0; position: relative; }
+.chales__media img { width: 100%; height: auto; aspect-ratio: 4 / 3.2; object-fit: cover; border-radius: 30px; box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .7); }
+.chales__media::before { content: ""; position: absolute; inset: 16px -16px -16px 16px; border: 2px solid rgba(255, 210, 31, .5); border-radius: 30px; z-index: -1; }
+.chales__text { min-width: 0; }
+.chales__lead { margin-top: 18px; font-size: clamp(16px, 1.2vw, 18.5px); line-height: 1.6; opacity: .92; }
+.chales__uses { list-style: none; margin: 26px 0 30px; padding: 0; display: grid; gap: 12px; }
+.chales__uses li {
+  display: grid; grid-template-columns: 44px 1fr; grid-template-rows: auto auto; column-gap: 14px; align-items: center;
+  padding: 14px 16px; border-radius: 16px; background: rgba(255, 255, 255, .07); border: 1px solid rgba(255, 255, 255, .12);
+}
+.chales__uses svg { grid-row: span 2; width: 44px; height: 44px; padding: 10px; border-radius: 12px; background: rgba(255, 210, 31, .15); color: var(--c-gold); }
+.chales__uses b { font-size: 16px; }
+.chales__uses span { font-size: 14px; opacity: .8; }
+.chales__note { margin-top: 14px; font-size: 12px; opacity: .6; }
+.chales .btn-pill { white-space: normal; text-align: center; }
+@media (max-width: 960px) {
+  .chales__grid { grid-template-columns: 1fr; }
+  .chales__media { max-width: 640px; }
+}
+@media (max-width: 560px) { .chales .btn-pill { width: 100%; } .chales__media::before { inset: 10px -8px -10px 10px; } }
+
+/* =========================================================================
+   23. ANTES E DEPOIS
+   ========================================================================= */
+.ba-wrap { max-width: 1100px; margin: 0 auto clamp(48px, 6vw, 80px); }
+.ba-tabs { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.ba-tab {
+  padding: 10px 18px; border-radius: 999px; cursor: pointer;
+  font: 700 14px/1 var(--f-body); color: var(--c-navy);
+  background: var(--c-white); border: 1px solid var(--c-line);
+  transition: background-color .25s, color .25s, border-color .25s;
+}
+.ba-tab.is-active { background: var(--c-blue); border-color: var(--c-blue); color: var(--c-white); }
+.ba {
+  --pos: 50%;
+  position: relative; overflow: hidden; border-radius: 26px; aspect-ratio: 2 / 1;
+  box-shadow: 0 28px 50px -30px rgba(7, 31, 77, .6); user-select: none; touch-action: pan-y;
+}
+.ba[hidden] { display: none; }
+.ba__after, .ba__before img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ba__before { position: absolute; inset: 0; clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+.ba__handle {
+  position: absolute; top: 0; bottom: 0; left: var(--pos); width: 4px; margin-left: -2px; background: var(--c-white);
+  box-shadow: 0 0 12px rgba(0, 0, 0, .35); pointer-events: none;
+}
+.ba__handle svg {
+  position: absolute; top: 50%; left: 50%; width: 48px; height: 48px; margin: -24px 0 0 -24px; padding: 12px;
+  border-radius: 50%; background: var(--c-white); color: var(--c-blue); box-shadow: 0 6px 18px rgba(0, 0, 0, .3);
+}
+.ba:not(.is-touched) .ba__handle svg { animation: ba-nudge 2.2s ease-in-out infinite; }
+@keyframes ba-nudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(6px); } }
+.ba__range { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; -webkit-appearance: none; appearance: none; }
+.ba__range:focus-visible + * , .ba:focus-within .ba__handle svg { outline: 3px solid var(--c-gold); }
+.ba__label {
+  position: absolute; top: 16px; padding: 7px 12px; border-radius: 999px; pointer-events: none;
+  font: 800 12px/1 var(--f-body); letter-spacing: .08em; text-transform: uppercase; color: var(--c-white);
+}
+.ba__label--before { left: 16px; background: rgba(140, 70, 20, .85); }
+.ba__label--after { right: 16px; background: rgba(0, 105, 214, .9); }
+.ba-hint { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--c-blue); }
+.ba-hint svg { width: 16px; height: 16px; }
+.stage-title { margin: 0 auto 20px; text-align: center; font: 800 clamp(18px, 1.5vw, 22px)/1.2 var(--f-body); color: var(--c-navy); }
+@media (max-width: 760px) {
+  .ba { aspect-ratio: 4 / 3.4; border-radius: 20px; }
+  .ba__label { top: 12px; font-size: 10.5px; }
+  .ba__label--before { left: 12px; } .ba__label--after { right: 12px; }
+}
+
+/* =========================================================================
+   24. SÓCIOS (carrossel com fotos)
+   ========================================================================= */
+.soc-track { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 6px 2px 14px; }
+.soc-track::-webkit-scrollbar { display: none; }
+.soc { position: relative; flex: 0 0 calc((100% - 32px) / 3); scroll-snap-align: start; border-radius: 22px; overflow: hidden; background: var(--c-white); box-shadow: 0 18px 36px -26px rgba(7, 31, 77, .55); }
+.soc img { width: 100%; height: auto; aspect-ratio: 4 / 4.2; object-fit: cover; display: block; }
+.soc__tag {
+  position: absolute; left: 12px; bottom: 12px; display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 12px 7px 8px; border-radius: 999px; background: rgba(255, 255, 255, .94); color: var(--c-navy);
+  font: 800 12px/1 var(--f-body); letter-spacing: .04em; text-transform: uppercase;
+}
+.soc__tag svg { width: 18px; height: 18px; padding: 3px; border-radius: 50%; background: var(--c-green); color: var(--c-white); }
+.carousel__arrow {
+  position: absolute; top: calc(50% - 30px); z-index: 2; display: grid; place-items: center;
+  width: 48px; height: 48px; border-radius: 50%; border: 0; cursor: pointer;
+  background: var(--c-white); color: var(--c-blue); box-shadow: 0 10px 24px -10px rgba(7, 31, 77, .5);
+  transition: opacity .25s, transform .25s;
+}
+.carousel__arrow svg { width: 22px; height: 22px; }
+.carousel__arrow--prev { left: -18px; } .carousel__arrow--prev svg { transform: rotate(180deg); }
+.carousel__arrow--next { right: -18px; }
+.carousel__arrow:disabled { opacity: 0; pointer-events: none; }
+@media (max-width: 960px) { .soc { flex-basis: calc((100% - 16px) / 2); } }
+@media (max-width: 760px) {
+  .carousel__arrow { display: none; }
+  .carousel--socios [data-track] > * { flex-basis: 78%; }
+}
+
+/* =========================================================================
+   25. CELULAR: acabamento geral
+   ========================================================================= */
+@media (max-width: 760px) {
+  .section { padding-block: 64px; }
+  .section-head { margin-bottom: 28px; }
+  .display { font-size: clamp(40px, 11.5vw, 56px); }
+  .lead { font-size: 16px; }
+}
+
+/* Hero da página O Parque: mesma estrutura, outra foto */
+.hs--parque { --hs-foto: url("../assets/img/site/piscina-ondas-full.jpg"); }
+.hs--parque .hs__photo { background-position: 30% 50%; }
+@media (max-width: 760px), (max-width: 1180px) and (orientation: portrait) and (max-aspect-ratio: 1/1) {
+  .hs--parque { --hs-foto: url("../assets/img/site/piscina-ondas-m.jpg"); }
+  .hs--parque .hs__photo { background-position: 60% 50%; }
+}
+
+/* antes/depois único + fotos da obra */
+.ba-title { margin-bottom: 16px; text-align: center; font: 900 clamp(22px, 2vw, 28px)/1.1 var(--f-body); color: var(--c-navy); }
+.ba-title span { display: inline-block; margin-left: 8px; padding: 5px 10px; border-radius: 999px; vertical-align: middle; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--c-white); background: var(--c-green); }
+.obra-fotos { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.obra-fotos li { position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 18px 36px -26px rgba(7, 31, 77, .55); }
+.obra-fotos img { width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; display: block; }
+.obra-fotos span { position: absolute; left: 12px; bottom: 12px; padding: 6px 11px; border-radius: 999px; background: rgba(140, 70, 20, .88); color: var(--c-white); font: 800 11px/1 var(--f-body); letter-spacing: .08em; text-transform: uppercase; }
+@media (max-width: 560px) { .obra-fotos { grid-template-columns: 1fr; gap: 10px; } .ba-title span { display: table; margin: 8px auto 0; } }
+
+/* =========================================================================
+   26. PERGUNTAS FREQUENTES
+   ========================================================================= */
+.faq-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(32px, 5vw, 80px); align-items: start; }
+.faq-side { position: sticky; top: 110px; }
+.faq-cta {
+  display: flex; align-items: flex-end; gap: 14px; margin-top: 28px; padding: 18px 20px 0 8px;
+  border-radius: 22px; background: linear-gradient(160deg, #e8f4ff, #d6ebff); overflow: hidden;
+}
+.faq-cta img { width: 110px; height: auto; flex: none; margin-bottom: -6px; }
+.faq-cta div { display: flex; flex-direction: column; gap: 10px; padding-bottom: 20px; }
+.faq-cta b { font-size: 17px; color: var(--c-navy); }
+.faq-list { display: grid; gap: 12px; }
+.faq { border-radius: 18px; background: var(--c-white); border: 1px solid var(--c-line); box-shadow: 0 14px 30px -26px rgba(7, 31, 77, .5); transition: border-color .25s; }
+.faq[open] { border-color: #9ccaf5; }
+.faq summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 20px 22px; cursor: pointer; list-style: none;
+  font: 800 clamp(15.5px, 1.15vw, 17.5px)/1.35 var(--f-body); color: var(--c-navy);
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary:focus-visible { outline: 3px solid var(--c-gold); outline-offset: 2px; border-radius: 18px; }
+.faq__icon { position: relative; flex: none; width: 32px; height: 32px; border-radius: 50%; background: #e8f4ff; transition: background-color .25s, transform .3s var(--ease-out); }
+.faq__icon::before, .faq__icon::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 2.5px; margin: -1.25px 0 0 -6px; border-radius: 2px; background: var(--c-blue); }
+.faq__icon::after { transform: rotate(90deg); transition: transform .3s var(--ease-out); }
+.faq[open] .faq__icon { background: var(--c-blue); }
+.faq[open] .faq__icon::before, .faq[open] .faq__icon::after { background: var(--c-white); }
+.faq[open] .faq__icon::after { transform: rotate(0deg); }
+.faq__a { padding: 0 22px 20px; }
+.faq__a p { font-size: 15.5px; line-height: 1.6; color: #3f5885; }
+.faq__a strong { color: var(--c-navy); }
+.faq__a a { color: var(--c-green-dark); font-weight: 700; }
+@media (max-width: 960px) {
+  .faq-grid { grid-template-columns: 1fr; }
+  .faq-side { position: static; }
+  .faq-cta { order: 2; }
+}
+@media (max-width: 760px) {
+  .faq summary { padding: 18px; }
+  .faq__a { padding: 0 18px 18px; }
+  .faq-cta img { width: 90px; }
+}
+.faq-side, .faq-list { min-width: 0; }
+.faq-cta .btn-pill { white-space: normal; }
+@media (max-width: 400px) { .faq-cta .btn-pill { padding: .8em 1.1em; font-size: 12.5px; } .faq-cta img { width: 76px; } }
+
+/* =========================================================================
+   27. DESCIDA: mensagem na piscina + onda que traz o slide do título
+   ========================================================================= */
+.ride__final { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+.ride__final-copy { display: flex; flex-direction: column; align-items: center; }
+.ride__final-title { align-items: center; }
+.ride__final.is-on { pointer-events: none; }
+
+.ride__slide {
+  position: absolute; inset: 0; z-index: 5; pointer-events: none;
+  transform: translateY(calc((1 - var(--w)) * 105%));
+  will-change: transform;
+}
+.ride.is-slide .ride__slide { pointer-events: auto; }
+.ride__wave { position: absolute; left: 0; bottom: calc(100% - 2px); width: 100%; height: clamp(60px, 9vw, 120px); }
+.ride__wave .w1 { fill: rgba(45, 201, 249, .55); }
+.ride__wave .w2 { fill: #0a5fd0; }
+.ride__slide-body {
+  position: absolute; inset: 0; overflow: hidden;
+  display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: clamp(20px, 4vw, 70px);
+  padding: 90px max(24px, 7vw) 40px;
+  background: radial-gradient(70% 60% at 25% 70%, rgba(45, 201, 249, .35), transparent 70%), linear-gradient(180deg, #0a5fd0 0%, #0747b0 60%, #063a8f 100%);
+  color: var(--c-white);
+}
+.ride__slide-body::before { /* sol nascendo atrás do Joca */
+  content: ""; position: absolute; left: 6%; bottom: -12%; width: min(46vw, 620px); aspect-ratio: 1;
+  background: var(--amb-sun) center / contain no-repeat; opacity: .25;
+  animation: sun-spin 80s linear infinite;
+}
+.ride__slide-joca { position: relative; align-self: end; justify-self: center; width: min(32vw, 58vh, 480px); }
+.ride__slide-joca img {
+  width: 100%; height: auto;
+  transform: translateY(calc((1 - var(--w)) * 40%)) rotate(calc((1 - var(--w)) * -8deg));
+  filter: drop-shadow(0 24px 30px rgba(0, 20, 60, .4));
+}
+.ride__slide-copy { min-width: 0; }
+.ride__slide-title {
+  margin: 8px 0 18px; font: 400 clamp(46px, 5vw, 92px)/.95 var(--f-display);
+  text-shadow: 0 .03em 0 #4f9df5, 0 .06em 0 #1459c4, 0 .12em .2em rgba(0, 25, 80, .5);
+}
+.ride__slide-title span {
+  display: block; margin-top: .08em; font: 900 .62em/1 var(--f-body); letter-spacing: -.015em; text-transform: uppercase; color: var(--c-gold);
+  text-shadow: 0 .03em 0 #f6b400, 0 .06em 0 #cf7200, 0 .14em .2em rgba(0, 20, 60, .45);
+}
+.ride__perks { list-style: none; margin: 0 0 22px; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.ride__perks li {
+  padding: 14px 16px; border-radius: 16px; font-size: 14px; line-height: 1.4;
+  background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .18);
+  opacity: 0; transform: translateY(16px);
+  transition: opacity .5s calc(var(--i) * .1s + .15s), transform .5s calc(var(--i) * .1s + .15s) var(--ease-out);
+}
+.ride__perks b { display: block; font-size: 16px; color: var(--c-gold); }
+.ride.is-slide .ride__perks li { opacity: 1; transform: none; }
+.ride__btn2 {
+  display: inline-flex; align-items: center; gap: .5em; min-height: clamp(52px, 3.8vw, 68px); padding: 0 1.4em;
+  border-radius: 14px; border: 2px solid rgba(255, 255, 255, .85); color: var(--c-white); text-decoration: none;
+  font: 800 clamp(14px, 1.08vw, 19px)/1 var(--f-body); letter-spacing: .05em; text-transform: uppercase;
+  transition: background-color .25s, color .25s, transform .25s var(--ease-out);
+}
+.ride__btn2 svg { width: 1.1em; height: 1.1em; }
+.ride__btn2:hover { background: var(--c-white); color: var(--c-blue-deep); transform: translateY(-3px); }
+.ride.is-slide .ride__progress { opacity: 0; }
+
+@media (max-width: 760px), (orientation: portrait) and (max-aspect-ratio: 1/1) {
+  .ride__final { padding: 70px 16px 0; grid-template-rows: 1fr; align-items: center; align-content: center; }
+  .ride__final-title .t1 { font-size: clamp(50px, 15vw, 90px); }
+  .ride__slide-body { grid-template-columns: 1fr; grid-template-rows: auto 1fr; align-items: start; padding: calc(78px + env(safe-area-inset-top, 0px)) 18px 0; text-align: center; gap: 0; }
+  .ride__slide-copy { order: 1; display: flex; flex-direction: column; align-items: center; }
+  .ride__slide-joca { order: 2; width: min(50vw, 30vh, 240px); align-self: end; }
+  .ride__slide-body::before { left: 50%; margin-left: -45vw; width: 90vw; bottom: -30vw; }
+  .ride__slide-title { font-size: clamp(38px, 11vw, 60px); margin-bottom: 12px; }
+  .ride__perks { gap: 8px; margin-bottom: 14px; text-align: left; }
+  .ride__perks li { padding: 10px 12px; font-size: 12px; }
+  .ride__perks b { font-size: 14px; }
+  .ride__final-actions { width: 100%; flex-direction: column; gap: 8px; }
+  .ride__final-actions .hs__btn, .ride__btn2 { width: 100%; justify-content: center; min-height: 48px; font-size: 13px; }
+}
+@media (max-height: 700px) and (max-width: 760px) { .ride__slide-joca { display: none; } }
+
+/* 28. SLIDE DO TÍTULO: acabamento (sem sol; Joca sobre a água) */
+.ride__slide-body {
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  background:
+    radial-gradient(55% 40% at 26% 92%, rgba(111, 214, 255, .45), transparent 70%),
+    radial-gradient(60% 50% at 85% 10%, rgba(255, 255, 255, .1), transparent 70%),
+    linear-gradient(180deg, #0a5fd0 0%, #0747b0 55%, #052f7a 100%);
+}
+.ride__slide-body::before { content: none; }
+.ride__slide-body::after { /* linhas de água no rodapé */
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 26%; pointer-events: none;
+  background: var(--amb-lines) center top 0 / 140px 22px repeat-x, var(--amb-lines) 70px top 34px / 140px 22px repeat-x, var(--amb-lines) center top 68px / 140px 22px repeat-x;
+  opacity: .6;
+}
+.ride__ripple {
+  position: absolute; left: 50%; bottom: 2%; width: 90%; aspect-ratio: 4 / 1; margin-left: -45%;
+  border-radius: 50%; border: 2px solid rgba(190, 236, 255, .6); pointer-events: none;
+  animation: ripple 3.6s ease-out infinite;
+}
+.ride__ripple--1 { background: radial-gradient(closest-side, rgba(150, 225, 255, .45), transparent); border: 0; animation: none; }
+.ride__ripple--3 { animation-delay: 1.8s; }
+@keyframes ripple { 0% { transform: scale(.55); opacity: .9; } 100% { transform: scale(1.35); opacity: 0; } }
+.ride__slide-joca img { position: relative; z-index: 1; }
+
+.ride__slide-copy {
+  padding: clamp(22px, 2.6vw, 40px); border-radius: 28px;
+  background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .16);
+  box-shadow: 0 30px 60px -30px rgba(0, 10, 40, .6);
+}
+.ride__badge {
+  display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px 6px 6px; border-radius: 999px;
+  background: rgba(255, 210, 31, .16); color: #ffe48a; font: 700 12.5px/1 var(--f-body); letter-spacing: .06em; text-transform: uppercase;
+}
+.ride__badge b { padding: 5px 9px; border-radius: 999px; background: var(--c-gold); color: var(--c-navy); font-weight: 900; letter-spacing: 0; }
+.ride__slide-title { margin: 14px 0 20px; }
+.ride__perks { gap: 10px; }
+.ride__perks li { display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: rgba(4, 30, 90, .35); border-color: rgba(255, 255, 255, .12); }
+.ride__perks b { font-size: 15.5px; margin-bottom: 2px; }
+.ride__pi { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; background: var(--c-gold); color: var(--c-navy); }
+.ride__pi svg { width: 22px; height: 22px; }
+.ride__slide-copy .ride__final-actions > * { flex: 1 1 220px; justify-content: center; white-space: normal; text-align: center; }
+
+@media (max-width: 1180px) and (min-width: 761px) and (orientation: landscape) {
+  .ride__slide-body { padding-inline: 4vw; gap: 3vw; }
+  .ride__perks { grid-template-columns: 1fr; }
+  .ride__slide-title { font-size: clamp(40px, 4.6vw, 64px); }
+}
+@media (max-width: 760px), (orientation: portrait) and (max-aspect-ratio: 1/1) {
+  .ride__slide-copy { padding: 0; background: none; border: 0; box-shadow: none; }
+  .ride__perks li { flex-direction: column; align-items: flex-start; gap: 6px; padding: 10px; }
+  .ride__pi { width: 30px; height: 30px; border-radius: 9px; }
+  .ride__pi svg { width: 17px; height: 17px; }
+  .ride__badge { font-size: 10.5px; }
+  .ride__slide-copy .ride__final-actions > * { flex: none; }
+}
+.ride__slide-copy .ride__final-actions > * { flex: 1 1 auto; white-space: nowrap; font-size: clamp(13px, .95vw, 16px); padding-inline: 1.1em; }
+@media (max-width: 760px), (orientation: portrait) and (max-aspect-ratio: 1/1) {
+  .ride__slide-body { grid-template-columns: 1fr; }
+  .ride__slide-copy .ride__final-actions > * { width: 100%; white-space: normal; font-size: 13px; }
+  .ride__slide-body::after { height: 14%; }
+}
