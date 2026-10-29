@@ -1994,3 +1994,63 @@ body.ride-slide .whats-fab { opacity: 0; pointer-events: none; transform: scale(
   .hs__photo { min-height: 0; flex: 1 1 0; }
 }
 .hs { position: relative; z-index: 5; }
+
+/* =========================================================================
+   34. AJUSTES: seção Sócio mais limpa, sol sem cortes, curvas sem faixa
+   ========================================================================= */
+/* curva entre seções: só a sobreposição suave, sem a faixa azul-clara */
+.curve::before { content: none; }
+.curve { filter: drop-shadow(0 -10px 14px rgba(7, 31, 77, .06)); }
+
+/* sol atrás dos títulos: inteiro e esmaecido nas bordas (nada cortado) */
+.section-head::before {
+  top: -96px; width: 200px; margin-left: -100px; opacity: .45;
+  -webkit-mask-image: radial-gradient(circle, #000 30%, transparent 68%);
+          mask-image: radial-gradient(circle, #000 30%, transparent 68%);
+}
+.socio__text::before { content: none; }
+
+/* seção Sócio: foto nova, sem o card dos 300 */
+.socio__media img { aspect-ratio: 4 / 5; object-position: 50% 40%; }
+.perk p { font-size: 13.5px; }
+
+@media (max-width: 960px) {
+  .socio__media { max-width: none; margin-bottom: 0; }
+  .socio__media img { aspect-ratio: 16 / 10; object-position: 50% 62%; border-radius: 22px; }
+}
+@media (max-width: 760px) {
+  .section { padding-block: 52px; }
+  .section-head::before { width: 150px; margin-left: -75px; top: -70px; }
+  .socio__grid { gap: 22px; }
+  .socio .lead { font-size: 15px; margin-top: 12px; }
+  .socio__badge { margin-top: 12px; font-size: 12.5px; }
+  .perks { grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 18px; }
+  .perk { flex-direction: column; gap: 8px; padding: 12px; border-radius: 14px; }
+  .perk__icon { width: 36px; height: 36px; border-radius: 10px; }
+  .perk__icon svg { width: 20px; height: 20px; }
+  .perk h3 { font-size: 14px; }
+  .perk p { font-size: 12.5px; margin-top: 2px; }
+  .socio__cta { margin-top: 18px; }
+  .socio__cta p { display: none; }
+}
+
+/* Hero no celular: sem o sol, foto mais baixa e inteira (pés do Joca aparecendo) */
+@media (max-width: 760px), (max-width: 1180px) and (orientation: portrait) and (max-aspect-ratio: 1/1) {
+  .hs__photo::after { content: none; }
+  .hs__frame { height: auto; min-height: 0; }
+  .hs__photo { flex: none; aspect-ratio: 1.75; min-height: 0; height: auto; background-position: 22% 100%; }
+  .hs--parque .hs__photo { background-position: 50% 70%; }
+  .hs__panel { margin-top: -44px; }
+}
+@media (max-width: 760px), (max-width: 1180px) and (orientation: portrait) and (max-aspect-ratio: 1/1) {
+  .hs__photo { aspect-ratio: 1.22; background-position: 14% 100%; }
+  .hs--parque .hs__photo { background-position: 60% 80%; }
+}
+@media (max-width: 760px), (max-width: 1180px) and (orientation: portrait) and (max-aspect-ratio: 1/1) {
+  /* a foto termina logo acima da curva: os pés do Joca ficam à mostra */
+  .hs__photo { aspect-ratio: 1.08; background-color: #0b6ade; background-size: auto calc(100% - 46px); background-position: 14% 0; }
+  .hs--parque .hs__photo { background-position: 60% 0; }
+}
+@media (max-width: 760px), (max-width: 1180px) and (orientation: portrait) and (max-aspect-ratio: 1/1) {
+  .hs__photo { background-size: auto calc(100% - 12px); aspect-ratio: 1.15; }
+}
