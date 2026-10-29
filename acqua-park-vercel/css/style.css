@@ -1927,3 +1927,70 @@ p { margin: 0; }
 }
 
 body.ride-slide .whats-fab { opacity: 0; pointer-events: none; transform: scale(.6); transition: opacity .3s, transform .3s; }
+
+/* =========================================================================
+   31. SEPARAÇÃO ENTRE SEÇÕES: a mesma curva da Hero em todas
+   ========================================================================= */
+.section, .chales, .final-cta { position: relative; }
+.section--tint::before, .section--tint::after { content: none; }
+.final-cta::before { background: radial-gradient(60% 45% at 50% 100%, rgba(255, 190, 70, .35), transparent 70%); }
+.section { --sec-bg: var(--c-white); }
+.section--tint { --sec-bg: var(--c-paper); }
+.chales { --sec-bg: #0b3a8e; }
+.final-cta { --sec-bg: #0069d6; }
+.curve {
+  position: absolute; left: 0; right: 0; top: calc(-1 * clamp(44px, 6vw, 90px) + 1px);
+  height: clamp(44px, 6vw, 90px); z-index: 4; pointer-events: none;
+}
+.curve--flip { transform: scaleX(-1); }
+.curve::before, .curve::after { content: ""; position: absolute; inset: 0; -webkit-mask-size: 100% 100%; mask-size: 100% 100%; }
+.curve::before { background: var(--c-aqua); -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 160' preserveAspectRatio='none'%3E%3Cpath d='M0 70C220 0 520-10 760 40c110 23 180 40 240 30V160H0Z'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 160' preserveAspectRatio='none'%3E%3Cpath d='M0 70C220 0 520-10 760 40c110 23 180 40 240 30V160H0Z'/%3E%3C/svg%3E"); }
+.curve::after  { background: var(--sec-bg); -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 160' preserveAspectRatio='none'%3E%3Cpath d='M0 104C220 34 520 24 760 74c110 23 180 40 240 30V160H0Z'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 160' preserveAspectRatio='none'%3E%3Cpath d='M0 104C220 34 520 24 760 74c110 23 180 40 240 30V160H0Z'/%3E%3C/svg%3E"); }
+
+/* =========================================================================
+   32. DESCIDA: frases no final
+   ========================================================================= */
+.ride__canvas { display: block !important; }
+.ride { --ride-length: 480vh; }
+.ride.is-end .ride__shade { background: linear-gradient(180deg, rgba(0, 40, 120, .55) 0%, rgba(0, 40, 120, .25) 45%, rgba(0, 40, 120, .55) 100%); }
+.ride__final { padding: 80px 20px 40px; align-content: center; }
+.ride__final.is-on { pointer-events: auto; }
+.ride__final-text { margin-top: 12px; }
+.ride__chips { list-style: none; margin: 18px 0 22px; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 640px; }
+.ride__chips li {
+  padding: 9px 14px; border-radius: 999px; font: 700 14px/1 var(--f-body); color: var(--c-white);
+  background: rgba(7, 31, 77, .55); border: 1px solid rgba(255, 255, 255, .25);
+  opacity: 0; transform: translateY(12px); transition: opacity .45s calc(.35s + var(--i) * .1s), transform .45s calc(.35s + var(--i) * .1s) var(--ease-out);
+}
+.ride__chips li::before { content: "✓"; margin-right: 6px; color: var(--c-gold); font-weight: 900; }
+.ride__final.is-on .ride__chips li { opacity: 1; transform: none; }
+.ride__final-actions { justify-content: center; }
+@media (max-width: 760px), (orientation: portrait) and (max-aspect-ratio: 1/1) {
+  .ride { --ride-length: 440vh; }
+  .ride__final { padding: 76px 16px 24px; }
+  .ride__final-title .t1 { font-size: clamp(48px, 14vw, 80px); }
+  .ride__final-title .t2 { font-size: clamp(22px, 7vw, 40px); }
+  .ride__final-text { font-size: 15px; }
+  .ride__chips { gap: 6px; margin: 14px 0 16px; }
+  .ride__chips li { font-size: 12.5px; padding: 8px 11px; }
+  .ride__final-actions { width: 100%; flex-direction: column; gap: 8px; }
+  .ride__final-actions .hs__btn, .ride__final-actions .ride__btn2 { width: 100%; justify-content: center; min-height: 48px; font-size: 13px; }
+}
+
+/* =========================================================================
+   33. HERO NO CELULAR: menos aperto, foto maior e nítida
+   ========================================================================= */
+@media (max-width: 760px), (max-width: 1180px) and (orientation: portrait) and (max-aspect-ratio: 1/1) {
+  .hs { --hs-foto: url("../assets/img/site/hero-entrada.jpg"); }
+  .hs--parque { --hs-foto: url("../assets/img/site/piscina-ondas.jpg"); }
+  .hs__photo { min-height: 48svh; background-position: 18% 70%; }
+  .hs--parque .hs__photo { background-position: 55% 60%; }
+  .hs__lead, .hs__copy > .hs__btn { display: none; }
+  .hs__copy { padding-top: 70px; padding-bottom: calc(var(--tab-h) + 22px); }
+  .hs__kicker { margin-top: 12px; }
+}
+@media (max-width: 760px), (max-width: 1180px) and (orientation: portrait) and (max-aspect-ratio: 1/1) {
+  .hs__frame { height: calc(100svh - 8px); min-height: 560px; }
+  .hs__photo { min-height: 0; flex: 1 1 0; }
+}
+.hs { position: relative; z-index: 5; }
