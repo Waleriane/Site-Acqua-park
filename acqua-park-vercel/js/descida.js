@@ -209,6 +209,8 @@
     var w = Math.min(1, Math.max(0, (p - 0.86) / 0.1));
     section.style.setProperty('--w', w.toFixed(4));
     section.classList.toggle('is-slide', w >= 0.85);
+    var inView = section.getBoundingClientRect().bottom > window.innerHeight * 0.5;
+    document.body.classList.toggle('ride-slide', w > 0.02 && inView);
   }
 
   function loop() {
