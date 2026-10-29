@@ -2054,3 +2054,17 @@ body.ride-slide .whats-fab { opacity: 0; pointer-events: none; transform: scale(
 @media (max-width: 760px), (max-width: 1180px) and (orientation: portrait) and (max-aspect-ratio: 1/1) {
   .hs__photo { background-size: auto calc(100% - 12px); aspect-ratio: 1.15; }
 }
+
+/* =========================================================================
+   35. CELULAR: menu lateral funcionando, Hero com mais respiro, logo menor
+   ========================================================================= */
+.nav-backdrop { z-index: 49 !important; }   /* fica atrás do menu (antes cobria o menu) */
+@media (max-width: 760px), (max-width: 1180px) and (orientation: portrait) and (max-aspect-ratio: 1/1) {
+  :root { --logo-w: clamp(82px, 22vw, 116px); }
+  .hs__copy { padding: 60px 20px calc(var(--tab-h) + 44px); }
+  .hs__eyebrow { font-size: 10.5px; }
+  .hs__title { margin-top: 16px; }
+  .hs__t2 { margin-top: .18em; }
+  .hs__kicker { margin-top: 20px; }
+  .hs .ill--palm { bottom: 70px; }
+}
