@@ -14,7 +14,7 @@ window.ACQUA_CONFIG = {
      Formato: 55 + DDD + número, só números, sem espaço, traço ou parênteses.
      Exemplo: (69) 99999-1234  →  '5569999991234'
      --------------------------------------------------------------------- */
-  whatsappNumero: '5569999999999',
+  whatsappNumero: '5569993815355',
 
   /* Mensagem que já vem digitada quando a pessoa abre o WhatsApp */
   whatsappMensagem:

@@ -92,7 +92,7 @@
       if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
     });
   }
-  if ('IntersectionObserver' in window && document.getElementById('inicio')) {
+  if ('IntersectionObserver' in window && document.body.classList.contains('page-home')) {
     var watched = ['inicio', 'socio-remido', 'o-projeto', 'quem-ja-e-socio', 'contato']
       .map(function (id) { return document.getElementById(id); })
       .filter(Boolean);

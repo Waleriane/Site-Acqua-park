@@ -1711,7 +1711,7 @@ p { margin: 0; }
 
 .ride__slide {
   position: absolute; inset: 0; z-index: 5; pointer-events: none;
-  transform: translateY(calc((1 - var(--w)) * 105%));
+  transform: translateY(calc((1 - var(--w)) * (100% + 140px)));
   will-change: transform;
 }
 .ride.is-slide .ride__slide { pointer-events: auto; }
