@@ -2068,3 +2068,12 @@ body.ride-slide .whats-fab { opacity: 0; pointer-events: none; transform: scale(
   .hs__kicker { margin-top: 20px; }
   .hs .ill--palm { bottom: 70px; }
 }
+
+/* 36. Sol dos títulos inteiro (sem esmaecer nem cortar) e curva sem linha de emenda */
+.curve { filter: none; }
+.curve::after { inset: 0 0 -2px 0; }
+.section-head::before {
+  top: -44px; width: 150px; margin-left: -75px; opacity: .32;
+  -webkit-mask-image: none; mask-image: none;
+}
+@media (max-width: 760px) { .section-head::before { width: 120px; margin-left: -60px; top: -34px; } }
