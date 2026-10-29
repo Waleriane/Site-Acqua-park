@@ -281,7 +281,7 @@
         <div class="ride__loader" aria-hidden="true"><span></span></div>
 
         <!-- ETAPA 1: topo do tobogã ✏️ -->
-        <div class="ride__step ride__step--1" data-from="0" data-to=".16">
+        <div class="ride__step ride__step--1" data-from="0" data-to=".12">
           <p class="ride__eyebrow">Acqua Park Resort Jaru</p>
           <h2 class="ride__big" id="t-descida">Bora <span>descer?</span></h2>
           <p class="ride__hint">
@@ -291,38 +291,61 @@
         </div>
 
         <!-- ETAPA 2: dentro do tubo ✏️ -->
-        <div class="ride__step ride__step--2" data-from=".24" data-to=".46">
+        <div class="ride__step ride__step--2" data-from=".19" data-to=".36">
           <p class="ride__line">Lazer, natureza</p>
           <p class="ride__line ride__line--gold">e diversão</p>
         </div>
 
         <!-- ETAPA 3: saindo do tubo ✏️ -->
-        <div class="ride__step ride__step--3" data-from=".54" data-to=".7">
+        <div class="ride__step ride__step--3" data-from=".42" data-to=".56">
           <p class="ride__line">para toda</p>
           <p class="ride__line ride__line--gold">a família</p>
         </div>
 
-        <!-- ETAPA FINAL: Joca aparece na piscina ✏️ -->
-        <div class="ride__final" data-from=".88">
+        <!-- ETAPA 4: chegou na piscina ✏️ (só a mensagem, sem o Joca) -->
+        <div class="ride__final" data-from=".72" data-to=".9">
           <div class="ride__final-copy">
             <p class="ride__eyebrow">Um grande projeto está nascendo em Jaru</p>
             <p class="ride__final-title"><span class="t1">Faça Parte</span><span class="t2">desde o começo</span></p>
-            <p class="ride__final-text">Seja <strong>Sócio Fundador Remido</strong> do Acqua Park Resort Jaru.</p>
-            <div class="ride__final-actions">
-              <a class="hs__btn" href="#" data-whatsapp target="_blank" rel="noopener">
-                <svg class="hs__btn-icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
-                Fale com um vendedor
-                <svg class="hs__btn-arrow" aria-hidden="true"><use href="#i-chevron-right"/></svg>
-              </a>
-              <a class="ride__link" href="#socio-remido">Saiba mais sobre o Sócio Remido</a>
-            </div>
+            <p class="ride__final-text">Continue rolando e conheça o título de <strong>Sócio Fundador Remido</strong>.</p>
           </div>
-          <div class="ride__joca">
-            <span class="ride__ring ride__ring--1" aria-hidden="true"></span>
-            <span class="ride__ring ride__ring--2" aria-hidden="true"></span>
-            <span class="ride__drops" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
-            <!-- JOCA OFICIAL ✏️ arquivo assets/img/joca.webp -->
-            <img src="assets/img/joca.webp" alt="Joca, mascote do Acqua Park, fazendo sinal de positivo" width="743" height="1000" loading="lazy">
+        </div>
+
+        <!-- ETAPA 5: onda sobe e traz o "slide" com o Joca e o título ✏️ -->
+        <div class="ride__slide" data-from=".86">
+          <svg class="ride__wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+            <path class="w1" d="M0 60c120-40 240-40 360 0s240 40 360 0 240-40 360 0 240 40 360 0v60H0Z"/>
+            <path class="w2" d="M0 80c120-34 240-34 360 0s240 34 360 0 240-34 360 0 240 34 360 0v40H0Z"/>
+          </svg>
+          <div class="ride__slide-body">
+            <div class="ride__slide-joca">
+              <span class="ride__ripple ride__ripple--1" aria-hidden="true"></span>
+              <span class="ride__ripple ride__ripple--2" aria-hidden="true"></span>
+              <span class="ride__ripple ride__ripple--3" aria-hidden="true"></span>
+              <!-- JOCA OFICIAL ✏️ arquivo assets/img/joca.webp -->
+              <img src="assets/img/joca.webp" alt="Joca, mascote do Acqua Park, fazendo sinal de positivo" width="743" height="1000" loading="lazy">
+            </div>
+            <div class="ride__slide-copy">
+              <p class="ride__badge"><b>300</b> títulos · primeiro lançamento</p>
+              <p class="ride__slide-title">Sócio Fundador <span>Remido</span></p>
+              <ul class="ride__perks">
+                <li style="--i:0"><span class="ride__pi"><svg aria-hidden="true"><use href="#i-nofee"/></svg></span><div><b>Sem mensalidade</b>Isento de taxa de manutenção</div></li>
+                <li style="--i:1"><span class="ride__pi"><svg aria-hidden="true"><use href="#i-people"/></svg></span><div><b>6 pessoas</b>Você e mais 5 no título</div></li>
+                <li style="--i:2"><span class="ride__pi"><svg aria-hidden="true"><use href="#i-guests"/></svg></span><div><b>2 convidados</b>Por fim de semana, durante 2 anos</div></li>
+                <li style="--i:3"><span class="ride__pi"><svg aria-hidden="true"><use href="#i-key"/></svg></span><div><b>Seu patrimônio</b>Pode vender ou passar aos filhos</div></li>
+              </ul>
+              <div class="ride__final-actions">
+                <a class="hs__btn" href="#" data-whatsapp target="_blank" rel="noopener">
+                  <svg class="hs__btn-icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                  Fale com um vendedor
+                  <svg class="hs__btn-arrow" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+                </a>
+                <a class="ride__btn2" href="#socio-remido">
+                  Saiba mais sobre o título
+                  <svg aria-hidden="true"><use href="#i-chevron-right"/></svg>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
