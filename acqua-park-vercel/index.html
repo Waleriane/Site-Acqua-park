@@ -15,7 +15,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
 
   <!-- IMAGEM DO FUNDO: pré-carregada para a Hero aparecer rápido -->
-  <link rel="preload" as="image" href="assets/img/hero-bg.jpg">
+  <link rel="preload" as="image" href="assets/img/site/hero-entrada-full.jpg" media="(min-width: 761px)">
+  <link rel="preload" as="image" href="assets/img/site/hero-entrada-m.jpg" media="(max-width: 760px)">
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/Qimberly.woff2" crossorigin>
 
   <link rel="stylesheet" href="css/style.css">
@@ -38,6 +39,7 @@
     <symbol id="i-nofee" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="11" width="34" height="30" rx="5"/><path d="M7 19h34M16 6v9M32 6v9"/><path d="m18 27 12 8M30 27l-12 8"/></g></symbol>
     <symbol id="i-guests" viewBox="0 0 48 48"><g fill="currentColor"><circle cx="17" cy="15" r="7"/><path d="M4 39c0-7.7 5.8-13 13-13s13 5.3 13 13v2H4z"/></g><path fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" d="M37 15v14M30 22h14"/></symbol>
     <symbol id="i-key" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 23 24 8l18 15"/><path d="M11 20v20h26V20"/><circle cx="24" cy="27" r="4"/><path d="M24 31v5"/></g></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></g></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
     <symbol id="i-drop" viewBox="0 0 24 32"><path fill="currentColor" d="M12 1.5C9 7.3 3 13.2 3 20a9 9 0 0 0 18 0c0-6.8-6-12.7-9-18.5Z"/></symbol>
   </svg>
@@ -99,7 +101,7 @@
       <div class="hs__frame">
 
         <!-- FOTO ✏️ troque o arquivo assets/img/hero-bg.jpg -->
-        <div class="hs__photo" role="img" aria-label="Joca, mascote do Acqua Park, na praia do parque apontando para a piscina de ondas e os tobogãs"></div>
+        <div class="hs__photo" role="img" aria-label="Joca, mascote do Acqua Park, de chapéu na entrada do resort"></div>
 
         <!-- PAINEL -->
         <div class="hs__panel">
@@ -271,6 +273,7 @@
     <section class="ride" id="descida" aria-labelledby="t-descida" data-ride>
       <div class="ride__sticky">
         <!-- VÍDEO DA DESCIDA ✏️ arquivos em assets/video (veja js/descida.js) -->
+        <canvas class="ride__canvas" aria-hidden="true"></canvas>
         <video class="ride__video" muted playsinline preload="none" disablepictureinpicture aria-hidden="true" poster=""></video>
         <div class="ride__shade" aria-hidden="true"></div>
 
@@ -328,18 +331,120 @@
       </div>
     </section>
 
-    <!-- CONHEÇA O ACQUA PARK -->
-    <section class="section" id="conheca-o-parque" aria-labelledby="t-conheca">
-      <div class="container feature">
-        <img class="feature__img" src="assets/img/joca-boia.jpg" alt="" loading="lazy" width="1672" height="941">
-        <div class="feature__box">
-          <p class="eyebrow eyebrow--light">Acqua Park Resort Jaru</p>
-          <h2 class="display display--light" id="t-conheca">Conheça <span>o parque</span></h2>
-          <p>Água, natureza e diversão para toda a família, em Jaru, Rondônia.</p>
-          <a class="btn-pill btn-pill--white" href="o-parque.html">
-            Ver a página do parque
-            <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+    <!-- ATRAÇÕES ✏️ fotos em assets/img/site -->
+    <section class="section atracoes" id="atracoes" aria-labelledby="t-atracoes">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Diversão para todas as idades</p>
+          <h2 class="display" id="t-atracoes">Atrações <span>do parque</span></h2>
+          <p class="lead">Do frio na barriga ao descanso na boia: tem lugar para cada um da família.</p>
+        </div>
+        <div class="carousel" data-carousel>
+          <ul class="atr-grid" data-track>
+          <li class="atr atr--big">
+            <img class="atr__img" src="assets/img/site/piscina-ondas.jpg" srcset="assets/img/site/piscina-ondas-m.jpg 760w, assets/img/site/piscina-ondas.jpg 1400w" sizes="(max-width: 760px) 84vw, 50vw" alt="Piscina de ondas" loading="lazy" decoding="async">
+            <div class="atr__body">
+              <span class="atr__tag atr__tag--família">Família</span>
+              <h3>Piscina de ondas</h3>
+              <p>Ondas de verdade e uma praia de areia para a família inteira.</p>
+            </div>
+          </li>
+          <li class="atr atr--wide">
+            <img class="atr__img" src="assets/img/site/surf-hill.jpg" srcset="assets/img/site/surf-hill-m.jpg 760w, assets/img/site/surf-hill.jpg 1400w" sizes="(max-width: 760px) 84vw, 50vw" alt="Surf Hill" loading="lazy" decoding="async">
+            <div class="atr__body">
+              <span class="atr__tag atr__tag--radical">Radical</span>
+              <h3>Surf Hill</h3>
+              <p>Pistas lado a lado para descer apostando corrida.</p>
+            </div>
+          </li>
+          <li class="atr ">
+            <img class="atr__img" src="assets/img/site/tirolesa-bike.jpg" srcset="assets/img/site/tirolesa-bike-m.jpg 760w, assets/img/site/tirolesa-bike.jpg 1400w" sizes="(max-width: 760px) 84vw, 50vw" alt="Tirolesa de bicicleta" loading="lazy" decoding="async">
+            <div class="atr__body">
+              <span class="atr__tag atr__tag--aventura">Aventura</span>
+              <h3>Tirolesa de bicicleta</h3>
+              <p>Pedale suspenso no ar, com a vista do parque lá de cima.</p>
+            </div>
+          </li>
+          <li class="atr ">
+            <img class="atr__img" src="assets/img/site/toboga-capsula.jpg" srcset="assets/img/site/toboga-capsula-m.jpg 760w, assets/img/site/toboga-capsula.jpg 1400w" sizes="(max-width: 760px) 84vw, 50vw" alt="Tobogã cápsula" loading="lazy" decoding="async">
+            <div class="atr__body">
+              <span class="atr__tag atr__tag--radical">Radical</span>
+              <h3>Tobogã cápsula</h3>
+              <p>O chão se abre e você despenca. Encara?</p>
+            </div>
+          </li>
+          <li class="atr atr--wide">
+            <img class="atr__img" src="assets/img/site/rio-lento.jpg" srcset="assets/img/site/rio-lento-m.jpg 760w, assets/img/site/rio-lento.jpg 1400w" sizes="(max-width: 760px) 84vw, 50vw" alt="Rio lento" loading="lazy" decoding="async">
+            <div class="atr__body">
+              <span class="atr__tag atr__tag--relax">Relax</span>
+              <h3>Rio lento</h3>
+              <p>Boia, sombra e água fresca, no seu ritmo.</p>
+            </div>
+          </li>
+          <li class="atr atr--wide">
+            <img class="atr__img" src="assets/img/site/bar-molhado.jpg" srcset="assets/img/site/bar-molhado-m.jpg 760w, assets/img/site/bar-molhado.jpg 1400w" sizes="(max-width: 760px) 84vw, 50vw" alt="Bar molhado" loading="lazy" decoding="async">
+            <div class="atr__body">
+              <span class="atr__tag atr__tag--relax">Relax</span>
+              <h3>Bar molhado</h3>
+              <p>Drinks e petiscos sem sair da piscina.</p>
+            </div>
+          </li>
+          </ul>
+          <div class="carousel__nav" aria-hidden="true"><span class="carousel__dots" data-dots></span></div>
+        </div>
+        <p class="ilustra"><svg aria-hidden="true"><use href="#i-info"/></svg>Imagens ilustrativas do projeto. O resultado final pode ter variações.</p>
+      </div>
+    </section>
+
+    <!-- ESPAÇOS DO RESORT -->
+    <section class="section section--tint espacos" id="espacos" aria-labelledby="t-espacos">
+      <div class="palms" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Estrutura de resort</p>
+          <h2 class="display" id="t-espacos">Espaços <span>pensados para você</span></h2>
+        </div>
+        <div class="carousel" data-carousel>
+          <ul class="esp-row" data-track data-accordion>
+          <li class="esp is-open" tabindex="0">
+            <img class="esp__img" src="assets/img/site/entrada.jpg" srcset="assets/img/site/entrada-m.jpg 760w, assets/img/site/entrada.jpg 1400w" sizes="(max-width: 760px) 84vw, 60vw" alt="Recepção" loading="lazy" decoding="async">
+            <div class="esp__body"><h3>Recepção</h3><p>A chegada ao resort, com estacionamento e jardim tropical.</p></div>
+          </li>
+          <li class="esp" tabindex="0">
+            <img class="esp__img" src="assets/img/site/restaurante.jpg" srcset="assets/img/site/restaurante-m.jpg 760w, assets/img/site/restaurante.jpg 1400w" sizes="(max-width: 760px) 84vw, 60vw" alt="Restaurante" loading="lazy" decoding="async">
+            <div class="esp__body"><h3>Restaurante</h3><p>Varanda com vista para o verde e cozinha completa.</p></div>
+          </li>
+          <li class="esp" tabindex="0">
+            <img class="esp__img" src="assets/img/site/praca-alimentacao.jpg" srcset="assets/img/site/praca-alimentacao-m.jpg 760w, assets/img/site/praca-alimentacao.jpg 1400w" sizes="(max-width: 760px) 84vw, 60vw" alt="Praça de alimentação" loading="lazy" decoding="async">
+            <div class="esp__body"><h3>Praça de alimentação</h3><p>Açaí, café e lanchonete para todos os gostos.</p></div>
+          </li>
+          </ul>
+          <div class="carousel__nav" aria-hidden="true"><span class="carousel__dots" data-dots></span></div>
+        </div>
+        <p class="ilustra"><svg aria-hidden="true"><use href="#i-info"/></svg>Imagens ilustrativas do projeto. O resultado final pode ter variações.</p>
+      </div>
+    </section>
+
+    <!-- CHALÉS ✏️ texto geral (sem condições definidas) -->
+    <section class="chales" id="chales" aria-labelledby="t-chales">
+      <div class="container chales__grid">
+        <figure class="chales__media">
+          <img class="" src="assets/img/site/chale.jpg" srcset="assets/img/site/chale-m.jpg 760w, assets/img/site/chale.jpg 1400w" sizes="(max-width: 760px) 100vw, 55vw" alt="Chalé em estilo triangular com deck de madeira ao entardecer" loading="lazy" decoding="async">
+        </figure>
+        <div class="chales__text">
+          <p class="eyebrow eyebrow--light">Chalés Acqua Park</p>
+          <h2 class="display display--light" id="t-chales">Seu chalé <span>dentro do resort</span></h2>
+          <p class="chales__lead">Imagine ter o seu cantinho a poucos passos do parque, cercado de natureza. Os chalés do Acqua Park são uma oportunidade para quem quer viver essa experiência de perto.</p>
+          <ul class="chales__uses">
+            <li><svg aria-hidden="true"><use href="#i-key"/></svg><b>Para morar</b><span>Tranquilidade e lazer no dia a dia.</span></li>
+            <li><svg aria-hidden="true"><use href="#i-sun"/></svg><b>Para curtir</b><span>Fins de semana e férias com a família.</span></li>
+            <li><svg aria-hidden="true"><use href="#i-people"/></svg><b>Para alugar</b><span>Uma forma de gerar renda com o seu imóvel.</span></li>
+          </ul>
+          <a class="btn-pill btn-pill--whats btn-pill--lg" href="#" data-whatsapp data-whatsapp-msg="Olá! Vi o site do Acqua Park Resort Jaru e quero saber mais sobre os chalés." target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            Quero saber mais sobre os chalés
           </a>
+          <p class="chales__note">Imagem ilustrativa. Disponibilidade e condições sob consulta.</p>
         </div>
       </div>
     </section>
@@ -350,9 +455,29 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">O futuro do parque</p>
-          <h2 class="display" id="t-projeto">O que vem na <span>primeira etapa</span></h2>
-          <p class="lead">Um grande projeto está nascendo em Jaru. Quem entra agora acompanha cada etapa da construção.</p>
+          <h2 class="display" id="t-projeto">A obra <span>já começou</span></h2>
+          <p class="lead">Um grande projeto está nascendo em Jaru. Compare como está a obra hoje com o que vem por aí.</p>
         </div>
+        <!-- ANTES E DEPOIS ✏️ bar molhado: obra hoje × projeto (mesmo lugar) -->
+        <div class="ba-wrap">
+          <h3 class="ba-title">Bar molhado <span>primeira etapa</span></h3>
+          <div class="ba" data-ba>
+            <img class="ba__after" src="assets/img/site/bar-molhado.jpg" srcset="assets/img/site/bar-molhado-m.jpg 760w, assets/img/site/bar-molhado.jpg 1400w" sizes="(max-width: 760px) 100vw, 1100px" alt="Bar molhado: como vai ficar" loading="lazy" decoding="async">
+            <div class="ba__before"><img class="" src="assets/img/site/obra-3.jpg" srcset="assets/img/site/obra-3-m.jpg 760w, assets/img/site/obra-3.jpg 1400w" sizes="(max-width: 760px) 100vw, 1100px" alt="Bar molhado: a obra hoje" loading="lazy" decoding="async"></div>
+            <span class="ba__label ba__label--before">A obra hoje</span>
+            <span class="ba__label ba__label--after">Como vai ficar</span>
+            <span class="ba__handle" aria-hidden="true"><svg><use href="#i-chevron-right"/></svg></span>
+            <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Arraste para comparar a obra do bar molhado com o projeto">
+          </div>
+          <p class="ba-hint"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg>Arraste para comparar</p>
+          <p class="ilustra"><svg aria-hidden="true"><use href="#i-info"/></svg>Imagem do projeto ilustrativa. O resultado final pode ter variações.</p>
+          <!-- FOTOS DA OBRA ✏️ -->
+          <ul class="obra-fotos">
+            <li><img class="" src="assets/img/site/obra-1.jpg" srcset="assets/img/site/obra-1-m.jpg 760w, assets/img/site/obra-1.jpg 1400w" sizes="(max-width: 760px) 100vw, 540px" alt="Obra do Acqua Park em andamento" loading="lazy" decoding="async"><span>Obra em andamento</span></li>
+            <li><img class="" src="assets/img/site/obra-2.jpg" srcset="assets/img/site/obra-2-m.jpg 760w, assets/img/site/obra-2.jpg 1400w" sizes="(max-width: 760px) 100vw, 540px" alt="Obra do Acqua Park em andamento" loading="lazy" decoding="async"><span>Obra em andamento</span></li>
+          </ul>
+        </div>
+        <h3 class="stage-title">O que vem na primeira etapa</h3>
         <ul class="stage">
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Bar molhado de 1.000 m²</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Piscina adulta de 1.000 m²</li>
@@ -374,42 +499,79 @@
       </div>
     </section>
 
-    <!-- VÍDEO DO PROJETO -->
-    <section class="section" id="video" aria-labelledby="t-video">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Veja como vai ficar</p>
-          <h2 class="display" id="t-video">O Acqua Park <span>do futuro</span></h2>
+    <!-- PERGUNTAS FREQUENTES ✏️ respostas conforme explicação do vendedor -->
+    <section class="section" id="duvidas" aria-labelledby="t-duvidas">
+      <div class="container faq-grid">
+        <div class="faq-side">
+          <p class="eyebrow">Tire suas dúvidas</p>
+          <h2 class="display" id="t-duvidas">Perguntas <span>frequentes</span></h2>
+          <p class="lead">Tudo o que você precisa saber sobre o título de Sócio Fundador Remido.</p>
+          <div class="faq-cta">
+            <img src="assets/img/joca.webp" alt="" width="743" height="1000" loading="lazy">
+            <div>
+              <b>Ficou com alguma dúvida?</b>
+              <a class="btn-pill btn-pill--whats" href="#" data-whatsapp target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                Chamar no WhatsApp
+              </a>
+            </div>
+          </div>
         </div>
-        <!-- COMPONENTE DE VÍDEO ✏️ O endereço do vídeo fica em js/config.js (videoProjetoUrl).
-             Também dá para colocar direto aqui: data-video-src="https://www.youtube.com/watch?v=..." -->
-        <div class="video" data-video>
-          <button class="video__cover" type="button" aria-label="Assistir ao vídeo do projeto">
-            <img class="video__poster" src="assets/img/video-poster.jpg" alt="" loading="lazy" width="960" height="540">
-            <span class="video__play"><svg aria-hidden="true"><use href="#i-play"/></svg></span>
-            <span class="video__label">Assistir ao vídeo do projeto</span>
-          </button>
+        <div class="faq-list">
+          <details class="faq" open>
+            <summary>O que quer dizer “Sócio Remido”?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Remido quer dizer <strong>isento de taxa de manutenção mensal</strong>. Você garante o seu título e não tem mensalidade para usar o parque.</p></div>
+          </details>
+          <details class="faq">
+            <summary>Quantas pessoas o título cobre?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>O título é para <strong>6 pessoas</strong>: o titular e mais 5.</p></div>
+          </details>
+          <details class="faq">
+            <summary>Posso levar convidados?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Sim. Os sócios fundadores podem levar <strong>2 convidados por fim de semana</strong> (no sábado ou no domingo), durante <strong>2 anos</strong>.</p></div>
+          </details>
+          <details class="faq">
+            <summary>Quantos títulos de fundador existem?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>São apenas os <strong>300 primeiros contratos</strong>, do primeiro lançamento do parque.</p></div>
+          </details>
+          <details class="faq">
+            <summary>Posso vender ou passar o título para os meus filhos?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Pode. O título é um <strong>patrimônio seu</strong>. A transferência custa <strong>20% do salário mínimo</strong> vigente.</p></div>
+          </details>
+          <details class="faq">
+            <summary>Quanto custa e como posso pagar?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Os valores e as formas de pagamento são informados pela nossa equipe. <a href="#" data-whatsapp target="_blank" rel="noopener">Fale com um vendedor no WhatsApp</a>.</p></div>
+          </details>
+          <details class="faq">
+            <summary>Quando o parque fica pronto?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>A obra já está em andamento. O vendedor pode passar as informações atualizadas sobre as etapas da construção.</p></div>
+          </details>
         </div>
-        <p class="video__hint">Vídeo de demonstração. O vídeo oficial do parque entra aqui.</p>
       </div>
     </section>
 
-    <!-- QUEM JÁ É SÓCIO -->
+    <!-- QUEM JÁ É SÓCIO ✏️ fotos em assets/img/site/socio-*.jpg -->
     <section class="section section--tint" id="quem-ja-e-socio" aria-labelledby="t-socios">
       <div class="palms" aria-hidden="true"></div>
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Família Acqua Park</p>
           <h2 class="display" id="t-socios">Quem já é <span>sócio</span></h2>
-          <p class="lead">Em breve, as fotos dos nossos primeiros sócios fundadores.</p>
+          <p class="lead">Eles já garantiram o título de Sócio Fundador Remido. Faltam poucos para fechar os 300.</p>
         </div>
-        <!-- ✏️ EDITAR: troque cada bloco por <figure><img src="..." alt="Nome do sócio"><figcaption>Nome</figcaption></figure> -->
-        <ul class="members">
-          <li class="members__slot"><svg aria-hidden="true"><use href="#i-people"/></svg>Foto do sócio</li>
-          <li class="members__slot"><svg aria-hidden="true"><use href="#i-people"/></svg>Foto do sócio</li>
-          <li class="members__slot"><svg aria-hidden="true"><use href="#i-people"/></svg>Foto do sócio</li>
-          <li class="members__slot"><svg aria-hidden="true"><use href="#i-people"/></svg>Foto do sócio</li>
-        </ul>
+        <div class="carousel carousel--socios" data-carousel data-autoplay>
+          <button class="carousel__arrow carousel__arrow--prev" type="button" data-prev aria-label="Fotos anteriores"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
+          <ul class="soc-track" data-track>
+            <li class="soc"><img class="" src="assets/img/site/socio-1.jpg" srcset="assets/img/site/socio-1-m.jpg 760w, assets/img/site/socio-1.jpg 1400w" sizes="(max-width: 760px) 78vw, 360px" alt="Sócio fundador recebendo o certificado do título" loading="lazy" decoding="async"><span class="soc__tag"><svg aria-hidden="true"><use href="#i-check"/></svg>Sócio fundador</span></li>
+            <li class="soc"><img class="" src="assets/img/site/socio-2.jpg" srcset="assets/img/site/socio-2-m.jpg 760w, assets/img/site/socio-2.jpg 1400w" sizes="(max-width: 760px) 78vw, 360px" alt="Sócio fundador recebendo o certificado do título" loading="lazy" decoding="async"><span class="soc__tag"><svg aria-hidden="true"><use href="#i-check"/></svg>Sócio fundador</span></li>
+            <li class="soc"><img class="" src="assets/img/site/socio-3.jpg" srcset="assets/img/site/socio-3-m.jpg 760w, assets/img/site/socio-3.jpg 1400w" sizes="(max-width: 760px) 78vw, 360px" alt="Sócio fundador recebendo o certificado do título" loading="lazy" decoding="async"><span class="soc__tag"><svg aria-hidden="true"><use href="#i-check"/></svg>Sócio fundador</span></li>
+            <li class="soc"><img class="" src="assets/img/site/socio-4.jpg" srcset="assets/img/site/socio-4-m.jpg 760w, assets/img/site/socio-4.jpg 1400w" sizes="(max-width: 760px) 78vw, 360px" alt="Sócio fundador recebendo o certificado do título" loading="lazy" decoding="async"><span class="soc__tag"><svg aria-hidden="true"><use href="#i-check"/></svg>Sócio fundador</span></li>
+            <li class="soc"><img class="" src="assets/img/site/socio-5.jpg" srcset="assets/img/site/socio-5-m.jpg 760w, assets/img/site/socio-5.jpg 1400w" sizes="(max-width: 760px) 78vw, 360px" alt="Sócio fundador recebendo o certificado do título" loading="lazy" decoding="async"><span class="soc__tag"><svg aria-hidden="true"><use href="#i-check"/></svg>Sócio fundador</span></li>
+            <li class="soc"><img class="" src="assets/img/site/socio-6.jpg" srcset="assets/img/site/socio-6-m.jpg 760w, assets/img/site/socio-6.jpg 1400w" sizes="(max-width: 760px) 78vw, 360px" alt="Sócio fundador recebendo o certificado do título" loading="lazy" decoding="async"><span class="soc__tag"><svg aria-hidden="true"><use href="#i-check"/></svg>Sócio fundador</span></li>
+          </ul>
+          <button class="carousel__arrow carousel__arrow--next" type="button" data-next aria-label="Próximas fotos"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
+          <div class="carousel__nav" aria-hidden="true"><span class="carousel__dots" data-dots></span></div>
+        </div>
       </div>
     </section>
 
@@ -437,6 +599,7 @@
         <a href="index.html#contato">Contato</a>
       </nav>
       <p>© <span data-year>2026</span> Acqua Park Resort Jaru · Jaru, Rondônia</p>
+      <p class="site-footer__note">As imagens do projeto são ilustrativas e podem ter variações no resultado final.</p>
     </div>
   </footer>
 
@@ -448,5 +611,6 @@
   <script src="js/config.js"></script>
   <script src="js/main.js"></script>
   <script src="js/descida.js"></script>
+  <script src="js/galeria.js"></script>
 </body>
 </html>
